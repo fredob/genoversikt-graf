@@ -1,0 +1,12 @@
+# Build artifacts
+public.zip
+
+# Dependencies
+node_modules/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

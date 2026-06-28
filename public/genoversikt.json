@@ -1,0 +1,3117 @@
+{
+  "_metadata": {
+    "kalla": "https://kunskapsbanken.cancercentrum.se/diagnoser/arftliga-tumorrisksyndrom-hos-barn-och-vuxna/vardprogram/genoversikt/",
+    "antal_gener": 74,
+    "antal_organ_kort": 171,
+    "antal_unika_organ": 87,
+    "struktur": "tumorsjukdom (originalnyckel) -> lista av mutationer med kanoniskt_organ + subkategori. Toppnivans 'kanoniska_organ'-index mappar kanonisk -> subkategori -> [originalnycklar].",
+    "antal_kanoniska_organ": 47,
+    "faltforklaringar": {
+      "gen": "Genens namn (med ev. monoallelisk/biallelisk-suffix)",
+      "syndrom": "Tumorrisksyndrom som genen ar associerad med",
+      "kanoniskt_organ": "Overgripande organkategori (sammanslagning av nara-dubletter)",
+      "subkategori": "Detalj inom kanoniskt organ (null = ospecificerat/generiskt)",
+      "annat_relevant": "Annat relevant om genen/syndromet",
+      "livstidsrisk": "Livstidsrisk for cancer/tumor i organet",
+      "uppfoljning": "Rekommenderad uppfoljning/screening",
+      "startalder": "Startalder for kontroller",
+      "slut_av_kontroller": "Slutalder for kontroller",
+      "nationellt_vardprogram": "Lank till nationellt vardprogram",
+      "uppfoljning_annat": "Uppfoljning av annat skal an cancerrisk",
+      "referens": "Referens for uppfoljningsrekommendationer"
+    }
+  },
+  "kanoniska_organ": {
+    "Andra maligna tumörer": {
+      "antal_mutationer": 2,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Andra maligna tumörer"
+        ]
+      }
+    },
+    "Andra relevanta symptom": {
+      "antal_mutationer": 2,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Andra relevanta symptom"
+        ]
+      }
+    },
+    "Benigna tumörer": {
+      "antal_mutationer": 1,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Benigna tumörer"
+        ]
+      }
+    },
+    "Binjure": {
+      "antal_mutationer": 10,
+      "antal_originalnycklar": 5,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Binjure"
+        ],
+        "bark": [
+          "Binjurebark"
+        ],
+        "feokromocytom": [
+          "Binjurar (feokromocytom)",
+          "Binjure (Feokromocytom)",
+          "Binjure - feokromocytom"
+        ]
+      }
+    },
+    "Bisköldkörtel": {
+      "antal_mutationer": 2,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Bisköldkörtel"
+        ]
+      }
+    },
+    "Bröst": {
+      "antal_mutationer": 16,
+      "antal_originalnycklar": 8,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Bröst"
+        ],
+        "kvinnor": [
+          "Bröst (kvinnor)",
+          "Bröst, kvinnor",
+          "Bröst, kvinnor.",
+          "Bröstcancer",
+          "Kvinnor bröst"
+        ],
+        "lobulär (kvinnor)": [
+          "Bröst lobulär (kvinnor)"
+        ],
+        "män": [
+          "Bröst (män)"
+        ]
+      }
+    },
+    "Bukspottkörtel": {
+      "antal_mutationer": 4,
+      "antal_originalnycklar": 3,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Bukspottkörtel"
+        ],
+        "endokrin": [
+          "Endokrin bukspottkörtel"
+        ],
+        "PNET (neuroendokrin)": [
+          "Bukspottkörtel (PNET)"
+        ]
+      }
+    },
+    "Endolymfatiska säcken i innerörat (ELST)": {
+      "antal_mutationer": 1,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Endolymfatiska säcken i innerörat (ELST)"
+        ]
+      }
+    },
+    "GIST": {
+      "antal_mutationer": 2,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "GIST"
+        ]
+      }
+    },
+    "Hematologiska maligniteter": {
+      "antal_mutationer": 1,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Hematologiska maligniteter"
+        ]
+      }
+    },
+    "Hjärna": {
+      "antal_mutationer": 6,
+      "antal_originalnycklar": 5,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Hjärna"
+        ],
+        "Optikus gliom": [
+          "Hjärna, ryggmärg och dess hinnor (Optikus gliom)"
+        ],
+        "ryggmärg och dess hinnor": [
+          "Hjärna, ryggmärg och dess hinnor"
+        ],
+        "ryggmärg och dess hinnor (hemangioblastom)": [
+          "Hjärna, ryggmärg och dess hinnor (hemangioblastom)"
+        ],
+        "SEGA (subependymalt jättecellsastrocytom)": [
+          "Hjärna-subependymalt jättecellsastrocytom (SEGA)"
+        ]
+      }
+    },
+    "Hjärtfibrom": {
+      "antal_mutationer": 2,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Hjärtfibrom"
+        ]
+      }
+    },
+    "Hud": {
+      "antal_mutationer": 6,
+      "antal_originalnycklar": 3,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Hud"
+        ],
+        "basalcellscancer (BCC)": [
+          "Hud - basalcellscancer (BCC)."
+        ],
+        "fibrofolliculom": [
+          "Hud/fibrofolliculom"
+        ]
+      }
+    },
+    "Hypofys": {
+      "antal_mutationer": 1,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Hypofys"
+        ]
+      }
+    },
+    "Könsträngs tumör med annular tubules": {
+      "antal_mutationer": 1,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Könsträngs tumör med annular tubules"
+        ]
+      }
+    },
+    "Lever": {
+      "antal_mutationer": 1,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Lever"
+        ]
+      }
+    },
+    "Livmoderhals, germinala celler (SCTAT), äggstockar, livmoderkropp": {
+      "antal_mutationer": 1,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Livmoderhals, germinala celler (SCTAT), äggstockar, livmoderkropp"
+        ]
+      }
+    },
+    "Livmoderkropp": {
+      "antal_mutationer": 8,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Livmoderkropp"
+        ]
+      }
+    },
+    "Lunga": {
+      "antal_mutationer": 4,
+      "antal_originalnycklar": 4,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Lunga"
+        ],
+        "bronkialcarcinoid": [
+          "Bronkialcarcinoid"
+        ],
+        "lungblastom": [
+          "Lungblastom"
+        ],
+        "lungcystor/pneumothorax": [
+          "Lungcystor/pneumothorax"
+        ]
+      }
+    },
+    "Lymfom": {
+      "antal_mutationer": 1,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Lymfom"
+        ]
+      }
+    },
+    "Magsäck": {
+      "antal_mutationer": 4,
+      "antal_originalnycklar": 2,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Magsäck"
+        ],
+        "magsäck/tunntarm/tjocktarm": [
+          "Magsäck, tunntarm och tjocktarm."
+        ]
+      }
+    },
+    "Magsäck/tolvfingertarm": {
+      "antal_mutationer": 8,
+      "antal_originalnycklar": 2,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Magsäck/tolvfingertarm"
+        ],
+        "carcinoider": [
+          "Carcinoider i magsäck/tolvfingertarm"
+        ]
+      }
+    },
+    "Malign perifer nervskidetumör (MPNST)": {
+      "antal_mutationer": 1,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Malign perifer nervskidetumör (MPNST)"
+        ]
+      }
+    },
+    "Medulloblastom": {
+      "antal_mutationer": 2,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Medulloblastom"
+        ]
+      }
+    },
+    "Meningiom": {
+      "antal_mutationer": 2,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Meningiom"
+        ]
+      }
+    },
+    "Mesoteliom (peritoneum och pleura)": {
+      "antal_mutationer": 1,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Mesoteliom (peritoneum och pleura)"
+        ]
+      }
+    },
+    "Multipla tumörer": {
+      "antal_mutationer": 6,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Multipla tumörer"
+        ]
+      }
+    },
+    "Njurar": {
+      "antal_mutationer": 9,
+      "antal_originalnycklar": 5,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Njurar"
+        ],
+        "angiomyolipom": [
+          "Njurar (angiomyolipom)"
+        ],
+        "klarcellig": [
+          "Njurar (klarcellig njurcancer)",
+          "Njurar (klarcellig)"
+        ],
+        "papillär": [
+          "Njurar (ffa papillär njurcancer )"
+        ]
+      }
+    },
+    "Osteoporos": {
+      "antal_mutationer": 1,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Osteoporos"
+        ]
+      }
+    },
+    "Paragangliom/feokromocytom": {
+      "antal_mutationer": 10,
+      "antal_originalnycklar": 2,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Paragangliom/feokromocytom"
+        ],
+        "paragangliom": [
+          "Paragangliom"
+        ]
+      }
+    },
+    "Prostata": {
+      "antal_mutationer": 3,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Prostata"
+        ]
+      }
+    },
+    "Rhabdoida tumörer": {
+      "antal_mutationer": 2,
+      "antal_originalnycklar": 2,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Rhabdoida tumörer"
+        ],
+        "olika lokalisationer": [
+          "Rhaboida tumörer (olika lokalisationer)"
+        ]
+      }
+    },
+    "Saknar organ/symtom": {
+      "antal_mutationer": 2,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Saknar organ/symtom"
+        ]
+      }
+    },
+    "Sarkom": {
+      "antal_mutationer": 3,
+      "antal_originalnycklar": 2,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Sarkom"
+        ],
+        "muskler/skelett + sköldkörtelcancer": [
+          "Sarkom i muskler, skelett och sköldkörtelcancer"
+        ]
+      }
+    },
+    "Schwannom": {
+      "antal_mutationer": 2,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Schwannom"
+        ]
+      }
+    },
+    "Sköldkörtel": {
+      "antal_mutationer": 4,
+      "antal_originalnycklar": 3,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Sköldkörtel",
+          "Sköldkörteln"
+        ],
+        "medullär": [
+          "Sköldkörtel (medullär)"
+        ]
+      }
+    },
+    "Tjock- och ändtarm": {
+      "antal_mutationer": 14,
+      "antal_originalnycklar": 2,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Tjock- och ändtarm",
+          "Tjocktarm och ändtarm"
+        ]
+      }
+    },
+    "Tolvfingertarm": {
+      "antal_mutationer": 1,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Tolvfingertarm"
+        ]
+      }
+    },
+    "Tymuscarcinoid": {
+      "antal_mutationer": 1,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Tymuscarcinoid"
+        ]
+      }
+    },
+    "Tänder": {
+      "antal_mutationer": 1,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "odontogena keratocystor (OKC)": [
+          "Tänder- odontogena keratocystor (OKC)."
+        ]
+      }
+    },
+    "Urinvägar": {
+      "antal_mutationer": 1,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Urinvägar"
+        ]
+      }
+    },
+    "Äggstockar": {
+      "antal_mutationer": 6,
+      "antal_originalnycklar": 4,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Äggstockar",
+          "Äggstockscancer"
+        ],
+        "könssträngstumörer": [
+          "Äggstockar (könssträngstumörer)."
+        ],
+        "SCCOHT (småcellig, hyperkalcemisk typ)": [
+          "Äggstockar (småcellig äggstockscancer, hyperkalcemisk typ, SCCOHT)."
+        ]
+      }
+    },
+    "Äggstockar/äggledare": {
+      "antal_mutationer": 6,
+      "antal_originalnycklar": 2,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Äggstockar/äggledare",
+          "Äggstockar/äggledare."
+        ]
+      }
+    },
+    "Äggstocksfibrom": {
+      "antal_mutationer": 2,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Äggstocksfibrom"
+        ]
+      }
+    },
+    "Ögon": {
+      "antal_mutationer": 3,
+      "antal_originalnycklar": 3,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Ögon"
+        ],
+        "näthinna": [
+          "Ögon (näthinna)"
+        ],
+        "näthinna (retinala hemangioblastom)": [
+          "Näthinna (retinala hemangioblastom)"
+        ]
+      }
+    },
+    "Övriga cancer": {
+      "antal_mutationer": 1,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Övriga cancer"
+        ]
+      }
+    },
+    "Övrigt": {
+      "antal_mutationer": 3,
+      "antal_originalnycklar": 1,
+      "subkategorier": {
+        "_ospecificerat": [
+          "Övrigt"
+        ]
+      }
+    }
+  },
+  "data": {
+    "Andra maligna tumörer": [
+      {
+        "gen": "ATM biallelisk (homozygot, kompound heterozygot)",
+        "syndrom": "Ataxia-telangiectasia",
+        "kanoniskt_organ": "Andra maligna tumörer",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "Ej definerad",
+        "uppfoljning": "Bröst, äggstockar, lever, GI, melanom, sarkom, leiomyom: fysisk undersökning årligen, multidisciplinär uppföljning; bör tas upp på MDK för samordning.",
+        "startalder": "Vid diagnos",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://www.socialstyrelsen.se/kunskapsstod-och-regler/omraden/sallsynta-halsotillstand/om-kunskapsdatabasen/sok-bland-sallsynta-halsotillstand/ataxia-telangiectasia/ | https://www.ncbi.nlm.nih.gov/books/NBK26468/"
+      },
+      {
+        "gen": "BLM - biallelisk (homozygot eller kompound heterozygot)",
+        "syndrom": "Blooms syndrom",
+        "kanoniskt_organ": "Andra maligna tumörer",
+        "subkategori": null,
+        "annat_relevant": "Viktig med HPV-vaccination! Undvik strålning! Minska ultraviolett exponering.",
+        "livstidsrisk": "83%, den kumulativa risken upp till 40 års ålder.",
+        "uppfoljning": "Kraftigt ökad risk för cancer i flertal olika organ (bl.a hud, njurar, hematologiska, lymfom, kolorektal, bröst). Utformas utifrån diskussion på MDK. Koloskopi årligen MRT helkropp (för lymfom). Ingen uppföljning rekommenderad för Wilms tumör - risk cirka 3% (Referens: Hol 2021, PMID: 34134020).",
+        "startalder": "15 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1016/j.gim.2022.03.008 | https://doi.org/10.1159/000452082 | https://www.ncbi.nlm.nih.gov/books/NBK1398/"
+      }
+    ],
+    "Andra relevanta symptom": [
+      {
+        "gen": "ATM biallelisk (homozygot, kompound heterozygot)",
+        "syndrom": "Ataxia-telangiectasia",
+        "kanoniskt_organ": "Andra relevanta symptom",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "-",
+        "startalder": "1-2 år (för ataxi)",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "Ataxi, telangiektasier - ögats bindhinna och i hud, immundefekt - bristfällig utvecking av tymus, hormonell påverkan med effekt på bland annat tillväxt.",
+        "referens": "https://www.socialstyrelsen.se/kunskapsstod-och-regler/omraden/sallsynta-halsotillstand/om-kunskapsdatabasen/sok-bland-sallsynta-halsotillstand/ataxia-telangiectasia/ | https://www.ncbi.nlm.nih.gov/books/NBK26468/"
+      },
+      {
+        "gen": "CDH1",
+        "syndrom": "Ärftlig diffus ventrikelcancer och lobulär bröstcancer syndrom",
+        "kanoniskt_organ": "Andra relevanta symptom",
+        "subkategori": null,
+        "annat_relevant": "Läpp-käk-gomspalt kan förekomma hos anlagsbärare.",
+        "livstidsrisk": "-",
+        "uppfoljning": "-",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/Cancergenetik/Arftlig-ventrikelcancer-2021-06-10.pdf"
+      }
+    ],
+    "Benigna tumörer": [
+      {
+        "gen": "APC",
+        "syndrom": "Familjär adenomatös polypos (FAP), Gardners syndrom",
+        "kanoniskt_organ": "Benigna tumörer",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "10-24% för desmoider",
+        "uppfoljning": "Desmoider: Inga regelbundna kontroller. Information om risk.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1093/bjs/znae070"
+      }
+    ],
+    "Binjurar (feokromocytom)": [
+      {
+        "gen": "VHL",
+        "syndrom": "Von Hippel-Lindaus syndrom",
+        "kanoniskt_organ": "Binjure",
+        "subkategori": "feokromocytom",
+        "annat_relevant": "-",
+        "livstidsrisk": "10-20%",
+        "uppfoljning": "P-metanefriner årligen.",
+        "startalder": "5 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1016/j.ejmg.2022.104538"
+      }
+    ],
+    "Binjure": [
+      {
+        "gen": "ARMC5",
+        "syndrom": "ACTH-independent macronodular adrenal hyperplasia 2",
+        "kanoniskt_organ": "Binjure",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "Kliniska kontroller samt uppföljning via endokrinolog.",
+        "startalder": "0 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram binjuretumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/binjuretumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "CACNA1D",
+        "syndrom": "PASNA syndrom, AD",
+        "kanoniskt_organ": "Binjure",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "Hög penetrans, varierande fenotyp.",
+        "uppfoljning": "P-Aldosteron:P-Renin- kvot (ARR).",
+        "startalder": "0 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram binjuretumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/binjuretumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1093/ejendo/lvae041 | https://doi.org/10.1161/HYPERTENSIONAHA.121.16498"
+      },
+      {
+        "gen": "CACNA1H",
+        "syndrom": "Familjär hyperaldosteronism typ 4, AD",
+        "kanoniskt_organ": "Binjure",
+        "subkategori": null,
+        "annat_relevant": "Ingen anlagsbärartestning över 60 års ålder vid normalt blodtryck.",
+        "livstidsrisk": "Ej definierad.",
+        "uppfoljning": "Uppföljning blodtryck, hjärta (EKG och ultraljud); P-Aldosteron: P-Renin- kvot (ARR) årligen.",
+        "startalder": "20 år eller tidigare om familjehistoria av ung debutålder.",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram binjuretumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/binjuretumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1161/HYPERTENSIONAHA.121.16498"
+      },
+      {
+        "gen": "CLCN2",
+        "syndrom": "Familjär hyperaldosteronism typ 2",
+        "kanoniskt_organ": "Binjure",
+        "subkategori": null,
+        "annat_relevant": "Ingen anlagsbärartestning över 60 års ålder vid normal blodtryck.",
+        "livstidsrisk": "Nedsatt penetrans",
+        "uppfoljning": "Blodtryck, hjärta (EKG och ultraljud); P-Aldosteron: P-Renin- kvot (ARR) årligen.",
+        "startalder": "10 år, tidigare om familjehistoria av ung debutålder.",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram binjuretumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/binjuretumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1093/ejendo/lvae041 | https://doi.org/10.1161/HYPERTENSIONAHA.121.16498"
+      },
+      {
+        "gen": "CYP11B1",
+        "syndrom": "Familjär hyperaldosteronism typ 1",
+        "kanoniskt_organ": "Binjure",
+        "subkategori": null,
+        "annat_relevant": "Ingen anlagsbärartestning över 60 års ålder vid normal blodtryck.",
+        "livstidsrisk": "Nedsatt penetrans",
+        "uppfoljning": "Blodtryck, hjärta (EKG och ultraljud); P-Aldosteron: P-Renin- kvot (ARR) årligen.",
+        "startalder": "20 år tidigare om familjehistoria av ung debut ålder",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram binjuretumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/binjuretumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1093/ejendo/lvae041 | https://doi.org/10.1161/HYPERTENSIONAHA.121.16498"
+      },
+      {
+        "gen": "KCNJ5",
+        "syndrom": "Familjär hyperaldosteronism typ 3, AD",
+        "kanoniskt_organ": "Binjure",
+        "subkategori": null,
+        "annat_relevant": "Ingen anlagsbärartestning över 60 års ålder vid normalt blodtryck.",
+        "livstidsrisk": "Hög penetrans, varierande fenotyp",
+        "uppfoljning": "Blodtryck, hjärta (EKG och ultraljud); P-Aldosteron: P-Renin- kvot (ARR) årligen.",
+        "startalder": "10 år eller enligt familjehistoria",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram binjuretumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/binjuretumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1093/ejendo/lvae041 | https://doi.org/10.1161/HYPERTENSIONAHA.121.16498"
+      }
+    ],
+    "Binjure (Feokromocytom)": [
+      {
+        "gen": "NF1",
+        "syndrom": "Neurofibromatos typ 1",
+        "kanoniskt_organ": "Binjure",
+        "subkategori": "feokromocytom",
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "Blodtryck årligen. Kontakt med specialist MVC vid gravidtet",
+        "startalder": "30 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/pediatrisk_genetik/Neurofibromatos-typ-1-NF1-handlaggningsstod.pdf"
+      }
+    ],
+    "Binjure - feokromocytom": [
+      {
+        "gen": "RET",
+        "syndrom": "Multipel endokrin neoplasi typ 2",
+        "kanoniskt_organ": "Binjure",
+        "subkategori": "feokromocytom",
+        "annat_relevant": "-",
+        "livstidsrisk": "50%",
+        "uppfoljning": "P-(nor)metanefriner årligen + MR binjurar vartannat år.",
+        "startalder": "11 år eller 16 år beroende på variant",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram vårdprogram (https://kunskapsbanken.cancercentrum.se/diagnoser/skoldkortelcancer/vardprogram/medullar-tyreoideacancer-mtc/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Binjurebark": [
+      {
+        "gen": "TP53",
+        "syndrom": "TP53-relaterad cancerpredisponerande syndrom",
+        "kanoniskt_organ": "Binjure",
+        "subkategori": "bark",
+        "annat_relevant": "TP53-bärare bör undvika joniserande strålning.Därför bör bilddiagnostik som inte innebär stråldos tillämpas i första hand.",
+        "livstidsrisk": "-",
+        "uppfoljning": "Abdominellt ultraljud, kortisolprofil i blod eller urin var 3:e månad.",
+        "startalder": "0 år",
+        "slut_av_kontroller": "18 år",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/Cancergenetik/Riktlinjer_TP53_250401.pdf"
+      }
+    ],
+    "Bisköldkörtel": [
+      {
+        "gen": "MEN1",
+        "syndrom": "Multipel endokrin neoplasi typ 1",
+        "kanoniskt_organ": "Bisköldkörtel",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "90%",
+        "uppfoljning": "Ca, PTH, prolaktin, PRL, IGF-I årligen.",
+        "startalder": "10-15 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram neuroendokrina buktumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/neuroendokrina-buktumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1016/j.ando.2023.09.003"
+      },
+      {
+        "gen": "RET",
+        "syndrom": "Multipel endokrin neoplasi typ 2",
+        "kanoniskt_organ": "Bisköldkörtel",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "15 - 30%",
+        "uppfoljning": "S-Ca-jon, S-PTH.",
+        "startalder": "11 år eller 16 år beroende på variant",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram vårdprogram (https://kunskapsbanken.cancercentrum.se/diagnoser/skoldkortelcancer/vardprogram/medullar-tyreoideacancer-mtc/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Bronkialcarcinoid": [
+      {
+        "gen": "MEN1",
+        "syndrom": "Multipel endokrin neoplasi typ 1",
+        "kanoniskt_organ": "Lunga",
+        "subkategori": "bronkialcarcinoid",
+        "annat_relevant": "-",
+        "livstidsrisk": "18%",
+        "uppfoljning": "MRT thorax eller lågdos DT (bronker, tymus) vartannat år.",
+        "startalder": "15-30 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram neuroendokrina buktumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/neuroendokrina-buktumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Bröst": [
+      {
+        "gen": "ATM monoallelisk (heterozygot)",
+        "syndrom": "-",
+        "kanoniskt_organ": "Bröst",
+        "subkategori": null,
+        "annat_relevant": "Rekommendationerna gäller endast kvinnor som har förstagradssläkting med bröstcancer. Rekommendationerna gäller trunkerande varianter och specifika missense-varianter enligt NVP Bröstcancer.",
+        "livstidsrisk": "Måttligt förhöjd",
+        "uppfoljning": "Årlig bilddiagnostik av bröst.",
+        "startalder": "40 år eller 5 år innan yngst insjuknande i släkten.",
+        "slut_av_kontroller": "60 år. Förlängd screening upp till 74 år kan motiveras av familjehistoria.",
+        "nationellt_vardprogram": "Nationellt vårdprogram bröstcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/brostcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "BARD1",
+        "syndrom": "BARD1-relaterad bröstcancer",
+        "kanoniskt_organ": "Bröst",
+        "subkategori": null,
+        "annat_relevant": "Rekommendationerna gäller endast kvinnor som har förstagradssläkting med bröstcancer. Rekommendationerna gäller proteintrunkerande varianter.",
+        "livstidsrisk": "Måttligt förhöjd.",
+        "uppfoljning": "Årlig bilddiagnostik av bröst från 40 till 60 års ålder.",
+        "startalder": "40 år eller 5 år innan yngst insjuknande i släkten.",
+        "slut_av_kontroller": "Förlängd screening upp till 74 år kan motiveras av familjehistoria.",
+        "nationellt_vardprogram": "Nationellt vårdprogram bröstcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/brostcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "BLM - biallelisk (homozygot eller kompound heterozygot)",
+        "syndrom": "Blooms syndrom",
+        "kanoniskt_organ": "Bröst",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "Okänd.",
+        "uppfoljning": "MRT årligen.",
+        "startalder": "18 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1016/j.gim.2022.03.008 | https://doi.org/10.1159/000452082 | https://www.ncbi.nlm.nih.gov/books/NBK1398/"
+      },
+      {
+        "gen": "NF1",
+        "syndrom": "Neurofibromatos typ 1",
+        "kanoniskt_organ": "Bröst",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "Måttligt förhöjd",
+        "uppfoljning": "Mammografi årligen.",
+        "startalder": "40-50 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram bröstcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/brostcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/pediatrisk_genetik/Neurofibromatos-typ-1-NF1-handlaggningsstod.pdf"
+      }
+    ],
+    "Bröst (kvinnor)": [
+      {
+        "gen": "STK11",
+        "syndrom": "Peutz-Jeghers Syndrom",
+        "kanoniskt_organ": "Bröst",
+        "subkategori": "kvinnor",
+        "annat_relevant": "-",
+        "livstidsrisk": "Sannolikt starkt förhöjd",
+        "uppfoljning": "Årlig bilddiagnostik inklusive MRT bröst. Riskreducerande mastektomi kan övervägas.",
+        "startalder": "25 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram bröstcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/brostcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Bröst (män)": [
+      {
+        "gen": "BRCA2",
+        "syndrom": "Ärftlig bröst- och äggstockscancer",
+        "kanoniskt_organ": "Bröst",
+        "subkategori": "män",
+        "annat_relevant": "-",
+        "livstidsrisk": "4%",
+        "uppfoljning": "-",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram bröstcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/brostcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Bröst lobulär (kvinnor)": [
+      {
+        "gen": "CDH1",
+        "syndrom": "Ärftlig diffus ventrikelcancer och lobulär bröstcancer syndrom",
+        "kanoniskt_organ": "Bröst",
+        "subkategori": "lobulär (kvinnor)",
+        "annat_relevant": "-",
+        "livstidsrisk": "Sannolikt starkt förhöjd",
+        "uppfoljning": "Mammografi och MRT bröst, årligen. Riskreducerande masektomi kan övervägas.",
+        "startalder": "30 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram bröstcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/brostcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/Cancergenetik/Arftlig-ventrikelcancer-2021-06-10.pdf"
+      }
+    ],
+    "Bröst, kvinnor": [
+      {
+        "gen": "PTEN",
+        "syndrom": "PHTS, PTEN-hamartoma tumör syndrom, innefattar även Bannayan-Riley-Ruvalcabas syndrom, Cowdens syndrom",
+        "kanoniskt_organ": "Bröst",
+        "subkategori": "kvinnor",
+        "annat_relevant": "PTEN är associerad med makrocefali, kan förekomma med intellekuell funktionsnedsättning. Cerebellära dysplastiska gangliocytom är patognomiska",
+        "livstidsrisk": "Sannolikt starkt förhöjd",
+        "uppfoljning": "Mammografi + MRT bröst, årligen; riskreducerande mastektomi kan ävervägas",
+        "startalder": "30-35",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram bröstcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/brostcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Bröst, kvinnor.": [
+      {
+        "gen": "TP53",
+        "syndrom": "TP53-relaterad cancerpredisponerande syndrom",
+        "kanoniskt_organ": "Bröst",
+        "subkategori": "kvinnor",
+        "annat_relevant": "TP53-bärare bör undvika joniserande strålning. Därför bör bilddiagnostik som inte innebär stråldos tillämpas i första hand. Vissa missens varianter är ffa associerade med ökad risk för bröstcancer och är generellt inte associerade med barncancer.",
+        "livstidsrisk": "Starkt förhöjd, även i mycket unga år.",
+        "uppfoljning": "Bröst-MR årligen och UL bröst med 6 månaderns förskjutning. Riskreducerande mastektomi kan övervägas tidigt.",
+        "startalder": "20 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram bröstcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/brostcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Bröstcancer": [
+      {
+        "gen": "CHEK2",
+        "syndrom": "CHEK2 -relaterad cancer predisposition",
+        "kanoniskt_organ": "Bröst",
+        "subkategori": "kvinnor",
+        "annat_relevant": "Trunkerande varianter och vissa specifika missens varianter",
+        "livstidsrisk": "Måttligt förhöjd",
+        "uppfoljning": "Årlig bilddiagnostik av bröst 40-60 års ålder. Endast förstagradssläktingar till kvinnor som haft bröstcancer.",
+        "startalder": "40 år eller 5 år innan yngst insjuknande i släkten.",
+        "slut_av_kontroller": "Förlängd screening upp till 74 år kan motiveras av familjehistoria.",
+        "nationellt_vardprogram": "Nationellt vårdprogram bröstcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/brostcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "CHEK2 biallelisk (homozygot eller kompound heterozygot)",
+        "syndrom": "CHEK2 -relaterad cancer predisposition",
+        "kanoniskt_organ": "Bröst",
+        "subkategori": "kvinnor",
+        "annat_relevant": "Trunkerande varianter och vissa specifika missens varianter",
+        "livstidsrisk": "50-80%",
+        "uppfoljning": "Årlig bilddiagnostik 25-75 års ålder inklusive MRT bröst upp till 55 års ålder. Möjlighet till riskreducerande mastektomi.",
+        "startalder": "25 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram bröstcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/brostcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "PALB2",
+        "syndrom": "Bröst-ovarial cancer predisposition syndrom",
+        "kanoniskt_organ": "Bröst",
+        "subkategori": "kvinnor",
+        "annat_relevant": "Sannolikt lätt till måttlig förhöjd risk för bukspottkörtelcancer, ingen evidens för klinisk nytta av profylaktiska åtgärder",
+        "livstidsrisk": "Starkt förhöjd",
+        "uppfoljning": "Årlig bilddiagnostik inkluderande MR bröst från 30 års ålder. Riskreducerande mastektomi kan övervägas.",
+        "startalder": "30 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram bröstcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/brostcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "RAD51C",
+        "syndrom": "RAD51C-related cancer susceptibility",
+        "kanoniskt_organ": "Bröst",
+        "subkategori": "kvinnor",
+        "annat_relevant": "Endast trunkerande varianter; Risken kan överstiga 35% om man har en familjehistoria",
+        "livstidsrisk": "Måttligt förhöjd",
+        "uppfoljning": "Årlig bilddiagnostik av bröst 40-60 års ålder. Endast förstagradssläktingar till kvinnor som haft bröstcancer",
+        "startalder": "40 år eller 5 år innan yngst insjuknande i släkten",
+        "slut_av_kontroller": "Förlängd screening upp till 74 år kan motiveras av familjehistoria",
+        "nationellt_vardprogram": "Nationellt vårdprogram bröstcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/brostcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "RAD51D",
+        "syndrom": "RAD51D-related cancer susceptibility",
+        "kanoniskt_organ": "Bröst",
+        "subkategori": "kvinnor",
+        "annat_relevant": "Endast trunkerande varianter; Risken kan överstiga 35% om man har en familjehistoria",
+        "livstidsrisk": "Måttligt förhöjd",
+        "uppfoljning": "Årlig bilddiagnostik av bröst 40-60 års ålder. Endast förstagradssläktingar till kvinnor som haft bröstcancer",
+        "startalder": "40 år eller 5 år innan yngst insjuknande i släkten",
+        "slut_av_kontroller": "Förlängd screening upp till 74 år kan motiveras av familjehistoria",
+        "nationellt_vardprogram": "Nationellt vårdprogram bröstcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/brostcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Bukspottkörtel": [
+      {
+        "gen": "CDKN2A",
+        "syndrom": "-",
+        "kanoniskt_organ": "Bukspottkörtel",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": ">15%",
+        "uppfoljning": "MRT pankreas årligen.",
+        "startalder": "40 år (eller 10 år innan yngsta insjuknandefallet i familjen)",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram bukspottkörtelcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/bukspottkortelcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "STK11",
+        "syndrom": "Peutz-Jeghers Syndrom",
+        "kanoniskt_organ": "Bukspottkörtel",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "11-55%",
+        "uppfoljning": "MR pankreas årligen",
+        "startalder": "40 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram bukspottkörtelcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/bukspottkortelcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Bukspottkörtel (PNET)": [
+      {
+        "gen": "VHL",
+        "syndrom": "Von Hippel-Lindaus syndrom",
+        "kanoniskt_organ": "Bukspottkörtel",
+        "subkategori": "PNET (neuroendokrin)",
+        "annat_relevant": "-",
+        "livstidsrisk": "11% av patienter",
+        "uppfoljning": "MR vartannat år.",
+        "startalder": "15 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1016/j.ejmg.2022.104538"
+      }
+    ],
+    "Carcinoider i magsäck/tolvfingertarm": [
+      {
+        "gen": "MEN1",
+        "syndrom": "Multipel endokrin neoplasi typ 1",
+        "kanoniskt_organ": "Magsäck/tolvfingertarm",
+        "subkategori": "carcinoider",
+        "annat_relevant": "-",
+        "livstidsrisk": "20-40%",
+        "uppfoljning": "P-gastrin + MR buk (ventrikel, bukspottkörtel, binjurar) var 2-3:e år. Endoskopiskt ultraljud kan utgöra ett alternativ till MR buk.",
+        "startalder": "10-15 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram neuroendokrina buktumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/neuroendokrina-buktumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Endokrin bukspottkörtel": [
+      {
+        "gen": "MEN1",
+        "syndrom": "Multipel endokrin neoplasi typ 1",
+        "kanoniskt_organ": "Bukspottkörtel",
+        "subkategori": "endokrin",
+        "annat_relevant": "-",
+        "livstidsrisk": "30-70%",
+        "uppfoljning": "Kromogranin-A, pancreaspolypeptid, glukagon, gastrin. Vid klinisk misstanke utifrån symtombild: F-insulin, B-glukos, VIP + MR buk (ventrikel, bukspottkörtel, binjurar) vartannat till vart 3:e år. Endoskopiskt ultraljud kan utgöra ett alternativ till MRT buk.",
+        "startalder": "10-15 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram neuroendokrina buktumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/neuroendokrina-buktumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Endolymfatiska säcken i innerörat (ELST)": [
+      {
+        "gen": "VHL",
+        "syndrom": "Von Hippel-Lindaus syndrom",
+        "kanoniskt_organ": "Endolymfatiska säcken i innerörat (ELST)",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "Hörselundersökning vartannat år.",
+        "startalder": "5 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1016/j.ejmg.2022.104538"
+      }
+    ],
+    "GIST": [
+      {
+        "gen": "SDHA",
+        "syndrom": "Ärftligt feokromocytom/paragangliom syndrom",
+        "kanoniskt_organ": "GIST",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "Okänd",
+        "uppfoljning": "Årliga plasma (nor)metanefriner + HK-MR med 2 års intervall. Kan glesas ut till var 3:e år om inga fynd.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/Cancergenetik/Arftligt-feokromocytom_paragangliom_20240401.pdf"
+      },
+      {
+        "gen": "SDHB",
+        "syndrom": "Ärftligt feokromocytom/paragangliom syndrom",
+        "kanoniskt_organ": "GIST",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "2%",
+        "uppfoljning": "Årliga plasma (nor)metanefriner + HK-MR med 2 års intervall. Kan glesas ut till var 3:e år om inga fynd.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/Cancergenetik/Arftligt-feokromocytom_paragangliom_20240401.pdf"
+      }
+    ],
+    "Hematologiska maligniteter": [
+      {
+        "gen": "ATM biallelisk (homozygot, kompound heterozygot)",
+        "syndrom": "Ataxia-telangiectasia",
+        "kanoniskt_organ": "Hematologiska maligniteter",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "Ej definierad.",
+        "uppfoljning": "Ökad risk för leukemi och lymfom: Fysisk undersökning, blodprover",
+        "startalder": "Barnaåren",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://www.socialstyrelsen.se/kunskapsstod-och-regler/omraden/sallsynta-halsotillstand/om-kunskapsdatabasen/sok-bland-sallsynta-halsotillstand/ataxia-telangiectasia/ | https://www.ncbi.nlm.nih.gov/books/NBK26468/"
+      }
+    ],
+    "Hjärna": [
+      {
+        "gen": "TP53",
+        "syndrom": "TP53-relaterad cancerpredisponerande syndrom",
+        "kanoniskt_organ": "Hjärna",
+        "subkategori": null,
+        "annat_relevant": "Plexus choroideus carcinom är patognomoniskt",
+        "livstidsrisk": "-",
+        "uppfoljning": "MR hjärna, årligen (för barn vid högrisk varianter).",
+        "startalder": "0 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/Cancergenetik/Riktlinjer_TP53_250401.pdf"
+      }
+    ],
+    "Hjärna, ryggmärg och dess hinnor": [
+      {
+        "gen": "SMARCB1",
+        "syndrom": "Rhabdoid tumör predispositionsyndrom 1",
+        "kanoniskt_organ": "Hjärna",
+        "subkategori": "ryggmärg och dess hinnor",
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "MR CNS inkl. spinalkanal eller HK-MR var fjärde vecka; UL av buk och mjuka vävnader med max 2-3 månaders intervall. Klinisk undersökning med neurologstatus 0-6 månaders ålder; MR CNS inkl. spinalkanal, ultraljud av buken inklusive mjukvävnad, klinisk undersökning med neurologstatus, - samtliga undersökningar med 2–3 månaders intervall 7-18 månaders ålder; MR CNS inkl. spinalkanal, ultraljud av buken inklusive mjukvävnad, klinisk undersökning med neurologstatus, - samtliga undersökningar med 3 månaders intervall 19 månader till 5 årl ålder; klinisk undersökning med 6 månader intervall och helkropps MR årligen från 5 års ålder",
+        "startalder": "Från födelse",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1007/s10689-021-00229-1"
+      }
+    ],
+    "Hjärna, ryggmärg och dess hinnor (hemangioblastom)": [
+      {
+        "gen": "VHL",
+        "syndrom": "Von Hippel-Lindaus syndrom",
+        "kanoniskt_organ": "Hjärna",
+        "subkategori": "ryggmärg och dess hinnor (hemangioblastom)",
+        "annat_relevant": "-",
+        "livstidsrisk": "60-80% av VHL patienter",
+        "uppfoljning": "Klinisk uppföljning årligen. MR årligen alt MR vid 10 år och sedan vartannat år fr 15 år.",
+        "startalder": "10 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1016/j.ejmg.2022.104538"
+      }
+    ],
+    "Hjärna, ryggmärg och dess hinnor (Optikus gliom)": [
+      {
+        "gen": "NF1",
+        "syndrom": "Neurofibromatos typ 1",
+        "kanoniskt_organ": "Hjärna",
+        "subkategori": "Optikus gliom",
+        "annat_relevant": "-",
+        "livstidsrisk": "15% (2% av fallen kräver behandling)",
+        "uppfoljning": "Ögonundersökning varje 6 mån till 4 år, sedan årligen till 10 år, MR vid behov.",
+        "startalder": "Vid genetisk diagnos",
+        "slut_av_kontroller": "10 års ålder Neurolog överväger om fortsatt uppföljning med MR är aktuell. Patienter med optikusgliom och plexiforma neurofibrom bör följas neuroradiologiskt till 30 år men enligt individuell utformat program",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/pediatrisk_genetik/Neurofibromatos-typ-1-NF1-handlaggningsstod.pdf"
+      }
+    ],
+    "Hjärna-subependymalt jättecellsastrocytom (SEGA)": [
+      {
+        "gen": "TSC1",
+        "syndrom": "Tuberös skleros",
+        "kanoniskt_organ": "Hjärna",
+        "subkategori": "SEGA (subependymalt jättecellsastrocytom)",
+        "annat_relevant": "-",
+        "livstidsrisk": "10-20% av TS patienter",
+        "uppfoljning": "MR varje till vart tredje år.",
+        "startalder": "Vid diagnos alt påvisad mutation",
+        "slut_av_kontroller": "25 år",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://snpf.barnlakarforeningen.se/wp-content/uploads/sites/4/2017/07/sjuttontsc.pdf | https://www.socialstyrelsen.se/kunskapsstod-och-regler/omraden/sallsynta-halsotillstand/om-kunskapsdatabasen/sok-bland-sallsynta-halsotillstand/tuberos-skleros/"
+      },
+      {
+        "gen": "TSC2",
+        "syndrom": "Tuberös skleros",
+        "kanoniskt_organ": "Hjärna",
+        "subkategori": "SEGA (subependymalt jättecellsastrocytom)",
+        "annat_relevant": "-",
+        "livstidsrisk": "10-20% av TS patienter",
+        "uppfoljning": "MR varje till vart tredje år.",
+        "startalder": "Vid diagnos alt påvisad mutation.",
+        "slut_av_kontroller": "25 år",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://snpf.barnlakarforeningen.se/wp-content/uploads/sites/4/2017/07/sjuttontsc.pdf | https://www.socialstyrelsen.se/kunskapsstod-och-regler/omraden/sallsynta-halsotillstand/om-kunskapsdatabasen/sok-bland-sallsynta-halsotillstand/tuberos-skleros/"
+      }
+    ],
+    "Hjärtfibrom": [
+      {
+        "gen": "PTCH1",
+        "syndrom": "Gorlins syndrom",
+        "kanoniskt_organ": "Hjärtfibrom",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "Baseline EKG vid diagnos (helst första 6 må).",
+        "startalder": "Vid diagnos",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram basalcellscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/basalcellscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "SUFU",
+        "syndrom": "-",
+        "kanoniskt_organ": "Hjärtfibrom",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "Inga kontroller.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1136/jmedgenet-2021-108385"
+      }
+    ],
+    "Hud": [
+      {
+        "gen": "BAP1",
+        "syndrom": "BAP1-tumör predispositionsyndrom",
+        "kanoniskt_organ": "Hud",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "13% av bärare",
+        "uppfoljning": "Hudundersökning. Ökad risk för melanom, basaliom, BIMT (BAP1-inaktiverad melanocytisk tumör, tidigare kallad atypisk Spitzoid tumör).",
+        "startalder": "18 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram basalcellscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/basalcellscancer/vardprogram/) | Nationellt vårdprogram melanom (https://kunskapsbanken.cancercentrum.se/diagnoser/melanom/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "CDKN2A",
+        "syndrom": "Melanom – pancreascancer syndrom",
+        "kanoniskt_organ": "Hud",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "60 gånger förhöjd (75% för den svenska foundermutationen)",
+        "uppfoljning": "Hudundersökning årligen.",
+        "startalder": "18 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram vårdprogram (https://kunskapsbanken.cancercentrum.se/diagnoser/melanom/vardprogram/bilaga-1.-handlaggning-av-individer-inom-familjer-med-familjart-melanom)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "DKC1, X-bunden recessiv",
+        "syndrom": "Dyskeratosis congenita",
+        "kanoniskt_organ": "Hud",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "Okänd",
+        "uppfoljning": "Individualiserade hudkontroller.",
+        "startalder": "Från cirka 16 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram skivepitelcancer i huden (https://kunskapsbanken.cancercentrum.se/diagnoser/skivepitelcancer-i-huden/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Hud - basalcellscancer (BCC).": [
+      {
+        "gen": "PTCH1",
+        "syndrom": "Gorlins syndrom",
+        "kanoniskt_organ": "Hud",
+        "subkategori": "basalcellscancer (BCC)",
+        "annat_relevant": "Finns risk för läpp-käk-gomspalt, skelettala missbildningar, polydactyli, makrocefali.",
+        "livstidsrisk": "-",
+        "uppfoljning": "Råd om lämpliga solskyddsåtgärder, hudkontroller hos hudläkare: årligen tills det första BCC, därefter var 3-6 månad.",
+        "startalder": "10 år. Tidigare om strålbehandling erhållits",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram basalcellscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/basalcellscancer/vardprogram/)",
+        "uppfoljning_annat": "Läkare bör vara medvetna om den möjliga ökade risken för utvecklingsförsening och följa utvecklingen av barn.",
+        "referens": "-"
+      },
+      {
+        "gen": "SUFU",
+        "syndrom": "-",
+        "kanoniskt_organ": "Hud",
+        "subkategori": "basalcellscancer (BCC)",
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "Råd om lämpliga solskyddsåtgärder och hudkontroller hos hudläkare: årligen tills det första BCC, därefter var 3-6 månad.",
+        "startalder": "20 år. Tidigare om strålbehandling erhållits.",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram basalcellscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/basalcellscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Hud/fibrofolliculom": [
+      {
+        "gen": "FLCN",
+        "syndrom": "Birt-Hogg-Dubés syndrom",
+        "kanoniskt_organ": "Hud",
+        "subkategori": "fibrofolliculom",
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "Kontakt med hudläkare om kosmetiskt störande. Individualiserad bedömning i så fall.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1038/s41431-024-01671-2"
+      }
+    ],
+    "Hypofys": [
+      {
+        "gen": "MEN1",
+        "syndrom": "Multipel endokrin neoplasi typ 1",
+        "kanoniskt_organ": "Hypofys",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "50%",
+        "uppfoljning": "PRL, IGF-I årligen + MR hypofys vart 3:e år. Oftare vid avvikelse i tillväxt, pubertetsutveckling.",
+        "startalder": "10-15 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram neuroendokrina buktumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/neuroendokrina-buktumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Kvinnor bröst": [
+      {
+        "gen": "BRCA1",
+        "syndrom": "Ärftlig bröst- och äggstockscancer",
+        "kanoniskt_organ": "Bröst",
+        "subkategori": "kvinnor",
+        "annat_relevant": "Risk för kontralateral bröstcancer 20 år efter insjuknande: 40%.",
+        "livstidsrisk": "50-80%",
+        "uppfoljning": "Årlig bilddiagnostik 25-75 års ålder inklusive MRT bröst upp till 55 års ålder. Möjlighet till riskreducerande mastektomi.",
+        "startalder": "25 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram bröstcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/brostcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "BRCA2",
+        "syndrom": "Ärftlig bröst- och äggstockscancer",
+        "kanoniskt_organ": "Bröst",
+        "subkategori": "kvinnor",
+        "annat_relevant": "Risk för kontralateral bröstcancer 20 år efter insjuknande: 26%",
+        "livstidsrisk": "50-80%",
+        "uppfoljning": "Årlig bilddiagnostik 25-75 års ålder inklusive MRT bröst upp till 55 års ålder. Möjlighet till riskreducerande mastektomi.",
+        "startalder": "25 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram bröstcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/brostcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Könsträngs tumör med annular tubules": [
+      {
+        "gen": "STK11",
+        "syndrom": "Peutz-Jeghers Syndrom",
+        "kanoniskt_organ": "Könsträngs tumör med annular tubules",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "9% (män)",
+        "uppfoljning": "Uppmärksamma gynekomasti och förstorad testikel.",
+        "startalder": "6-9 års ålder pojkar",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1007/s00428-024-03803-x | https://doi.org/10.3390/jcm10030473"
+      }
+    ],
+    "Lever": [
+      {
+        "gen": "APC",
+        "syndrom": "Familjär adenomatös polypos (FAP), Gardners syndrom",
+        "kanoniskt_organ": "Lever",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "2,5%",
+        "uppfoljning": "Inga regelbundna kontroller. Information om risk.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1093/bjs/znae070"
+      }
+    ],
+    "Livmoderhals, germinala celler (SCTAT), äggstockar, livmoderkropp": [
+      {
+        "gen": "STK11",
+        "syndrom": "Peutz-Jeghers Syndrom",
+        "kanoniskt_organ": "Livmoderhals, germinala celler (SCTAT), äggstockar, livmoderkropp",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "18-50%",
+        "uppfoljning": "Gynundersökning, årligen.",
+        "startalder": "25 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram äggstockscancer, icke epitelial (https://kunskapsbanken.cancercentrum.se/diagnoser/aggstockscancer-icke-epitelial/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.3390/jcm10030473"
+      }
+    ],
+    "Livmoderkropp": [
+      {
+        "gen": "MLH1",
+        "syndrom": "Lynchs syndrom",
+        "kanoniskt_organ": "Livmoderkropp",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "31-44%, https://plsd.eu/",
+        "uppfoljning": "Riskreducerande hysterektomi och bilateral salpingooforektomi (SOEB) för personer som avslutat familjebildning eller senast runt 40 års ålder. Innan riskreducerande kirurgi genomförs rekommenderas årliga gynekologiska undersökningar. Kontrollerna bör inkludera transvaginalt ultraljud (för bedömning av endometrietjocklek) och i förekommande fall endometriebiopsi.",
+        "startalder": "35 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram livmoderkroppscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/livmoderkroppscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "MSH2",
+        "syndrom": "Lynchs syndrom",
+        "kanoniskt_organ": "Livmoderkropp",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "36-53%, https://plsd.eu/",
+        "uppfoljning": "Riskreducerande hysterektomi och bilateral salpingooforektomi (SOEB) för personer som avslutat familjebildning eller senast runt 40 års ålder. Innan riskreducerande kirurgi genomförs rekommenderas årliga gynekologiska undersökningar. Kontrollerna bör inkludera transvaginalt ultraljud (för bedömning av endometrietjocklek) och i förekommande fall endometriebiopsi.",
+        "startalder": "35 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram livmoderkroppscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/livmoderkroppscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "MSH6",
+        "syndrom": "Lynchs syndrom",
+        "kanoniskt_organ": "Livmoderkropp",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "36-57%, https://plsd.eu/",
+        "uppfoljning": "Riskreducerande hysterektomi och bilateral salpingooforektomi (SOEB) för kvinnor som avslutat familjebildning eller senast runt 40 års ålder. Innan riskreducerande kirurgi genomförs rekommenderas årliga gynekologiska undersökningar. Kontrollerna bör inkludera transvaginalt ultraljud (för bedömning av endometrietjocklek) och i förekommande fall endometriebiopsi.",
+        "startalder": "35 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram livmoderkroppscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/livmoderkroppscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "NTHL1 biallelisk (homozygot eller kompound heterozygot)",
+        "syndrom": "NTHL1 Tumor Syndrome",
+        "kanoniskt_organ": "Livmoderkropp",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "Ej definierad",
+        "uppfoljning": "Kontakt med gynekolog, ev kontroller.",
+        "startalder": "30 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi/ | https://10.0.4.162/s13053-025-00323-w"
+      },
+      {
+        "gen": "PMS2",
+        "syndrom": "Lynchs syndrom",
+        "kanoniskt_organ": "Livmoderkropp",
+        "subkategori": null,
+        "annat_relevant": "Bör analyseras endast om immunohistokemi visar bortfall av PMS2. Finns psudogener, kontrollera om analysen är heltäckande",
+        "livstidsrisk": "21% (stort konfidensintervall), https://plsd.eu/",
+        "uppfoljning": "Rekommenderas riskreducerande hysterektomi för postmenopausala mutationsbärare samt premenopausala mutationsbärare efter 40 års ålder. Innan riskreducerande kirurgi genomförs rekommenderas årliga gynekologiska undersökningar. Kontrollerna bör inkludera transvaginalt ultraljud (för bedömning av endometrietjocklek) och i förekommande fall endometriebiopsi.",
+        "startalder": "35 - 40 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram livmoderkroppscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/livmoderkroppscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "POLD1",
+        "syndrom": "PPAP (polymerase proofreading adenomatous polyposis",
+        "kanoniskt_organ": "Livmoderkropp",
+        "subkategori": null,
+        "annat_relevant": "Framförallt mutation i exonukleas domän",
+        "livstidsrisk": "Sannolikt hög men ännu inte fastställd",
+        "uppfoljning": "Riskreducerande operation kan övervägas utifrån fenotyp i släkten.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1093/bjs/znae070"
+      },
+      {
+        "gen": "POLE",
+        "syndrom": "PPAP (polymerase proofreading adenomatous polyposis",
+        "kanoniskt_organ": "Livmoderkropp",
+        "subkategori": null,
+        "annat_relevant": "Framförallt mutation i exonukleas domän",
+        "livstidsrisk": "Ej fastställd",
+        "uppfoljning": "Riskreducerande operation kan övervägas utifrån fenotyp i släkten.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1093/bjs/znae070"
+      },
+      {
+        "gen": "PTEN",
+        "syndrom": "PHTS, PTEN-hamartoma tumör syndrom, innefattar även Bannayan-Riley-Ruvalcabas syndrom, Cowdens syndrom",
+        "kanoniskt_organ": "Livmoderkropp",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "28%",
+        "uppfoljning": "Gynekologiska undersökning inklusiv transvaginal ultraljud.",
+        "startalder": "35 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram livmoderkroppscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/livmoderkroppscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Lunga": [
+      {
+        "gen": "CDKN2A",
+        "syndrom": "-",
+        "kanoniskt_organ": "Lunga",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "10% (hos storrökare)",
+        "uppfoljning": "Lågdos DT vartannat år hos storrökare.",
+        "startalder": "Efter minst 30 paketår",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram vårdprogram (https://kunskapsbanken.cancercentrum.se/diagnoser/melanom/vardprogram/bilaga-1.-handlaggning-av-individer-inom-familjer-med-familjart-melanom)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Lungblastom": [
+      {
+        "gen": "DICER1",
+        "syndrom": "DICER1 relaterad cancer predisposition syndrom",
+        "kanoniskt_organ": "Lunga",
+        "subkategori": "lungblastom",
+        "annat_relevant": "Kontroller av foster påbörjas under graviditet",
+        "livstidsrisk": "Ej definierad",
+        "uppfoljning": "Ultraljud prenatalt under 3:e trimester (foster anlagsbärare eller med 50% risk). Lungröntgen var 6:e månad eller lågdos-DT thorax under första året och vid 2,5-3 år. Engångs lungröntgen vid diagnos efter 6 års ålder.",
+        "startalder": "0 år",
+        "slut_av_kontroller": "6 år",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1007/s10689-021-00264-y"
+      }
+    ],
+    "Lungcystor/pneumothorax": [
+      {
+        "gen": "FLCN",
+        "syndrom": "Birt-Hogg-Dubés syndrom",
+        "kanoniskt_organ": "Lunga",
+        "subkategori": "lungcystor/pneumothorax",
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "Individualiserad bedömning.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1038/s41431-024-01671-2"
+      }
+    ],
+    "Lymfom": [
+      {
+        "gen": "BLM - biallelisk (homozygot eller kompound heterozygot)",
+        "syndrom": "Blooms syndrom",
+        "kanoniskt_organ": "Lymfom",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "Okänd.",
+        "uppfoljning": "MRT helkropp med 1-2 års intervall.",
+        "startalder": "12 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1016/j.gim.2022.03.008 | https://doi.org/10.1159/000452082 | https://www.ncbi.nlm.nih.gov/books/NBK1398/"
+      }
+    ],
+    "Magsäck": [
+      {
+        "gen": "APC  (mutationer i exon 1B promotor)",
+        "syndrom": "GAPPS (gastric adenocarcinoma and proximal polyposis of the stomach)",
+        "kanoniskt_organ": "Magsäck",
+        "subkategori": null,
+        "annat_relevant": "Endast mutationer i exon 1B promotor.",
+        "livstidsrisk": "Upp till 25%",
+        "uppfoljning": "Regelbundna gastroskopier från 16-18 års ålder. Om gastroskopi visar omfattande polypos eller om biopsi visar dysplasi bör profylaktisk gastrektomi övervägas.",
+        "startalder": "16-18 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/Cancergenetik/Arftlig-ventrikelcancer-2021-06-10.pdf"
+      },
+      {
+        "gen": "CDH1",
+        "syndrom": "Ärftlig diffus ventrikelcancer och lobulär bröstcancer syndrom",
+        "kanoniskt_organ": "Magsäck",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "33% för kvinnor och 42% för män",
+        "uppfoljning": "Gastroskopikontroller årligen med white light gastroskop och multipla biopsier samt H.pylori-eradikering. I högriskfamiljer med fall av diffus ventrikelcancer även profylaktisk gastrektomi i 20-30 års ålder.",
+        "startalder": "18-20 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/Cancergenetik/Arftlig-ventrikelcancer-2021-06-10.pdf"
+      },
+      {
+        "gen": "CTNN1A",
+        "syndrom": "Hereditär diffus ventrikel cancer",
+        "kanoniskt_organ": "Magsäck",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "50%",
+        "uppfoljning": "Mycket sällsynt, bör tas upp på MDK. Generellt rekommenderas gastroskopikontroller årligen med white light gastroskop och multipla biopsier samt i högriskfamiljer även profylaktisk gastrektomi i 20-30 års ålder.",
+        "startalder": "18-20 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/Cancergenetik/Arftlig-ventrikelcancer-2021-06-10.pdf"
+      }
+    ],
+    "Magsäck, tunntarm och tjocktarm.": [
+      {
+        "gen": "STK11",
+        "syndrom": "Peutz-Jeghers Syndrom",
+        "kanoniskt_organ": "Magsäck",
+        "subkategori": "magsäck/tunntarm/tjocktarm",
+        "annat_relevant": "-",
+        "livstidsrisk": "57%",
+        "uppfoljning": "Esofagogastroduodenoskopi, koloskopi and kapselendoskopi av tunntarm, 3 års intervall.",
+        "startalder": "8 år - Basal undersökning (fortsatta kontroller om polyp, 1-3 års intervall). Alla från 18 år.",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "Risk för intussusception 50-68% under barnaåren. Endoskopisk polypektomi kan övervägas om polyper mer än 1.5-2 cm i tunntarmen. Mukokutan pigmentering som uppstår i barnålder och kan blekna i sena tonåren.",
+        "referens": "https://doi.org/10.3390/jcm10030473"
+      }
+    ],
+    "Magsäck/tolvfingertarm": [
+      {
+        "gen": "APC",
+        "syndrom": "Familjär adenomatös polypos (FAP), Gardners syndrom",
+        "kanoniskt_organ": "Magsäck/tolvfingertarm",
+        "subkategori": null,
+        "annat_relevant": "Finns fenotyp-genotyp korrelering (https://www.ncbi.nlm.nih.gov/books/NBK1345/)",
+        "livstidsrisk": "4-10%",
+        "uppfoljning": "Gastroskopier, intervall utifrån fynd enligt Spiegelman-klassifikation. Profylaktisk operation diskuteras vid flertal negativt prognostiska undersökningsfynd.",
+        "startalder": "20-25 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram tjock- och ändtarmscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/tjock-och-andtarmscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "BMPR1A",
+        "syndrom": "Juvenil polypos syndrom",
+        "kanoniskt_organ": "Magsäck/tolvfingertarm",
+        "subkategori": null,
+        "annat_relevant": "Det finns en aggressivare form med deletion av BMPR1A som bör få täta kontroller och uppföljning på expertcenter.",
+        "livstidsrisk": "-",
+        "uppfoljning": "Gastroduodenoskopi med 1-3 års intervall.",
+        "startalder": "25 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1055/a-0965-0605 | https://doi.org/10.1097/MPG.0000000000002246"
+      },
+      {
+        "gen": "MSH3 biallelisk",
+        "syndrom": "Recessivt",
+        "kanoniskt_organ": "Magsäck/tolvfingertarm",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "Gastroduodenoskopi, 5-års intervall.",
+        "startalder": "35 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1093/bjs/znae070"
+      },
+      {
+        "gen": "MUTYH biallelisk (homozygot eller kompound heterozygot)",
+        "syndrom": "MAP (MUTYH-associerad polypos)",
+        "kanoniskt_organ": "Magsäck/tolvfingertarm",
+        "subkategori": null,
+        "annat_relevant": "1% av befolkning är heterozygota anlagsbärarebärare",
+        "livstidsrisk": "5%",
+        "uppfoljning": "Gastroskopier, intervall utifrån fynd enl Spiegelman-klassifikation, riskreducerande operation diskuteras vid flertal negativt prognostiska undersökningsfynd.",
+        "startalder": "35 år",
+        "slut_av_kontroller": "Individuell bedömning",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://www.ncbi.nlm.nih.gov/books/NBK107219/"
+      },
+      {
+        "gen": "POLD1",
+        "syndrom": "PPAP (polymerase proofreading adenomatous polyposis",
+        "kanoniskt_organ": "Magsäck/tolvfingertarm",
+        "subkategori": null,
+        "annat_relevant": "Framförallt mutation i exonukleas domän",
+        "livstidsrisk": "Hög men ännu inte fastställd",
+        "uppfoljning": "Gastroskopier enligt FAP-upplägg.",
+        "startalder": "25 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1093/bjs/znae070"
+      },
+      {
+        "gen": "POLE",
+        "syndrom": "PPAP (polymerase proofreading adenomatous polyposis",
+        "kanoniskt_organ": "Magsäck/tolvfingertarm",
+        "subkategori": null,
+        "annat_relevant": "Framförallt mutation i exonukleas domän",
+        "livstidsrisk": "Hög men ännu inte fastställd",
+        "uppfoljning": "Gastroskopier enligt FAP-upplägg.",
+        "startalder": "25 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1093/bjs/znae070"
+      },
+      {
+        "gen": "SMAD4",
+        "syndrom": "Juvenil polypos syndrom",
+        "kanoniskt_organ": "Magsäck/tolvfingertarm",
+        "subkategori": null,
+        "annat_relevant": "SMAD4 -HHT (hereditär hemorragisk telgangiektasi)",
+        "livstidsrisk": "20-60%",
+        "uppfoljning": "Gastroduodenoskopi 1-3 års intervall.",
+        "startalder": "18 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram matstrups- och magsäckscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/matstrups-och-magsackscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Malign perifer nervskidetumör (MPNST)": [
+      {
+        "gen": "NF1",
+        "syndrom": "Neurofibromatos typ 1",
+        "kanoniskt_organ": "Malign perifer nervskidetumör (MPNST)",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "10%",
+        "uppfoljning": "Klinisk kontroll med 1-3 års intervall . Ställningstagande till MR vid misstanke på plexiforma neurofibrom.",
+        "startalder": "Vid genetisk diagnos",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/pediatrisk_genetik/Neurofibromatos-typ-1-NF1-handlaggningsstod.pdf"
+      }
+    ],
+    "Medulloblastom": [
+      {
+        "gen": "PTCH1",
+        "syndrom": "Gorlins syndrom",
+        "kanoniskt_organ": "Medulloblastom",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "< 2%",
+        "uppfoljning": "Årliga kliniska kontroller med bedömning av neurologiskt status. MRT av hjärnan rekommenderas inte rutinmässigt men bör erbjudas vid förekomst av neurologiska symtom.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram basalcellscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/basalcellscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "SUFU",
+        "syndrom": "-",
+        "kanoniskt_organ": "Medulloblastom",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "8-9%",
+        "uppfoljning": "MR hjärna (först med kontrast, följande utan kontrast) 0-3 år var 4-e månad, 3-5 år var 6-e månad.",
+        "startalder": "0 år",
+        "slut_av_kontroller": "5 år",
+        "nationellt_vardprogram": "Nationellt vårdprogram basalcellscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/basalcellscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Meningiom": [
+      {
+        "gen": "PTCH1",
+        "syndrom": "Gorlins syndrom",
+        "kanoniskt_organ": "Meningiom",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "Årliga kliniska kontroller med bedömning av neurologiskt status. MRT av hjärnan rekommenderas inte rutinmässigt men bör erbjudas vid förekomst av neurologiska symtom.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram basalcellscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/basalcellscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "SUFU",
+        "syndrom": "-",
+        "kanoniskt_organ": "Meningiom",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "MR hjärna 3-5 års intervall.",
+        "startalder": "30 år. Tidigare om strålbehandling erhållits.",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram basalcellscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/basalcellscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Mesoteliom (peritoneum och pleura)": [
+      {
+        "gen": "BAP1",
+        "syndrom": "BAP1-tumör predispositionsyndrom",
+        "kanoniskt_organ": "Mesoteliom (peritoneum och pleura)",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "25% av probander, 17% av bärare (icke proband).",
+        "uppfoljning": "Granskning av peritoneum och pleura i samband med MRT endast inom ramen för kliniska studier.",
+        "startalder": "Vid inklusion i studie.",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1038/s41431-023-01448-z"
+      }
+    ],
+    "Multipla tumörer": [
+      {
+        "gen": "MLH1 biallelisk (homozygot eller kompound heterozygot)",
+        "syndrom": "Constitutional mismatch repair deficiency (CMMRD)",
+        "kanoniskt_organ": "Multipla tumörer",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "100%",
+        "uppfoljning": "Handläggning via MDK. Flertal undersökningar där nyttan av dessa noggrant behöver övervägas samt diskuteras med familjen. Klinisk undersökning var 6 månad. MR hjärna 1-2 gånger per år från 2 års ålder. Koloskopi årligen från 6 års ålder. Årlig esophagogastroduodenoskopi/kapsel från 10 års ålder. Gynekologiska kontroller och kontroller av urinvägar.",
+        "startalder": "0 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1038/s41431-024-01708-6"
+      },
+      {
+        "gen": "MSH2 biallelisk (homozygot eller kompound heterozygot)",
+        "syndrom": "Constitutional mismatchrepair deficiency",
+        "kanoniskt_organ": "Multipla tumörer",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "100%",
+        "uppfoljning": "Handläggning via MDK. Flertal undersökningar där nyttan av dessa noggrant behöver övervägas samt diskuteras med familjen. Klinisk undersökning var 6 månad. MR hjärna 1-2 gånger per år från 2 års ålder. Koloskopi årligen från 6 års ålder. Årlig esophagogastroduodenoskopi/kapsel från 10 års ålder. Gynekologiska kontroller och kontroller av urinvägar.",
+        "startalder": "0 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1038/s41431-024-01708-6"
+      },
+      {
+        "gen": "MSH6 biallelisk (homozygot eller kompound heterozygot)",
+        "syndrom": "Constitutional mismatchrepair deficiency",
+        "kanoniskt_organ": "Multipla tumörer",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "100%",
+        "uppfoljning": "Handläggning via MDK. Flertal undersökningar där nyttan av dessa noggrant behöver övervägas samt diskuteras med familjen. Klinisk undersökning var 6 månad. MR hjärna 1-2 gånger per år från 2 års ålder. Koloskopi årligen från 6 års ålder. Årlig esophagogastroduodenoskopi/kapsel från 10 års ålder. Gynekologiska kontroller och kontroller av urinvägar.",
+        "startalder": "0 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1038/s41431-024-01708-6"
+      },
+      {
+        "gen": "PMS2 biallelisk (homozygot eller kompound heterozygot",
+        "syndrom": "Constitutional mismatchrepair deficiency",
+        "kanoniskt_organ": "Multipla tumörer",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "100%",
+        "uppfoljning": "Handläggning via MDK. Flertal undersökningar där nyttan av dessa noggrant behöver övervägas samt diskuteras med familjen. Klinisk undersökning var 6 månad. MR hjärna 1-2 gånger per år från 2 års ålder. Koloskopi årligen från 6 års ålder. Årlig esophagogastroduodenoskopi/kapsel från 10 års ålder. Gynekologiska kontroller och kontroller av urinvägar.",
+        "startalder": "0 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1038/s41431-024-01708-6"
+      },
+      {
+        "gen": "PRKACA",
+        "syndrom": "Carney complex",
+        "kanoniskt_organ": "Multipla tumörer",
+        "subkategori": null,
+        "annat_relevant": "Multipla tumörer",
+        "livstidsrisk": "-",
+        "uppfoljning": "Kliniska kontroller samt uppföljning via endokrinolog.",
+        "startalder": "1 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://www.ncbi.nlm.nih.gov/books/NBK1286/"
+      },
+      {
+        "gen": "PRKAR1A",
+        "syndrom": "Carney complex",
+        "kanoniskt_organ": "Multipla tumörer",
+        "subkategori": null,
+        "annat_relevant": "Multipla tumörer",
+        "livstidsrisk": "-",
+        "uppfoljning": "Kliniska kontroller samt uppföljning via endokrinolog.",
+        "startalder": "0 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram binjuretumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/binjuretumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Njurar": [
+      {
+        "gen": "BAP1",
+        "syndrom": "BAP1-tumör predispositionsyndrom",
+        "kanoniskt_organ": "Njurar",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "10% av bärare",
+        "uppfoljning": "MRT årligen.",
+        "startalder": "30 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram njurcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/njurcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "DICER1",
+        "syndrom": "DICER1 relaterad cancer predisposition syndrom",
+        "kanoniskt_organ": "Njurar",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "7%",
+        "uppfoljning": "Ultraljud av buk var 6:e månad. Engångs ultraljud av buk vid diagnos efter 6 års ålder.",
+        "startalder": "0 år",
+        "slut_av_kontroller": "6 år",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1007/s10689-021-00264-y"
+      },
+      {
+        "gen": "FH",
+        "syndrom": "HLRCC (hereditär leiomyomatos och klarcellig njurcancer syndrom)",
+        "kanoniskt_organ": "Njurar",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "20%",
+        "uppfoljning": "MRT njurar årligen.",
+        "startalder": "10 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram njurcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/njurcancer/vardprogram/)",
+        "uppfoljning_annat": "Ökad förekomst av kutant leiomyom och myom i livmoder",
+        "referens": "-"
+      },
+      {
+        "gen": "FLCN",
+        "syndrom": "Birt-Hogg-Dubés syndrom",
+        "kanoniskt_organ": "Njurar",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "15-30%",
+        "uppfoljning": "MRT njurar vart tredje år.",
+        "startalder": "20 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram njurcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/njurcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Njurar (angiomyolipom)": [
+      {
+        "gen": "TSC1",
+        "syndrom": "Tuberös skleros",
+        "kanoniskt_organ": "Njurar",
+        "subkategori": "angiomyolipom",
+        "annat_relevant": "-",
+        "livstidsrisk": "75% av TS patienter har angiomyolipom",
+        "uppfoljning": "MR varje till vart tredje år.",
+        "startalder": "Vid diagnos alt påvisad mutation",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://snpf.barnlakarforeningen.se/wp-content/uploads/sites/4/2017/07/sjuttontsc.pdf | https://www.socialstyrelsen.se/kunskapsstod-och-regler/omraden/sallsynta-halsotillstand/om-kunskapsdatabasen/sok-bland-sallsynta-halsotillstand/tuberos-skleros/"
+      },
+      {
+        "gen": "TSC2",
+        "syndrom": "Tuberös skleros",
+        "kanoniskt_organ": "Njurar",
+        "subkategori": "angiomyolipom",
+        "annat_relevant": "-",
+        "livstidsrisk": "75 av TS patienter har angiomyolipom",
+        "uppfoljning": "MR varje till vart tredje år.",
+        "startalder": "Vid diagnos alt påvisad mutation.",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://snpf.barnlakarforeningen.se/wp-content/uploads/sites/4/2017/07/sjuttontsc.pdf | https://www.socialstyrelsen.se/kunskapsstod-och-regler/omraden/sallsynta-halsotillstand/om-kunskapsdatabasen/sok-bland-sallsynta-halsotillstand/tuberos-skleros/"
+      }
+    ],
+    "Njurar (ffa papillär njurcancer )": [
+      {
+        "gen": "PTEN",
+        "syndrom": "PHTS, PTEN-hamartoma tumör syndrom, innefattar även Bannayan-Riley-Ruvalcabas syndrom, Cowdens syndrom",
+        "kanoniskt_organ": "Njurar",
+        "subkategori": "papillär",
+        "annat_relevant": "-",
+        "livstidsrisk": "34%",
+        "uppfoljning": "Ultraljud eller MR, vartannat år.",
+        "startalder": "40 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram njurcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/njurcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Njurar (klarcellig njurcancer)": [
+      {
+        "gen": "VHL",
+        "syndrom": "Von Hippel-Lindaus syndrom",
+        "kanoniskt_organ": "Njurar",
+        "subkategori": "klarcellig",
+        "annat_relevant": "-",
+        "livstidsrisk": "40-70%",
+        "uppfoljning": "MR vartannat år.",
+        "startalder": "15 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram njurcancer (https://kunskapsbanken.cancercentrum.se/diagnoser/njurcancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Njurar (klarcellig)": [
+      {
+        "gen": "SDHB",
+        "syndrom": "Ärftligt feokromocytom/paragangliom syndrom",
+        "kanoniskt_organ": "Njurar",
+        "subkategori": "klarcellig",
+        "annat_relevant": "-",
+        "livstidsrisk": "14%",
+        "uppfoljning": "Årliga plasma (nor)metanefriner + HK-MR med 2 års intervall.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/Cancergenetik/Arftligt-feokromocytom_paragangliom_20240401.pdf"
+      }
+    ],
+    "Näthinna (retinala hemangioblastom)": [
+      {
+        "gen": "VHL",
+        "syndrom": "Von Hippel-Lindaus syndrom",
+        "kanoniskt_organ": "Ögon",
+        "subkategori": "näthinna (retinala hemangioblastom)",
+        "annat_relevant": "-",
+        "livstidsrisk": "50-60% av VHL patienter",
+        "uppfoljning": "Ögonbottenundersökning årligen.",
+        "startalder": "3-5 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1016/j.ejmg.2022.104538"
+      }
+    ],
+    "Osteoporos": [
+      {
+        "gen": "NF1",
+        "syndrom": "Neurofibromatos typ 1",
+        "kanoniskt_organ": "Osteoporos",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "Riskbedömning för osteoporos.",
+        "startalder": "40 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/pediatrisk_genetik/Neurofibromatos-typ-1-NF1-handlaggningsstod.pdf"
+      }
+    ],
+    "Paragangliom": [
+      {
+        "gen": "VHL",
+        "syndrom": "Von Hippel-Lindaus syndrom",
+        "kanoniskt_organ": "Paragangliom/feokromocytom",
+        "subkategori": "paragangliom",
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "MR buk med kontrast (njurar, pankreas, binjurar) vartannat år samt årlig plasma-meta- och normetanephriner.",
+        "startalder": "5 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1016/j.ejmg.2022.104538"
+      }
+    ],
+    "Paragangliom/feokromocytom": [
+      {
+        "gen": "MAX",
+        "syndrom": "Ärftlig feokromocytom/paragangliomsyndrom",
+        "kanoniskt_organ": "Paragangliom/feokromocytom",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "Okänd",
+        "uppfoljning": "Klinisk kontroll av blodtryck vartannat år. Årliga plasma (nor)metanefriner + MRT helkropp med 2 års intervall. Kan glesas ut till vart 3:e år om inga fynd.",
+        "startalder": "18 år (individuell bedömning)",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram binjuretumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/binjuretumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "SDHA",
+        "syndrom": "Ärftligt feokromocytom/paragangliom syndrom",
+        "kanoniskt_organ": "Paragangliom/feokromocytom",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "1-10%",
+        "uppfoljning": "Årliga plasma (nor)metanefriner + HK-MR med 2 års intervall. Kan glesas ut till var 3:e år om inga fynd.",
+        "startalder": "18 år (individuell bedömning)",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram binjuretumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/binjuretumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "SDHAF2 (på maternell allel)",
+        "syndrom": "Ärftligt feokromocytom/paragangliom syndrom",
+        "kanoniskt_organ": "Paragangliom/feokromocytom",
+        "subkategori": null,
+        "annat_relevant": "Genetisk prägling av maternell allel",
+        "livstidsrisk": "-",
+        "uppfoljning": "Engångskontroll: blodtryck, plasma (nor)metanefriner och HK-MR en gång om varianten ligger på maternell allel.",
+        "startalder": "18 år (individuell bedömning)",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram binjuretumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/binjuretumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/Cancergenetik/Arftligt-feokromocytom_paragangliom_20240401.pdf"
+      },
+      {
+        "gen": "SDHAF2 (på paternell allel)",
+        "syndrom": "Ärftligt feokromocytom/paragangliom syndrom",
+        "kanoniskt_organ": "Paragangliom/feokromocytom",
+        "subkategori": null,
+        "annat_relevant": "Genetisk prägling av maternell allel",
+        "livstidsrisk": "Låg risk för metastatisk sjukdom",
+        "uppfoljning": "Klinisk kontroll av blodtryck vart annat år. Årliga plasma (nor)metanefriner + HK-MR med 2 års intervall. Kan glesas ut till var 3:e år om inga fynd.",
+        "startalder": "18 år (individuell bedömning)",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram binjuretumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/binjuretumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/Cancergenetik/Arftligt-feokromocytom_paragangliom_20240401.pdf"
+      },
+      {
+        "gen": "SDHB",
+        "syndrom": "Ärftligt feokromocytom/paragangliom syndrom",
+        "kanoniskt_organ": "Paragangliom/feokromocytom",
+        "subkategori": null,
+        "annat_relevant": "Hös risk för metastatisk sjukdom.",
+        "livstidsrisk": "30%",
+        "uppfoljning": "Klinisk kontroll av blodtryck vartannat år. Årliga plasma (nor)metanefriner + HK-MR med 2 års intervall.",
+        "startalder": "6-10 år (individuell bedömning)",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram binjuretumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/binjuretumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "SDHC",
+        "syndrom": "Ärftligt feokromocytom/paragangliom syndrom",
+        "kanoniskt_organ": "Paragangliom/feokromocytom",
+        "subkategori": null,
+        "annat_relevant": "20% metastatisk sjukdom.",
+        "livstidsrisk": "-",
+        "uppfoljning": "Årliga plasma (nor)metanefriner + HK-MR med 2 års intervall. Kan glesas ut till var 3:e år om inga fynd.",
+        "startalder": "18 år (individuell bedömning)",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram binjuretumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/binjuretumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "SDHD (på maternell allel)",
+        "syndrom": "Ärftligt feokromocytom/paragangliom syndrom",
+        "kanoniskt_organ": "Paragangliom/feokromocytom",
+        "subkategori": null,
+        "annat_relevant": "Genetisk prägling av maternell allel",
+        "livstidsrisk": "-",
+        "uppfoljning": "Engångskontroll: blodtryck, plasma (nor)metanefriner och HK-MR en gång om varianten ligger på maternell allel.",
+        "startalder": "18 år (individuell bedömning)",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram binjuretumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/binjuretumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "SDHD (på paternell allel)",
+        "syndrom": "Ärftligt feokromocytom/paragangliom syndrom",
+        "kanoniskt_organ": "Paragangliom/feokromocytom",
+        "subkategori": null,
+        "annat_relevant": "Genetisk prägling av maternell allel",
+        "livstidsrisk": "Låg risk för metastatisk sjukdom",
+        "uppfoljning": "Klinisk kontroll av blodtryck vart annat år. Årliga plasma (nor)metanefriner + HK-MR med 2 års intervall. Kan glesas ut till var 3:e år om inga fynd",
+        "startalder": "18 år (individuell bedömning)",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram binjuretumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/binjuretumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "TMEM127",
+        "syndrom": "Ärftlig feokromocytom/paragangliom syndrom",
+        "kanoniskt_organ": "Paragangliom/feokromocytom",
+        "subkategori": null,
+        "annat_relevant": "Metastasrisken <5%",
+        "livstidsrisk": "-",
+        "uppfoljning": "Klinisk kontroll av blodtryck vart annat år. Årliga plasma (nor)metanefriner + HK-MR med 2 års intervall. Kan glesas ut till var 3:e år om inga fynd.",
+        "startalder": "18 år (individuell bedömning)",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram binjuretumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/binjuretumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Prostata": [
+      {
+        "gen": "BRCA2",
+        "syndrom": "Ärftlig bröst- och äggstockscancer",
+        "kanoniskt_organ": "Prostata",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "27-60%",
+        "uppfoljning": "Individualiserat kontrollprogram utifrån PSA.",
+        "startalder": "40 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram prostatacancer (https://kunskapsbanken.cancercentrum.se/diagnoser/prostatacancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "MSH2",
+        "syndrom": "Lynchs syndrom",
+        "kanoniskt_organ": "Prostata",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "18-32%, https://plsd.eu/",
+        "uppfoljning": "PSA",
+        "startalder": "40 år",
+        "slut_av_kontroller": "Individuell bedömning",
+        "nationellt_vardprogram": "Nationellt vårdprogram prostatacancer (https://kunskapsbanken.cancercentrum.se/diagnoser/prostatacancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "TP53",
+        "syndrom": "TP53-relaterad cancerpredisponerande syndrom",
+        "kanoniskt_organ": "Prostata",
+        "subkategori": null,
+        "annat_relevant": "TP53-bärare bör undvika joniserande strålning. Därför bör bilddiagnostik som inte innebär stråldos tillämpas i första hand. Vissa missens varianter är ffa associerade med ökad risk för bröstcancer och är generellt inte associerade med barncancer.",
+        "livstidsrisk": "-",
+        "uppfoljning": "PSA kontroller årligen .",
+        "startalder": "40 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram prostatacancer (https://kunskapsbanken.cancercentrum.se/diagnoser/prostatacancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Rhabdoida tumörer": [
+      {
+        "gen": "SMARCA4",
+        "syndrom": "Rhabdoid tumörpredispostionssyndrom 2",
+        "kanoniskt_organ": "Rhabdoida tumörer",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "Okänd risk och spektrum, mycket sällsynt",
+        "uppfoljning": "V g se rekommendationer för SMARCB1 (MRT typ1).",
+        "startalder": "Vid genetisk diagnos",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1007/s10689-021-00229-1"
+      }
+    ],
+    "Rhaboida tumörer (olika lokalisationer)": [
+      {
+        "gen": "SMARCB1",
+        "syndrom": "Rhabdoid tumör predispositionsyndrom 1",
+        "kanoniskt_organ": "Rhabdoida tumörer",
+        "subkategori": "olika lokalisationer",
+        "annat_relevant": "Missense-PV och exon 1-frameshift orsakar ett re-initieringskodon vilket är associerade med schwannomatos. Stora deletioner och stopp-kodoner predisponerar nästan uteslutande för MRT (malignant rhabdoid tumör). Notera att hypomorfa varianter ibland kan inducera både MRT och schwannomatos, synkront eller metakront. Dominant-negativ eller gain-of-function patogena varianter i SMARCB1-genen orsakar Coffin-Siris syndrom.",
+        "livstidsrisk": "Okänd (penetrans >90% vid 5 års ålder)",
+        "uppfoljning": "Helkropps MR.",
+        "startalder": "Vid genetisk diagnos",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1007/s10689-021-00229-1"
+      }
+    ],
+    "Saknar organ/symtom": [
+      {
+        "gen": "PDE11A",
+        "syndrom": "Carney complex",
+        "kanoniskt_organ": "Saknar organ/symtom",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "Kliniska kontroller samt uppföljning via endokrinolog.",
+        "startalder": "2 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://www.ncbi.nlm.nih.gov/books/NBK1286/"
+      },
+      {
+        "gen": "PDE8B",
+        "syndrom": "Carney complex",
+        "kanoniskt_organ": "Saknar organ/symtom",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "Kliniska kontroller samt uppföljning via endokrinolog.",
+        "startalder": "3 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://www.ncbi.nlm.nih.gov/books/NBK1286/"
+      }
+    ],
+    "Sarkom": [
+      {
+        "gen": "RB1",
+        "syndrom": "Retinoblastom",
+        "kanoniskt_organ": "Sarkom",
+        "subkategori": null,
+        "annat_relevant": "Ökad risk för mjukdelssarkom.",
+        "livstidsrisk": "4% (om tidigare bilaterala retinoblastom)",
+        "uppfoljning": "Skelett, långa rörbenens tillväxtområden (epifyserna). Risken att utveckla osteosarkom för den som tidigare haft dubbelsidigt retinoblastom är cirka 4 procent.",
+        "startalder": "Tillväxtspurten i puberteten.",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram buksarkom (https://kunskapsbanken.cancercentrum.se/diagnoser/buksarkom/Vardprogram/) | Nationellt vårdprogram vårdprogram (https://kunskapsbanken.cancercentrum.se/diagnoser/sarkom/vardprogram/arftlighet/)",
+        "uppfoljning_annat": "-",
+        "referens": "https://www.socialstyrelsen.se/kunskapsstod-och-regler/omraden/sallsynta-halsotillstand/om-kunskapsdatabasen/sok-bland-sallsynta-halsotillstand/retinoblastom/"
+      },
+      {
+        "gen": "TP53",
+        "syndrom": "TP53-relaterad cancerpredisponerande syndrom",
+        "kanoniskt_organ": "Sarkom",
+        "subkategori": null,
+        "annat_relevant": "TP53-bärare bör undvika joniserande strålning. Därför bör bilddiagnostik som inte innebär stråldos tillämpas i första hand. Vissa missens varianter är ffa associerade med ökad risk för bröstcancer och är generellt inte associerade med barncancer.",
+        "livstidsrisk": "-",
+        "uppfoljning": "Helkropps-MR, årligen (baseline med gadolinium kontrast)",
+        "startalder": "15-18 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/Cancergenetik/Riktlinjer_TP53_250401.pdf"
+      }
+    ],
+    "Sarkom i muskler, skelett och sköldkörtelcancer": [
+      {
+        "gen": "WRN biallelisk (homozygot eller  kompound heterozygot)",
+        "syndrom": "Werner syndrome",
+        "kanoniskt_organ": "Sarkom",
+        "subkategori": "muskler/skelett + sköldkörtelcancer",
+        "annat_relevant": "-",
+        "livstidsrisk": ">95%",
+        "uppfoljning": "Fysisk undersökning, årligen; multidisciplinär uppföljning, bör tas upp på MDK för samordning.",
+        "startalder": "Vid genetisk diagnos",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "Ja, av flertal olika organ",
+        "referens": "https://www.ncbi.nlm.nih.gov/books/NBK1514/"
+      }
+    ],
+    "Schwannom": [
+      {
+        "gen": "LZTR1",
+        "syndrom": "LZRT1- relaterad schwannomatos",
+        "kanoniskt_organ": "Schwannom",
+        "subkategori": null,
+        "annat_relevant": "Endast trunkerande varianter. Endast patogena (P) varianter bekräftar diagnosen. Vid fynd av sannolikt patogen (LP) variant krävs specifik tumördiagnostik för att fastställa diagnos. 1% av befolkningen har dessa varianter utan att ha några symtom. Bifynd av patogen variant i LZTR1 föranleder ingen uppföljning eller undersökningar.",
+        "livstidsrisk": "40-50%: hjärna, ryggmärg och dess hinnor -Schwannom, olika lokalisationer, även unilateral vestibulärt schwannom.",
+        "uppfoljning": "MRT helkropp/hjärna och ryggmärg samt hörselkanal MRT, upprepa vid symtom, annars 2-3 års intervall.",
+        "startalder": "12-14 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1038/s41431-022-01086-x"
+      },
+      {
+        "gen": "SMARCB1",
+        "syndrom": "SMARCB1-relaterad schwannomatos",
+        "kanoniskt_organ": "Schwannom",
+        "subkategori": null,
+        "annat_relevant": "Hjärna, ryggmärg och dess hinnor. Schwannom har olika lokalisationer, även unilateral vestibulärt schwannom förekommer",
+        "livstidsrisk": "40-50%",
+        "uppfoljning": "HK-MRT/hjärna och ryggmärg MR, upprepa vid symptom, annars 2-3 års intervall.",
+        "startalder": "12-14 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "nej",
+        "referens": "https://doi.org/10.1038/s41431-022-01086-x"
+      }
+    ],
+    "Sköldkörtel": [
+      {
+        "gen": "APC",
+        "syndrom": "Familjär adenomatös polypos (FAP), Gardners syndrom",
+        "kanoniskt_organ": "Sköldkörtel",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "2-9%",
+        "uppfoljning": "Inga regelbundna kontroller. Information om risk.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1093/bjs/znae070"
+      },
+      {
+        "gen": "DICER1",
+        "syndrom": "DICER1 relaterad cancer predisposition syndrom",
+        "kanoniskt_organ": "Sköldkörtel",
+        "subkategori": null,
+        "annat_relevant": "Struma är mycket vanlig, 17% män, 75% kvinnor",
+        "livstidsrisk": "Okänd",
+        "uppfoljning": "Ultraljud av sköldkörtel med 3 års intervall. Engångs ultraljud av sköldkörtel om diagnos vid 40-50 års ålder. Tyreoideafunktion bör kontrolleras hos gravida.",
+        "startalder": "8 år",
+        "slut_av_kontroller": "40 år",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1007/s10689-021-00264-y"
+      }
+    ],
+    "Sköldkörtel (medullär)": [
+      {
+        "gen": "RET",
+        "syndrom": "Multipel endokrin neoplasi typ 2",
+        "kanoniskt_organ": "Sköldkörtel",
+        "subkategori": "medullär",
+        "annat_relevant": "Olika expressivitet beroende på variant och därför olika start ålder för kontroller.",
+        "livstidsrisk": "100%",
+        "uppfoljning": "Riskreducerande operation av sköldkörtel. Om mild variant kan calcitonin kontroller göras var 6- mån om stabilt, kan intervallet ökas till 1 år.",
+        "startalder": "0 år (beroende på variant som finns i familjen)",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram vårdprogram (https://kunskapsbanken.cancercentrum.se/diagnoser/skoldkortelcancer/vardprogram/medullar-tyreoideacancer-mtc/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Sköldkörteln": [
+      {
+        "gen": "PTEN",
+        "syndrom": "PHTS, PTEN-hamartoma tumör syndrom, innefattar även Bannayan-Riley-Ruvalcabas syndrom, Cowdens syndrom",
+        "kanoniskt_organ": "Sköldkörtel",
+        "subkategori": null,
+        "annat_relevant": "Även typisk med kolloid struma.",
+        "livstidsrisk": "35%",
+        "uppfoljning": "Ultraljud, årligen.",
+        "startalder": "18 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1038/s41431-020-0651-7"
+      }
+    ],
+    "Tjock- och ändtarm": [
+      {
+        "gen": "APC",
+        "syndrom": "Familjär adenomatös polypos (FAP), Gardners syndrom",
+        "kanoniskt_organ": "Tjock- och ändtarm",
+        "subkategori": null,
+        "annat_relevant": "Finns fenotyp-genotyp korrelering (https://www.ncbi.nlm.nih.gov/books/NBK1345/). Bedömning tandläkare, osteom (om kodon 767-1578 eller familjehistoria).",
+        "livstidsrisk": "100%",
+        "uppfoljning": "Koloskopi regelbundet, vanligvis årligen tills riskreducerande operation.",
+        "startalder": "12-15 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram tjock- och ändtarmscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/tjock-och-andtarmscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "BMPR1A",
+        "syndrom": "Juvenil polypos syndrom",
+        "kanoniskt_organ": "Tjock- och ändtarm",
+        "subkategori": null,
+        "annat_relevant": "Det finns en aggressivare form med deletion av BMPR1A som bör få täta kontroller och uppföljning på expertcenter.",
+        "livstidsrisk": "-",
+        "uppfoljning": "Koloskopi med 1-3 års intervall.",
+        "startalder": "12-15 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1055/a-0965-0605 | https://doi.org/10.1097/MPG.0000000000002246"
+      },
+      {
+        "gen": "MLH1",
+        "syndrom": "Lynchs syndrom",
+        "kanoniskt_organ": "Tjock- och ändtarm",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "48-57%, https://plsd.eu/",
+        "uppfoljning": "Koloskopi vartannat år.",
+        "startalder": "25 år",
+        "slut_av_kontroller": "Individuell bedömning",
+        "nationellt_vardprogram": "Nationellt vårdprogram tjock- och ändtarmscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/tjock-och-andtarmscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "MSH2",
+        "syndrom": "Lynchs syndrom",
+        "kanoniskt_organ": "Tjock- och ändtarm",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "36-50% (kvinnor), 47-65% (män), https://plsd.eu/",
+        "uppfoljning": "Koloskopi vartannat år.",
+        "startalder": "25 år",
+        "slut_av_kontroller": "Individuell bedömning",
+        "nationellt_vardprogram": "Nationellt vårdprogram tjock- och ändtarmscancerscreening (https://kunskapsbanken.cancercentrum.se/diagnoser/tjock-och-andtarmscancerscreening/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "MSH3 biallelisk",
+        "syndrom": "Recessivt",
+        "kanoniskt_organ": "Tjock- och ändtarm",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "Koloskopi med 1-2 års intervall.",
+        "startalder": "18-20 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1093/bjs/znae070"
+      },
+      {
+        "gen": "MSH6",
+        "syndrom": "Lynchs syndrom",
+        "kanoniskt_organ": "Tjock- och ändtarm",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "11-26% (kvinnor), 9-29% (män), https://plsd.eu/",
+        "uppfoljning": "Koloskopi vartannat år.",
+        "startalder": "30 år",
+        "slut_av_kontroller": "Individuell bedömning",
+        "nationellt_vardprogram": "Nationellt vårdprogram tjock- och ändtarmscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/tjock-och-andtarmscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "MUTYH biallelisk (homozygot eller kompound heterozygot)",
+        "syndrom": "MAP (MUTYH-associerad polypos)",
+        "kanoniskt_organ": "Tjock- och ändtarm",
+        "subkategori": null,
+        "annat_relevant": "1% av befolkning är heterozygota anlagsbärarebärare",
+        "livstidsrisk": "40-100%",
+        "uppfoljning": "Koloskopi regelbundet, vanligvis årligen tills riskreducerande operation.",
+        "startalder": "12 år",
+        "slut_av_kontroller": "Individuell bedömning",
+        "nationellt_vardprogram": "Nationellt vårdprogram tjock- och ändtarmscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/tjock-och-andtarmscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "NTHL1 biallelisk (homozygot eller kompound heterozygot)",
+        "syndrom": "NTHL1 Tumor Syndrome",
+        "kanoniskt_organ": "Tjock- och ändtarm",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "Ej definierad",
+        "uppfoljning": "Koloskopi med 2 års intervall.",
+        "startalder": "18-20 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi/ | https://10.0.4.162/s13053-025-00323-w"
+      },
+      {
+        "gen": "PMS2",
+        "syndrom": "Lynchs syndrom",
+        "kanoniskt_organ": "Tjock- och ändtarm",
+        "subkategori": null,
+        "annat_relevant": "Bör analyseras endast om immunohistokemi visar bortfall av PMS2. Finns psudogener, kontrollera om analysen är heltäckande",
+        "livstidsrisk": "9% (kvinnor), 33% (män), (stort konfidensintervall) , https://plsd.eu/",
+        "uppfoljning": "Koloskopi vartannat år.",
+        "startalder": "35 år (om inte familjeanamnesen indikerar en tidigare start)",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram tjock- och ändtarmscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/tjock-och-andtarmscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "POLD1",
+        "syndrom": "PPAP (polymerase proofreading adenomatous polyposis",
+        "kanoniskt_organ": "Tjock- och ändtarm",
+        "subkategori": null,
+        "annat_relevant": "Framförallt mutation i exonukleas domän",
+        "livstidsrisk": "Hög men ännu inte fastställd",
+        "uppfoljning": "Koloskopi vartannat år, riskreducerande op utifrån polyputveckling.",
+        "startalder": "14 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1093/bjs/znae070"
+      },
+      {
+        "gen": "POLE",
+        "syndrom": "PPAP (polymerase proofreading adenomatous polyposis",
+        "kanoniskt_organ": "Tjock- och ändtarm",
+        "subkategori": null,
+        "annat_relevant": "Framförallt mutation i exonukleas domän",
+        "livstidsrisk": "Hög men ännu inte fastställd",
+        "uppfoljning": "Koloskopi vartannat år, riskreducerande op utifrån polyputveckling.",
+        "startalder": "14 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1093/bjs/znae070"
+      },
+      {
+        "gen": "PTEN",
+        "syndrom": "PHTS, PTEN-hamartoma tumör syndrom, innefattar även Bannayan-Riley-Ruvalcabas syndrom, Cowdens syndrom",
+        "kanoniskt_organ": "Tjock- och ändtarm",
+        "subkategori": null,
+        "annat_relevant": "Hamartomatösa intestinala polyper vanligt förekommande",
+        "livstidsrisk": "16%",
+        "uppfoljning": "Baseline koloskopi.",
+        "startalder": "35-40 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram tjock- och ändtarmscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/tjock-och-andtarmscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1038/s41431-020-0651-7"
+      },
+      {
+        "gen": "SMAD4",
+        "syndrom": "Juvenil polypos syndrom",
+        "kanoniskt_organ": "Tjock- och ändtarm",
+        "subkategori": null,
+        "annat_relevant": "SMAD4 -HHT (hereditär hemorragisk telgangiektasi)",
+        "livstidsrisk": "38-60%",
+        "uppfoljning": "Koloskopi med 1-3 års intervall.",
+        "startalder": "12 - 15 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram tjock- och ändtarmscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/tjock-och-andtarmscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Tjocktarm och ändtarm": [
+      {
+        "gen": "TP53",
+        "syndrom": "TP53-relaterad cancerpredisponerande syndrom",
+        "kanoniskt_organ": "Tjock- och ändtarm",
+        "subkategori": null,
+        "annat_relevant": "TP53-bärare bör undvika joniserande strålning. Därför bör bilddiagnostik som inte innebär stråldos tillämpas i första hand. Vissa missens varianter är ffa associerade med ökad risk för bröstcancer och är generellt inte associerade med barncancer.",
+        "livstidsrisk": "-",
+        "uppfoljning": "Koloskopi kan övervägas om familjehistoria.",
+        "startalder": "Från 18 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/Cancergenetik/Riktlinjer_TP53_250401.pdf"
+      }
+    ],
+    "Tolvfingertarm": [
+      {
+        "gen": "NTHL1 biallelisk (homozygot eller kompound heterozygot)",
+        "syndrom": "NTHL1 Tumor Syndrome",
+        "kanoniskt_organ": "Tolvfingertarm",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "Ej definierad",
+        "uppfoljning": "Gastroduodenoskopi, 5-årsintervall.",
+        "startalder": "35 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi/ | https://10.0.4.162/s13053-025-00323-w"
+      }
+    ],
+    "Tymuscarcinoid": [
+      {
+        "gen": "MEN1",
+        "syndrom": "Multipel endokrin neoplasi typ 1",
+        "kanoniskt_organ": "Tymuscarcinoid",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "7%",
+        "uppfoljning": "MRT thorax eller lågdos DT (bronker, tymus) vartannat år.",
+        "startalder": "15-30 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram neuroendokrina buktumörer (https://kunskapsbanken.cancercentrum.se/diagnoser/neuroendokrina-buktumorer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Tänder- odontogena keratocystor (OKC).": [
+      {
+        "gen": "PTCH1",
+        "syndrom": "Gorlins syndrom",
+        "kanoniskt_organ": "Tänder",
+        "subkategori": "odontogena keratocystor (OKC)",
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "Årliga kontroller hos tandläkare att följa tanderuption Orthopantomogram (alt MR): tills det första OKC - var 2 år efter först OKC - årligen efter 22 års ålder - vid behov .",
+        "startalder": "2 år 8 år (tidigare vid sent tandutbrott)",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram basalcellscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/basalcellscancer/vardprogram/)",
+        "uppfoljning_annat": "Läkare bör vara medvetna om den möjliga ökade risken för utvecklingsförsening och följa utvecklingen av barn. Årliga kliniska kontroller med bedömning av neurologiskt status. MRT av hjärnan rekommenderas inte rutinmässigt för bärare av PTCH1-variant men bör erbjudas vid förekomst av neurologiska symtom.",
+        "referens": "-"
+      }
+    ],
+    "Urinvägar": [
+      {
+        "gen": "MSH2",
+        "syndrom": "Lynchs syndrom",
+        "kanoniskt_organ": "Urinvägar",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "15-30% (kvinnor), 11-22% (män), https://plsd.eu/",
+        "uppfoljning": "Årlig urinanalys med urincytologi samt analys med FISH-test på urin (UroVysion).",
+        "startalder": "50 år",
+        "slut_av_kontroller": "Individuell bedömning",
+        "nationellt_vardprogram": "Nationellt vårdprogram urinblåse- och urinvägscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/urinblase-och-urinvagscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Äggstockar": [
+      {
+        "gen": "PMS2",
+        "syndrom": "Lynchs syndrom",
+        "kanoniskt_organ": "Äggstockar",
+        "subkategori": null,
+        "annat_relevant": "Bör analyseras endast om immunohistokemi visar bortfall av PMS2. Finns psudogener, kontrollera om analysen är heltäckande",
+        "livstidsrisk": "2.6%, https://plsd.eu/",
+        "uppfoljning": "SOEB diskuteras vid äggstock-tubar cancer i familjehistoria",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram äggstockscancer, epitelial (https://kunskapsbanken.cancercentrum.se/diagnoser/aggstockscancer-epitelial/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "RAD51C",
+        "syndrom": "RAD51C-related cancer susceptibility",
+        "kanoniskt_organ": "Äggstockar",
+        "subkategori": null,
+        "annat_relevant": "Endast trunkerande varianter",
+        "livstidsrisk": "11%",
+        "uppfoljning": "Individuell anpassad kontakt med gynekolog; Riskreducerande SOEB",
+        "startalder": "50",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram äggstockscancer, epitelial (https://kunskapsbanken.cancercentrum.se/diagnoser/aggstockscancer-epitelial/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "RAD51D",
+        "syndrom": "RAD51D-related cancer susceptibility",
+        "kanoniskt_organ": "Äggstockar",
+        "subkategori": null,
+        "annat_relevant": "Endast trunkerande varianter",
+        "livstidsrisk": "13%",
+        "uppfoljning": "Individuell anpassad kontakt med gynekolog; Riskreducerande SOEB",
+        "startalder": "50",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram äggstockscancer, epitelial (https://kunskapsbanken.cancercentrum.se/diagnoser/aggstockscancer-epitelial/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Äggstockar (könssträngstumörer).": [
+      {
+        "gen": "DICER1",
+        "syndrom": "DICER1 relaterad cancer predisposition syndrom",
+        "kanoniskt_organ": "Äggstockar",
+        "subkategori": "könssträngstumörer",
+        "annat_relevant": "-",
+        "livstidsrisk": "7%",
+        "uppfoljning": "Ultraljud årligen.",
+        "startalder": "8 år",
+        "slut_av_kontroller": "40 år",
+        "nationellt_vardprogram": "Nationellt vårdprogram äggstockscancer, icke epitelial (https://kunskapsbanken.cancercentrum.se/diagnoser/aggstockscancer-icke-epitelial/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1007/s10689-021-00264-y"
+      }
+    ],
+    "Äggstockar (småcellig äggstockscancer, hyperkalcemisk typ, SCCOHT).": [
+      {
+        "gen": "SMARCA4",
+        "syndrom": "Rhabdoid tumörpredispostionssyndrom 2",
+        "kanoniskt_organ": "Äggstockar",
+        "subkategori": "SCCOHT (småcellig, hyperkalcemisk typ)",
+        "annat_relevant": "-",
+        "livstidsrisk": "Okänd",
+        "uppfoljning": "Individuell uppföljning efter diskussion på nationell MDK. Inga internationella rekommendationer. Det saknas evidens för SOEB, vilken dock kan diskuteras i hög-risk familjer.",
+        "startalder": "5 år (diskussion om SOEB)",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1158/1078-0432.CCR-19-3797"
+      }
+    ],
+    "Äggstockar/äggledare": [
+      {
+        "gen": "BRCA1",
+        "syndrom": "Ärftlig bröst- och äggstockscancer",
+        "kanoniskt_organ": "Äggstockar/äggledare",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "30-60%",
+        "uppfoljning": "Kontakt med gynekolog, riskreducerande SOEB 35-40 års ålder.",
+        "startalder": "30 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram äggstockscancer, epitelial (https://kunskapsbanken.cancercentrum.se/diagnoser/aggstockscancer-epitelial/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "BRCA2",
+        "syndrom": "Ärftlig bröst- och äggstockscancer",
+        "kanoniskt_organ": "Äggstockar/äggledare",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "10-25%",
+        "uppfoljning": "Kontakt med gynekolog, riskreducerande salpingooforektomi 40-50 års ålder.",
+        "startalder": "30 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram äggstockscancer, epitelial (https://kunskapsbanken.cancercentrum.se/diagnoser/aggstockscancer-epitelial/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "MLH1",
+        "syndrom": "Lynchs syndrom",
+        "kanoniskt_organ": "Äggstockar/äggledare",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "5-12%, https://plsd.eu/",
+        "uppfoljning": "Riskreducerande SOEB efter avslutad familjebildning, tidigast från 35-40 års ålder.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram äggstockscancer, epitelial (https://kunskapsbanken.cancercentrum.se/diagnoser/aggstockscancer-epitelial/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "MSH2",
+        "syndrom": "Lynchs syndrom",
+        "kanoniskt_organ": "Äggstockar/äggledare",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "9-20%, https://plsd.eu/",
+        "uppfoljning": "Riskreducerande SOEB efter avslutad familjebildning, tidigast från 35-40 års ålder.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram äggstockscancer, epitelial (https://kunskapsbanken.cancercentrum.se/diagnoser/aggstockscancer-epitelial/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "MSH6",
+        "syndrom": "Lynchs syndrom",
+        "kanoniskt_organ": "Äggstockar/äggledare",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "3-15%, https://plsd.eu/",
+        "uppfoljning": "Riskreducerande SOEB efter avslutad familjebildning, tidigast från 35-40 års ålder.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram äggstockscancer, epitelial (https://kunskapsbanken.cancercentrum.se/diagnoser/aggstockscancer-epitelial/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Äggstockar/äggledare.": [
+      {
+        "gen": "BRIP1",
+        "syndrom": "-",
+        "kanoniskt_organ": "Äggstockar/äggledare",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "6–12%",
+        "uppfoljning": "Individuellt anpassad kontakt med gynekolog som kan ge information om riskreducerande salpingooforektomi från 50–55 års ålder, eller tidigare om ungt insjuknande finns i familjen.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram äggstockscancer, epitelial (https://kunskapsbanken.cancercentrum.se/diagnoser/aggstockscancer-epitelial/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Äggstockscancer": [
+      {
+        "gen": "PALB2",
+        "syndrom": "Bröst-ovarial cancer predisposition syndrom",
+        "kanoniskt_organ": "Äggstockar",
+        "subkategori": null,
+        "annat_relevant": "Sannolikt lätt till måttlig förhöjd risk för bukspottkörtelcancer, ingen evidens för klinisk nytta av profylaktiska åtgärder",
+        "livstidsrisk": ">5%",
+        "uppfoljning": "Riskreducerande SOEB kan övervägas vid 50-55 års ålder",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram äggstockscancer, epitelial (https://kunskapsbanken.cancercentrum.se/diagnoser/aggstockscancer-epitelial/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      }
+    ],
+    "Äggstocksfibrom": [
+      {
+        "gen": "PTCH1",
+        "syndrom": "Gorlins syndrom",
+        "kanoniskt_organ": "Äggstocksfibrom",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "~ 5%",
+        "uppfoljning": "Baseline ultraljudsundersökning.",
+        "startalder": "Ca 18 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram basalcellscancer (https://kunskapsbanken.cancercentrum.se/diagnoser/basalcellscancer/vardprogram/)",
+        "uppfoljning_annat": "-",
+        "referens": "-"
+      },
+      {
+        "gen": "SUFU",
+        "syndrom": "-",
+        "kanoniskt_organ": "Äggstocksfibrom",
+        "subkategori": null,
+        "annat_relevant": "Tidig diagnos är viktig för att möjliggöra upptäckt av små tumörer som kan opereras med minimal kirurgi.",
+        "livstidsrisk": "-",
+        "uppfoljning": "Mycket sällsynt, bör tas upp på MDK. ULJ var 3 år kan göras i fertilitetsbevarande syfte, inte cancerkontroll.",
+        "startalder": "5 år",
+        "slut_av_kontroller": "När fertilitetsbevarande ej är aktuellt.",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1136/jmedgenet-2021-108385"
+      }
+    ],
+    "Ögon": [
+      {
+        "gen": "BAP1",
+        "syndrom": "BAP1-tumör predispositionsyndrom",
+        "kanoniskt_organ": "Ögon",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "36% av probander, 16% av bärare (icke proband)",
+        "uppfoljning": "Ögonundersökning.",
+        "startalder": "16 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1038/s41431-023-01448-z"
+      }
+    ],
+    "Ögon (näthinna)": [
+      {
+        "gen": "RB1",
+        "syndrom": "Retinoblastom",
+        "kanoniskt_organ": "Ögon",
+        "subkategori": "näthinna",
+        "annat_relevant": "-",
+        "livstidsrisk": "90%",
+        "uppfoljning": "Ögonbottenundersökning med 3–4 veckors intervall upp till 6 månaders ålder. Därefter glesas undersökningarna ut fram till 3 års ålder och därefter sker undersökningarna 2–4 gånger per år upp till 7 års ålder.",
+        "startalder": "0 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "Nationellt vårdprogram buksarkom (https://kunskapsbanken.cancercentrum.se/diagnoser/buksarkom/Vardprogram/) | Nationellt vårdprogram vårdprogram (https://kunskapsbanken.cancercentrum.se/diagnoser/sarkom/vardprogram/arftlighet/)",
+        "uppfoljning_annat": "-",
+        "referens": "https://www.socialstyrelsen.se/kunskapsstod-och-regler/omraden/sallsynta-halsotillstand/om-kunskapsdatabasen/sok-bland-sallsynta-halsotillstand/retinoblastom/"
+      }
+    ],
+    "Övriga cancer": [
+      {
+        "gen": "TP53",
+        "syndrom": "TP53-relaterad cancerpredisponerande syndrom",
+        "kanoniskt_organ": "Övriga cancer",
+        "subkategori": null,
+        "annat_relevant": "TP53-bärare bör undvika joniserande strålning. Därför bör bilddiagnostik som inte innebär stråldos tillämpas i första hand.",
+        "livstidsrisk": "Risk för malign melanom. Hypodiploid ALL är patognomisk för germline varianter i TP53. Sammantaget nästan 100% (lägre penetrans vid vissa missens varianter)",
+        "uppfoljning": "Klinska kontroller med 3 månader intervall hos barn, årligen från 20 års ålder.",
+        "startalder": "0 år",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://sfmg.se/download/riktlinjer/Cancergenetik/Riktlinjer_TP53_250401.pdf"
+      }
+    ],
+    "Övrigt": [
+      {
+        "gen": "APC",
+        "syndrom": "Familjär adenomatös polypos (FAP), Gardners syndrom",
+        "kanoniskt_organ": "Övrigt",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "-",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "Barn kan diagnostiseras med osteom, kongenital hypertrofi av pigmenterat epitel i retina (CHRPE), tandavvikelser samt epidermala cystor.",
+        "referens": "https://doi.org/10.1093/bjs/znae070"
+      },
+      {
+        "gen": "DICER1",
+        "syndrom": "DICER1 relaterad cancer predisposition syndrom",
+        "kanoniskt_organ": "Övrigt",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "Kliniska kontroller, palpation av hals.",
+        "startalder": "0 år (kliniska kontroller), 8 år (palpation av hals).",
+        "slut_av_kontroller": "20 år",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://doi.org/10.1007/s10689-021-00264-y"
+      },
+      {
+        "gen": "WRN biallelisk (homozygot eller  kompound heterozygot)",
+        "syndrom": "Werner syndrome",
+        "kanoniskt_organ": "Övrigt",
+        "subkategori": null,
+        "annat_relevant": "-",
+        "livstidsrisk": "-",
+        "uppfoljning": "Prematurt åldrande, grå starr, ateroskleros, endokrina störningar, osv.",
+        "startalder": "-",
+        "slut_av_kontroller": "-",
+        "nationellt_vardprogram": "-",
+        "uppfoljning_annat": "-",
+        "referens": "https://www.ncbi.nlm.nih.gov/books/NBK1514/"
+      }
+    ]
+  }
+}

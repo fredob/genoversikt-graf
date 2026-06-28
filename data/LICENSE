@@ -1,0 +1,28 @@
+Data License — Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The data files in this directory, together with public/genoversikt.json, are
+licensed under CC BY 4.0.
+
+  Full license text:  https://creativecommons.org/licenses/by/4.0/legalcode
+  Human-readable deed: https://creativecommons.org/licenses/by/4.0/
+
+You are free to share and adapt this data for any purpose, including
+commercially, provided you give appropriate credit.
+
+Suggested attribution:
+  "Genoversikt – Organ ↔ Gen graf" by Fredrik Döberl, licensed under CC BY 4.0.
+  Derived from publicly available clinical guidelines:
+    - RCC Kunskapsbanken, nationellt vårdprogram för ärftliga tumörrisksyndrom:
+      https://kunskapsbanken.cancercentrum.se/diagnoser/arftliga-tumorrisksyndrom-hos-barn-och-vuxna/vardprogram/genoversikt/
+    - EAU-EANM-ESTRO-ESUR-ISUP-SIOG Guidelines on Prostate Cancer 2026:
+      https://uroweb.org/guidelines/prostate-cancer
+
+IMPORTANT — scope and provenance:
+  This dataset is a compiled and normalized mapping (organ <-> gene, with risk
+  and follow-up metadata) created by the author. CC BY 4.0 applies to THIS
+  compilation and its graph representation — NOT to the underlying guideline
+  source documents, whose copyright and terms of use remain with their
+  respective publishers (RCC, EAU, et al.).
+
+  This material is a reference / decision-support aid, not a clinical
+  recommendation.

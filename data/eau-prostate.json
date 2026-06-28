@@ -1,0 +1,102 @@
+{
+  "_meta": {
+    "kalla": "EAU-EANM-ESTRO-ESUR-ISUP-SIOG Guidelines on Prostate Cancer 2026",
+    "url_risk": "https://uroweb.org/guidelines/prostate-cancer/chapter/epidemiology-and-aetiology",
+    "url_behandling": "https://uroweb.org/guidelines/prostate-cancer/chapter/treatment",
+    "underlag": "Table 3.2 (germline mutations in DNA repair genes) + Treatment-kapitlet (systemisk behandling vid mCRPC)",
+    "hamtad": "2026-06-09",
+    "disclaimer": "Referens/beslutsstöd, inte klinisk rekommendation. 'risk' = epidemiologisk riskökning för prostatacancer; urvalsprincip skiljer sig från RCC:s vårdprogram som speglar svensk screening/uppföljning. 'behandling' gäller i regel metastaserad kastrationsresistent sjukdom (mCRPC), inte ärftlighetsuppföljning.",
+    "normalisering": "Gensymboler matchar RCC:s kanoniska namn direkt UTOM två fall: (1) ATM - RCC delar mono-/biallelisk; EAU avser bärarstatus (monoallelisk). Sätt kanonisk_gen om du vill slå ihop med RCC:s ATM-nod. (2) HOXB13 - finns inte i RCC, blir en ny nod (avsiktligt).",
+    "sprak": "risk/behandling = svenska; risk_en/behandling_en = engelska. Bygget väljer efter aktivt språk i grafen."
+  },
+  "organ": "Prostata",
+  "src": "eau",
+  "gener": [
+    {
+      "gen": "BRCA2",
+      "lage": "13q12.3",
+      "risk": "RR 2,5–4,6; ≤55 år RR 8–23",
+      "risk_en": "RR 2.5–4.6; ≤55 yrs RR 8–23",
+      "behandling": "PARP-hämmare (t.ex. olaparib) vid HRR-/BRCA-muterad mCRPC – prioriteras vid BRCA. Platinumkänslighet.",
+      "behandling_en": "PARP inhibitors (e.g. olaparib) in HRR/BRCA-mutated mCRPC – prioritised for BRCA. Platinum sensitivity.",
+      "kommentar": "Oberoende prediktor för metastas och sämre PCa-specifik överlevnad.",
+      "ref": "30,35,38,39,40,41,42"
+    },
+    {
+      "gen": "HOXB13",
+      "lage": "17q21.2",
+      "risk": "OR 3,4–7,9",
+      "risk_en": "OR 3.4–7.9",
+      "kommentar": "Prostataspecifik risk-gen; högre PSA och Gleason vid diagnos. Saknas i RCC – blir ny nod.",
+      "ref": "32,43,44"
+    },
+    {
+      "gen": "CHEK2",
+      "lage": "22q12.1",
+      "risk": "OR 3,3",
+      "risk_en": "OR 3.3",
+      "kommentar": "HRR-gen i bredare paneler; PARP-nytta vid icke-BRCA HRR inkonsekvent (EMA-monoterapi begränsad till BRCA1/2).",
+      "ref": "30,38,39"
+    },
+    {
+      "gen": "BRCA1",
+      "lage": "17q21",
+      "risk": "RR 1,8–3,8 (≤65 år)",
+      "risk_en": "RR 1.8–3.8 (≤65 yrs)",
+      "behandling": "PARP-hämmare vid HRR-/BRCA-muterad mCRPC.",
+      "behandling_en": "PARP inhibitors in HRR/BRCA-mutated mCRPC.",
+      "kommentar": "Högre andel letal PCa bland bärare.",
+      "ref": "30,37,45,46"
+    },
+    {
+      "gen": "ATM",
+      "lage": "11q22.3",
+      "risk": "RR 6,3 (metastaserad PCa)",
+      "risk_en": "RR 6.3 (metastatic PCa)",
+      "behandling": "HRR-gen (PROfound kohort A: BRCA1/2/ATM); PARP-hämmare kan erbjudas, men effekt svagare än vid BRCA.",
+      "behandling_en": "HRR gene (PROfound cohort A: BRCA1/2/ATM); PARP inhibitors may be offered, but effect weaker than for BRCA.",
+      "kommentar": "Högre andel letal PCa bland bärare. EAU avser monoallelisk bärarstatus.",
+      "ref": "30,37"
+    },
+    {
+      "gen": "MLH1",
+      "lage": "3p21.3",
+      "risk": "RR 3,7 (MMR/Lynch)",
+      "risk_en": "RR 3.7 (MMR/Lynch)",
+      "behandling": "Vid MMR-brist/MSI-hög mCRPC: pembrolizumab (immunterapi).",
+      "behandling_en": "In MMR-deficient/MSI-high mCRPC: pembrolizumab (immunotherapy).",
+      "kommentar": "MMR-gen (Lynchs syndrom).",
+      "ref": "47,48"
+    },
+    {
+      "gen": "MSH2",
+      "lage": "2p21",
+      "risk": "RR 3,7 (MMR/Lynch)",
+      "risk_en": "RR 3.7 (MMR/Lynch)",
+      "behandling": "Vid MMR-brist/MSI-hög mCRPC: pembrolizumab (immunterapi).",
+      "behandling_en": "In MMR-deficient/MSI-high mCRPC: pembrolizumab (immunotherapy).",
+      "kommentar": "Störst PCa-risk bland MMR-generna.",
+      "ref": "47,48,49"
+    },
+    {
+      "gen": "MSH6",
+      "lage": "2p16",
+      "risk": "RR 3,7 (MMR/Lynch)",
+      "risk_en": "RR 3.7 (MMR/Lynch)",
+      "behandling": "Vid MMR-brist/MSI-hög mCRPC: pembrolizumab (immunterapi).",
+      "behandling_en": "In MMR-deficient/MSI-high mCRPC: pembrolizumab (immunotherapy).",
+      "kommentar": "MMR-gen (Lynchs syndrom).",
+      "ref": "47,48"
+    },
+    {
+      "gen": "PMS2",
+      "lage": "7p22.2",
+      "risk": "RR 3,7 (MMR/Lynch)",
+      "risk_en": "RR 3.7 (MMR/Lynch)",
+      "behandling": "Vid MMR-brist/MSI-hög mCRPC: pembrolizumab (immunterapi).",
+      "behandling_en": "In MMR-deficient/MSI-high mCRPC: pembrolizumab (immunotherapy).",
+      "kommentar": "MMR-gen (Lynchs syndrom).",
+      "ref": "47,48"
+    }
+  ]
+}

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<title>Genoversikt - Organ vs Gen</title>
+<meta name="description" content="Interactive map of the Swedish national care programme for hereditary cancer syndromes. 170 documented gene-organ links across 72 high-penetrance predisposition genes and 47 organ categories.">
+
+<!-- Open Graph (for LinkedIn, Facebook, Slack, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gene overview - Organ vs Gene">
+<meta property="og:description" content="Interactive map of the Swedish national care programme for hereditary cancer syndromes. 170 documented gene-organ links across 72 high-penetrance predisposition genes and 47 organ categories.">
+<meta property="og:image" content="og-preview.png">
+<meta property="og:image:alt" content="Force-directed graph showing connections between cancer predisposition genes and affected organs">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="sv_SE">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gene overview - Organ vs Gene">
+<meta name="twitter:description" content="Interactive map of the Swedish national care programme for hereditary cancer syndromes.">
+<meta name="twitter:image" content="og-preview.png">
+
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: #111; background: #fafaf7; }
+  #root { display: flex; flex-direction: column; height: 100vh; }
+  header { padding: 8px 12px; background: #fff; border-bottom: 1px solid #ddd; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; font-size: 13px; }
+  header h1 { font-size: 14px; font-weight: 600; margin: 0 8px 0 0; }
+  header input[type=text] { font-size: 13px; padding: 4px 8px; border: 1px solid #bbb; border-radius: 4px; width: 220px; }
+  header label { display: flex; align-items: center; gap: 4px; cursor: pointer; }
+  header button, header a.btn { font-size: 12px; padding: 4px 10px; border: 1px solid #999; background: #fff; border-radius: 4px; cursor: pointer; text-decoration: none; color: #111; }
+  header button:hover, header a.btn:hover { background: #eee; }
+  #lang-toggle { display: inline-flex; border: 1px solid #999; border-radius: 4px; overflow: hidden; }
+  #lang-toggle button { border: none; border-radius: 0; padding: 4px 10px; background: #fff; font-size: 12px; cursor: pointer; }
+  #lang-toggle button + button { border-left: 1px solid #999; }
+  #lang-toggle button.active { background: #3a7bd5; color: #fff; font-weight: 600; }
+  #lang-toggle button:not(.active):hover { background: #eee; }
+  #legend { display: flex; gap: 12px; align-items: center; font-size: 12px; color: #555; }
+  #legend .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 4px; vertical-align: middle; }
+  #info { font-size: 12px; color: #777; margin-left: auto; }
+  #stage { flex: 1; position: relative; overflow: hidden; background: #fafaf7; }
+  svg { width: 100%; height: 100%; cursor: grab; }
+  svg.dragging { cursor: grabbing; }
+  .link { stroke: #ccc; stroke-width: 1; opacity: 0.5; }
+  .link.highlight { stroke: #444; stroke-width: 1.5; opacity: 1; }
+  .link.src-eau { stroke: #8d6cc4; stroke-dasharray: 4 3; }
+  .node { cursor: pointer; }
+  .node circle { stroke: #fff; stroke-width: 1.5; }
+  .node.organ circle { fill: #e07b3c; }
+  .node.gene circle { fill: #3a7bd5; }
+  .node.dim { opacity: 0.15; }
+  .node.highlight circle { stroke: #111; stroke-width: 2; }
+  .node text { font-size: 10px; pointer-events: none; user-select: none; fill: #222; paint-order: stroke; stroke: #fafaf7; stroke-width: 3; stroke-linejoin: round; }
+  .node.selected text { font-weight: 700; fill: #000; }
+  #tooltip { position: absolute; pointer-events: none; background: #fff; border: 1px solid #999; padding: 8px 10px; font-size: 12px; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); max-width: 320px; display: none; z-index: 10; }
+  #tooltip h4 { margin: 0 0 4px; font-size: 13px; }
+  #tooltip .small { color: #666; font-size: 11px; }
+  #panel { position: absolute; top: 8px; right: 8px; background: #fff; border: 1px solid #ccc; padding: 8px 10px; border-radius: 4px; max-width: 320px; max-height: calc(100% - 24px); overflow: auto; font-size: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); display: none; }
+  #panel h3 { margin: 0 0 6px; font-size: 13px; }
+  #panel .row { padding: 2px 0; cursor: pointer; }
+  #panel .row:hover { background: #f0f0f0; }
+  #panel .badge { display: inline-block; min-width: 22px; text-align: center; background: #eee; border-radius: 3px; padding: 0 4px; margin-right: 6px; font-size: 11px; color: #555; }
+  #panel .small { color: #666; font-size: 11px; }
+</style>
+</head>
+<body>
+<div id="root">
+  <header>
+    <h1 id="header-title" data-i18n="header_title">Genoversikt - Organ vs Gen</h1>
+    <input type="text" id="search" data-i18n-placeholder="search_placeholder" placeholder="Sok organ eller gen...">
+    <label><input type="checkbox" id="showLabels"> <span data-i18n="show_all_labels">Visa alla namn</span></label>
+    <label><input type="checkbox" id="layer-rcc" checked> RCC</label>
+    <label><input type="checkbox" id="layer-eau" checked> EAU prostata</label>
+    <button id="reset" data-i18n="reset_button">Aterstall</button>
+    <a id="downloadJson" class="btn" href="genoversikt.json" download data-i18n="download_button">Ladda ned data (JSON)</a>
+    <span id="lang-toggle" role="group" aria-label="Language">
+      <button type="button" data-lang="sv">SV</button>
+      <button type="button" data-lang="en">EN</button>
+    </span>
+    <span id="legend">
+      <span><span class="dot" style="background:#e07b3c"></span><span data-i18n="legend_organ">Kanoniskt organ</span> (47)</span>
+      <span><span class="dot" style="background:#3a7bd5"></span><span data-i18n="legend_gene">Gen</span> (74)</span>
+    </span>
+    <span id="info"></span>
+  </header>
+  <div id="stage">
+    <svg id="svg"></svg>
+    <div id="tooltip"></div>
+    <div id="panel"></div>
+  </div>
+</div>
+<script>
+const EDGES_DATA = [{"o": "Andra maligna tumörer", "g": "ATM biallelisk (homozygot, kompound heterozygot)", "s": ["Ataxia-telangiectasia"], "sub": [], "lr": ["Ej definerad"], "sources": [{"id": "rcc"}]}, {"o": "Andra maligna tumörer", "g": "BLM - biallelisk (homozygot eller kompound heterozygot)", "s": ["Blooms syndrom"], "sub": [], "lr": ["83%, den kumulativa risken upp till 40 års ålder."], "sources": [{"id": "rcc"}]}, {"o": "Andra relevanta symptom", "g": "ATM biallelisk (homozygot, kompound heterozygot)", "s": ["Ataxia-telangiectasia"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Andra relevanta symptom", "g": "CDH1", "s": ["Ärftlig diffus ventrikelcancer och lobulär bröstcancer syndrom"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Benigna tumörer", "g": "APC", "s": ["Familjär adenomatös polypos (FAP), Gardners syndrom"], "sub": [], "lr": ["10-24% för desmoider"], "sources": [{"id": "rcc"}]}, {"o": "Binjure", "g": "VHL", "s": ["Von Hippel-Lindaus syndrom"], "sub": ["feokromocytom"], "lr": ["10-20%"], "sources": [{"id": "rcc"}]}, {"o": "Binjure", "g": "ARMC5", "s": ["ACTH-independent macronodular adrenal hyperplasia 2"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Binjure", "g": "CACNA1D", "s": ["PASNA syndrom, AD"], "sub": [], "lr": ["Hög penetrans, varierande fenotyp."], "sources": [{"id": "rcc"}]}, {"o": "Binjure", "g": "CACNA1H", "s": ["Familjär hyperaldosteronism typ 4, AD"], "sub": [], "lr": ["Ej definierad."], "sources": [{"id": "rcc"}]}, {"o": "Binjure", "g": "CLCN2", "s": ["Familjär hyperaldosteronism typ 2"], "sub": [], "lr": ["Nedsatt penetrans"], "sources": [{"id": "rcc"}]}, {"o": "Binjure", "g": "CYP11B1", "s": ["Familjär hyperaldosteronism typ 1"], "sub": [], "lr": ["Nedsatt penetrans"], "sources": [{"id": "rcc"}]}, {"o": "Binjure", "g": "KCNJ5", "s": ["Familjär hyperaldosteronism typ 3, AD"], "sub": [], "lr": ["Hög penetrans, varierande fenotyp"], "sources": [{"id": "rcc"}]}, {"o": "Binjure", "g": "NF1", "s": ["Neurofibromatos typ 1"], "sub": ["feokromocytom"], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Binjure", "g": "RET", "s": ["Multipel endokrin neoplasi typ 2"], "sub": ["feokromocytom"], "lr": ["50%"], "sources": [{"id": "rcc"}]}, {"o": "Binjure", "g": "TP53", "s": ["TP53-relaterad cancerpredisponerande syndrom"], "sub": ["bark"], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Bisköldkörtel", "g": "MEN1", "s": ["Multipel endokrin neoplasi typ 1"], "sub": [], "lr": ["90%"], "sources": [{"id": "rcc"}]}, {"o": "Bisköldkörtel", "g": "RET", "s": ["Multipel endokrin neoplasi typ 2"], "sub": [], "lr": ["15 - 30%"], "sources": [{"id": "rcc"}]}, {"o": "Lunga", "g": "MEN1", "s": ["Multipel endokrin neoplasi typ 1"], "sub": ["bronkialcarcinoid"], "lr": ["18%"], "sources": [{"id": "rcc"}]}, {"o": "Bröst", "g": "ATM monoallelisk (heterozygot)", "s": [], "sub": [], "lr": ["Måttligt förhöjd"], "sources": [{"id": "rcc"}]}, {"o": "Bröst", "g": "BARD1", "s": ["BARD1-relaterad bröstcancer"], "sub": [], "lr": ["Måttligt förhöjd."], "sources": [{"id": "rcc"}]}, {"o": "Bröst", "g": "BLM - biallelisk (homozygot eller kompound heterozygot)", "s": ["Blooms syndrom"], "sub": [], "lr": ["Okänd."], "sources": [{"id": "rcc"}]}, {"o": "Bröst", "g": "NF1", "s": ["Neurofibromatos typ 1"], "sub": [], "lr": ["Måttligt förhöjd"], "sources": [{"id": "rcc"}]}, {"o": "Bröst", "g": "STK11", "s": ["Peutz-Jeghers Syndrom"], "sub": ["kvinnor"], "lr": ["Sannolikt starkt förhöjd"], "sources": [{"id": "rcc"}]}, {"o": "Bröst", "g": "BRCA2", "s": ["Ärftlig bröst- och äggstockscancer"], "sub": ["kvinnor", "män"], "lr": ["4%", "50-80%"], "sources": [{"id": "rcc"}]}, {"o": "Bröst", "g": "CDH1", "s": ["Ärftlig diffus ventrikelcancer och lobulär bröstcancer syndrom"], "sub": ["lobulär (kvinnor)"], "lr": ["Sannolikt starkt förhöjd"], "sources": [{"id": "rcc"}]}, {"o": "Bröst", "g": "PTEN", "s": ["PHTS, PTEN-hamartoma tumör syndrom, innefattar även Bannayan-Riley-Ruvalcabas syndrom, Cowdens syndrom"], "sub": ["kvinnor"], "lr": ["Sannolikt starkt förhöjd"], "sources": [{"id": "rcc"}]}, {"o": "Bröst", "g": "TP53", "s": ["TP53-relaterad cancerpredisponerande syndrom"], "sub": ["kvinnor"], "lr": ["Starkt förhöjd, även i mycket unga år."], "sources": [{"id": "rcc"}]}, {"o": "Bröst", "g": "CHEK2", "s": ["CHEK2 -relaterad cancer predisposition"], "sub": ["kvinnor"], "lr": ["Måttligt förhöjd"], "sources": [{"id": "rcc"}]}, {"o": "Bröst", "g": "CHEK2 biallelisk (homozygot eller kompound heterozygot)", "s": ["CHEK2 -relaterad cancer predisposition"], "sub": ["kvinnor"], "lr": ["50-80%"], "sources": [{"id": "rcc"}]}, {"o": "Bröst", "g": "PALB2", "s": ["Bröst-ovarial cancer predisposition syndrom"], "sub": ["kvinnor"], "lr": ["Starkt förhöjd"], "sources": [{"id": "rcc"}]}, {"o": "Bröst", "g": "RAD51C", "s": ["RAD51C-related cancer susceptibility"], "sub": ["kvinnor"], "lr": ["Måttligt förhöjd"], "sources": [{"id": "rcc"}]}, {"o": "Bröst", "g": "RAD51D", "s": ["RAD51D-related cancer susceptibility"], "sub": ["kvinnor"], "lr": ["Måttligt förhöjd"], "sources": [{"id": "rcc"}]}, {"o": "Bukspottkörtel", "g": "CDKN2A", "s": [], "sub": [], "lr": [">15%"], "sources": [{"id": "rcc"}]}, {"o": "Bukspottkörtel", "g": "STK11", "s": ["Peutz-Jeghers Syndrom"], "sub": [], "lr": ["11-55%"], "sources": [{"id": "rcc"}]}, {"o": "Bukspottkörtel", "g": "VHL", "s": ["Von Hippel-Lindaus syndrom"], "sub": ["PNET (neuroendokrin)"], "lr": ["11% av patienter"], "sources": [{"id": "rcc"}]}, {"o": "Magsäck/tolvfingertarm", "g": "MEN1", "s": ["Multipel endokrin neoplasi typ 1"], "sub": ["carcinoider"], "lr": ["20-40%"], "sources": [{"id": "rcc"}]}, {"o": "Bukspottkörtel", "g": "MEN1", "s": ["Multipel endokrin neoplasi typ 1"], "sub": ["endokrin"], "lr": ["30-70%"], "sources": [{"id": "rcc"}]}, {"o": "Endolymfatiska säcken i innerörat (ELST)", "g": "VHL", "s": ["Von Hippel-Lindaus syndrom"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "GIST", "g": "SDHA", "s": ["Ärftligt feokromocytom/paragangliom syndrom"], "sub": [], "lr": ["Okänd"], "sources": [{"id": "rcc"}]}, {"o": "GIST", "g": "SDHB", "s": ["Ärftligt feokromocytom/paragangliom syndrom"], "sub": [], "lr": ["2%"], "sources": [{"id": "rcc"}]}, {"o": "Hematologiska maligniteter", "g": "ATM biallelisk (homozygot, kompound heterozygot)", "s": ["Ataxia-telangiectasia"], "sub": [], "lr": ["Ej definierad."], "sources": [{"id": "rcc"}]}, {"o": "Hjärna", "g": "TP53", "s": ["TP53-relaterad cancerpredisponerande syndrom"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Hjärna", "g": "SMARCB1", "s": ["Rhabdoid tumör predispositionsyndrom 1"], "sub": ["ryggmärg och dess hinnor"], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Hjärna", "g": "VHL", "s": ["Von Hippel-Lindaus syndrom"], "sub": ["ryggmärg och dess hinnor (hemangioblastom)"], "lr": ["60-80% av VHL patienter"], "sources": [{"id": "rcc"}]}, {"o": "Hjärna", "g": "NF1", "s": ["Neurofibromatos typ 1"], "sub": ["Optikus gliom"], "lr": ["15% (2% av fallen kräver behandling)"], "sources": [{"id": "rcc"}]}, {"o": "Hjärna", "g": "TSC1", "s": ["Tuberös skleros"], "sub": ["SEGA (subependymalt jättecellsastrocytom)"], "lr": ["10-20% av TS patienter"], "sources": [{"id": "rcc"}]}, {"o": "Hjärna", "g": "TSC2", "s": ["Tuberös skleros"], "sub": ["SEGA (subependymalt jättecellsastrocytom)"], "lr": ["10-20% av TS patienter"], "sources": [{"id": "rcc"}]}, {"o": "Hjärtfibrom", "g": "PTCH1", "s": ["Gorlins syndrom"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Hjärtfibrom", "g": "SUFU", "s": [], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Hud", "g": "BAP1", "s": ["BAP1-tumör predispositionsyndrom"], "sub": [], "lr": ["13% av bärare"], "sources": [{"id": "rcc"}]}, {"o": "Hud", "g": "CDKN2A", "s": ["Melanom – pancreascancer syndrom"], "sub": [], "lr": ["60 gånger förhöjd (75% för den svenska foundermutationen)"], "sources": [{"id": "rcc"}]}, {"o": "Hud", "g": "DKC1, X-bunden recessiv", "s": ["Dyskeratosis congenita"], "sub": [], "lr": ["Okänd"], "sources": [{"id": "rcc"}]}, {"o": "Hud", "g": "PTCH1", "s": ["Gorlins syndrom"], "sub": ["basalcellscancer (BCC)"], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Hud", "g": "SUFU", "s": [], "sub": ["basalcellscancer (BCC)"], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Hud", "g": "FLCN", "s": ["Birt-Hogg-Dubés syndrom"], "sub": ["fibrofolliculom"], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Hypofys", "g": "MEN1", "s": ["Multipel endokrin neoplasi typ 1"], "sub": [], "lr": ["50%"], "sources": [{"id": "rcc"}]}, {"o": "Bröst", "g": "BRCA1", "s": ["Ärftlig bröst- och äggstockscancer"], "sub": ["kvinnor"], "lr": ["50-80%"], "sources": [{"id": "rcc"}]}, {"o": "Könsträngs tumör med annular tubules", "g": "STK11", "s": ["Peutz-Jeghers Syndrom"], "sub": [], "lr": ["9% (män)"], "sources": [{"id": "rcc"}]}, {"o": "Lever", "g": "APC", "s": ["Familjär adenomatös polypos (FAP), Gardners syndrom"], "sub": [], "lr": ["2,5%"], "sources": [{"id": "rcc"}]}, {"o": "Livmoderhals, germinala celler (SCTAT), äggstockar, livmoderkropp", "g": "STK11", "s": ["Peutz-Jeghers Syndrom"], "sub": [], "lr": ["18-50%"], "sources": [{"id": "rcc"}]}, {"o": "Livmoderkropp", "g": "MLH1", "s": ["Lynchs syndrom"], "sub": [], "lr": ["31-44%, https://plsd.eu/"], "sources": [{"id": "rcc"}]}, {"o": "Livmoderkropp", "g": "MSH2", "s": ["Lynchs syndrom"], "sub": [], "lr": ["36-53%, https://plsd.eu/"], "sources": [{"id": "rcc"}]}, {"o": "Livmoderkropp", "g": "MSH6", "s": ["Lynchs syndrom"], "sub": [], "lr": ["36-57%, https://plsd.eu/"], "sources": [{"id": "rcc"}]}, {"o": "Livmoderkropp", "g": "NTHL1 biallelisk (homozygot eller kompound heterozygot)", "s": ["NTHL1 Tumor Syndrome"], "sub": [], "lr": ["Ej definierad"], "sources": [{"id": "rcc"}]}, {"o": "Livmoderkropp", "g": "PMS2", "s": ["Lynchs syndrom"], "sub": [], "lr": ["21% (stort konfidensintervall), https://plsd.eu/"], "sources": [{"id": "rcc"}]}, {"o": "Livmoderkropp", "g": "POLD1", "s": ["PPAP (polymerase proofreading adenomatous polyposis"], "sub": [], "lr": ["Sannolikt hög men ännu inte fastställd"], "sources": [{"id": "rcc"}]}, {"o": "Livmoderkropp", "g": "POLE", "s": ["PPAP (polymerase proofreading adenomatous polyposis"], "sub": [], "lr": ["Ej fastställd"], "sources": [{"id": "rcc"}]}, {"o": "Livmoderkropp", "g": "PTEN", "s": ["PHTS, PTEN-hamartoma tumör syndrom, innefattar även Bannayan-Riley-Ruvalcabas syndrom, Cowdens syndrom"], "sub": [], "lr": ["28%"], "sources": [{"id": "rcc"}]}, {"o": "Lunga", "g": "CDKN2A", "s": [], "sub": [], "lr": ["10% (hos storrökare)"], "sources": [{"id": "rcc"}]}, {"o": "Lunga", "g": "DICER1", "s": ["DICER1 relaterad cancer predisposition syndrom"], "sub": ["lungblastom"], "lr": ["Ej definierad"], "sources": [{"id": "rcc"}]}, {"o": "Lunga", "g": "FLCN", "s": ["Birt-Hogg-Dubés syndrom"], "sub": ["lungcystor/pneumothorax"], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Lymfom", "g": "BLM - biallelisk (homozygot eller kompound heterozygot)", "s": ["Blooms syndrom"], "sub": [], "lr": ["Okänd."], "sources": [{"id": "rcc"}]}, {"o": "Magsäck", "g": "APC  (mutationer i exon 1B promotor)", "s": ["GAPPS (gastric adenocarcinoma and proximal polyposis of the stomach)"], "sub": [], "lr": ["Upp till 25%"], "sources": [{"id": "rcc"}]}, {"o": "Magsäck", "g": "CDH1", "s": ["Ärftlig diffus ventrikelcancer och lobulär bröstcancer syndrom"], "sub": [], "lr": ["33% för kvinnor och 42% för män"], "sources": [{"id": "rcc"}]}, {"o": "Magsäck", "g": "CTNN1A", "s": ["Hereditär diffus ventrikel cancer"], "sub": [], "lr": ["50%"], "sources": [{"id": "rcc"}]}, {"o": "Magsäck", "g": "STK11", "s": ["Peutz-Jeghers Syndrom"], "sub": ["magsäck/tunntarm/tjocktarm"], "lr": ["57%"], "sources": [{"id": "rcc"}]}, {"o": "Magsäck/tolvfingertarm", "g": "APC", "s": ["Familjär adenomatös polypos (FAP), Gardners syndrom"], "sub": [], "lr": ["4-10%"], "sources": [{"id": "rcc"}]}, {"o": "Magsäck/tolvfingertarm", "g": "BMPR1A", "s": ["Juvenil polypos syndrom"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Magsäck/tolvfingertarm", "g": "MSH3 biallelisk", "s": ["Recessivt"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Magsäck/tolvfingertarm", "g": "MUTYH biallelisk (homozygot eller kompound heterozygot)", "s": ["MAP (MUTYH-associerad polypos)"], "sub": [], "lr": ["5%"], "sources": [{"id": "rcc"}]}, {"o": "Magsäck/tolvfingertarm", "g": "POLD1", "s": ["PPAP (polymerase proofreading adenomatous polyposis"], "sub": [], "lr": ["Hög men ännu inte fastställd"], "sources": [{"id": "rcc"}]}, {"o": "Magsäck/tolvfingertarm", "g": "POLE", "s": ["PPAP (polymerase proofreading adenomatous polyposis"], "sub": [], "lr": ["Hög men ännu inte fastställd"], "sources": [{"id": "rcc"}]}, {"o": "Magsäck/tolvfingertarm", "g": "SMAD4", "s": ["Juvenil polypos syndrom"], "sub": [], "lr": ["20-60%"], "sources": [{"id": "rcc"}]}, {"o": "Malign perifer nervskidetumör (MPNST)", "g": "NF1", "s": ["Neurofibromatos typ 1"], "sub": [], "lr": ["10%"], "sources": [{"id": "rcc"}]}, {"o": "Medulloblastom", "g": "PTCH1", "s": ["Gorlins syndrom"], "sub": [], "lr": ["< 2%"], "sources": [{"id": "rcc"}]}, {"o": "Medulloblastom", "g": "SUFU", "s": [], "sub": [], "lr": ["8-9%"], "sources": [{"id": "rcc"}]}, {"o": "Meningiom", "g": "PTCH1", "s": ["Gorlins syndrom"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Meningiom", "g": "SUFU", "s": [], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Mesoteliom (peritoneum och pleura)", "g": "BAP1", "s": ["BAP1-tumör predispositionsyndrom"], "sub": [], "lr": ["25% av probander, 17% av bärare (icke proband)."], "sources": [{"id": "rcc"}]}, {"o": "Multipla tumörer", "g": "MLH1 biallelisk (homozygot eller kompound heterozygot)", "s": ["Constitutional mismatch repair deficiency (CMMRD)"], "sub": [], "lr": ["100%"], "sources": [{"id": "rcc"}]}, {"o": "Multipla tumörer", "g": "MSH2 biallelisk (homozygot eller kompound heterozygot)", "s": ["Constitutional mismatchrepair deficiency"], "sub": [], "lr": ["100%"], "sources": [{"id": "rcc"}]}, {"o": "Multipla tumörer", "g": "MSH6 biallelisk (homozygot eller kompound heterozygot)", "s": ["Constitutional mismatchrepair deficiency"], "sub": [], "lr": ["100%"], "sources": [{"id": "rcc"}]}, {"o": "Multipla tumörer", "g": "PMS2 biallelisk (homozygot eller kompound heterozygot", "s": ["Constitutional mismatchrepair deficiency"], "sub": [], "lr": ["100%"], "sources": [{"id": "rcc"}]}, {"o": "Multipla tumörer", "g": "PRKACA", "s": ["Carney complex"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Multipla tumörer", "g": "PRKAR1A", "s": ["Carney complex"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Njurar", "g": "BAP1", "s": ["BAP1-tumör predispositionsyndrom"], "sub": [], "lr": ["10% av bärare"], "sources": [{"id": "rcc"}]}, {"o": "Njurar", "g": "DICER1", "s": ["DICER1 relaterad cancer predisposition syndrom"], "sub": [], "lr": ["7%"], "sources": [{"id": "rcc"}]}, {"o": "Njurar", "g": "FH", "s": ["HLRCC (hereditär leiomyomatos och klarcellig njurcancer syndrom)"], "sub": [], "lr": ["20%"], "sources": [{"id": "rcc"}]}, {"o": "Njurar", "g": "FLCN", "s": ["Birt-Hogg-Dubés syndrom"], "sub": [], "lr": ["15-30%"], "sources": [{"id": "rcc"}]}, {"o": "Njurar", "g": "TSC1", "s": ["Tuberös skleros"], "sub": ["angiomyolipom"], "lr": ["75% av TS patienter har angiomyolipom"], "sources": [{"id": "rcc"}]}, {"o": "Njurar", "g": "TSC2", "s": ["Tuberös skleros"], "sub": ["angiomyolipom"], "lr": ["75 av TS patienter har angiomyolipom"], "sources": [{"id": "rcc"}]}, {"o": "Njurar", "g": "PTEN", "s": ["PHTS, PTEN-hamartoma tumör syndrom, innefattar även Bannayan-Riley-Ruvalcabas syndrom, Cowdens syndrom"], "sub": ["papillär"], "lr": ["34%"], "sources": [{"id": "rcc"}]}, {"o": "Njurar", "g": "VHL", "s": ["Von Hippel-Lindaus syndrom"], "sub": ["klarcellig"], "lr": ["40-70%"], "sources": [{"id": "rcc"}]}, {"o": "Njurar", "g": "SDHB", "s": ["Ärftligt feokromocytom/paragangliom syndrom"], "sub": ["klarcellig"], "lr": ["14%"], "sources": [{"id": "rcc"}]}, {"o": "Ögon", "g": "VHL", "s": ["Von Hippel-Lindaus syndrom"], "sub": ["näthinna (retinala hemangioblastom)"], "lr": ["50-60% av VHL patienter"], "sources": [{"id": "rcc"}]}, {"o": "Osteoporos", "g": "NF1", "s": ["Neurofibromatos typ 1"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Paragangliom/feokromocytom", "g": "VHL", "s": ["Von Hippel-Lindaus syndrom"], "sub": ["paragangliom"], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Paragangliom/feokromocytom", "g": "MAX", "s": ["Ärftlig feokromocytom/paragangliomsyndrom"], "sub": [], "lr": ["Okänd"], "sources": [{"id": "rcc"}]}, {"o": "Paragangliom/feokromocytom", "g": "SDHA", "s": ["Ärftligt feokromocytom/paragangliom syndrom"], "sub": [], "lr": ["1-10%"], "sources": [{"id": "rcc"}]}, {"o": "Paragangliom/feokromocytom", "g": "SDHAF2 (på maternell allel)", "s": ["Ärftligt feokromocytom/paragangliom syndrom"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Paragangliom/feokromocytom", "g": "SDHAF2 (på paternell allel)", "s": ["Ärftligt feokromocytom/paragangliom syndrom"], "sub": [], "lr": ["Låg risk för metastatisk sjukdom"], "sources": [{"id": "rcc"}]}, {"o": "Paragangliom/feokromocytom", "g": "SDHB", "s": ["Ärftligt feokromocytom/paragangliom syndrom"], "sub": [], "lr": ["30%"], "sources": [{"id": "rcc"}]}, {"o": "Paragangliom/feokromocytom", "g": "SDHC", "s": ["Ärftligt feokromocytom/paragangliom syndrom"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Paragangliom/feokromocytom", "g": "SDHD (på maternell allel)", "s": ["Ärftligt feokromocytom/paragangliom syndrom"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Paragangliom/feokromocytom", "g": "SDHD (på paternell allel)", "s": ["Ärftligt feokromocytom/paragangliom syndrom"], "sub": [], "lr": ["Låg risk för metastatisk sjukdom"], "sources": [{"id": "rcc"}]}, {"o": "Paragangliom/feokromocytom", "g": "TMEM127", "s": ["Ärftlig feokromocytom/paragangliom syndrom"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Prostata", "g": "BRCA2", "s": ["Ärftlig bröst- och äggstockscancer"], "sub": [], "lr": ["27-60%"], "sources": [{"id": "rcc"}, {"id": "eau", "lage": "13q12.3", "risk": "RR 2,5–4,6; ≤55 år RR 8–23", "risk_en": "RR 2.5–4.6; ≤55 yrs RR 8–23", "behandling": "PARP-hämmare (t.ex. olaparib) vid HRR-/BRCA-muterad mCRPC – prioriteras vid BRCA. Platinumkänslighet.", "behandling_en": "PARP inhibitors (e.g. olaparib) in HRR/BRCA-mutated mCRPC – prioritised for BRCA. Platinum sensitivity.", "kommentar": "Oberoende prediktor för metastas och sämre PCa-specifik överlevnad.", "ref": "30,35,38,39,40,41,42"}]}, {"o": "Prostata", "g": "MSH2", "s": ["Lynchs syndrom"], "sub": [], "lr": ["18-32%, https://plsd.eu/"], "sources": [{"id": "rcc"}, {"id": "eau", "lage": "2p21", "risk": "RR 3,7 (MMR/Lynch)", "risk_en": "RR 3.7 (MMR/Lynch)", "behandling": "Vid MMR-brist/MSI-hög mCRPC: pembrolizumab (immunterapi).", "behandling_en": "In MMR-deficient/MSI-high mCRPC: pembrolizumab (immunotherapy).", "kommentar": "Störst PCa-risk bland MMR-generna.", "ref": "47,48,49"}]}, {"o": "Prostata", "g": "TP53", "s": ["TP53-relaterad cancerpredisponerande syndrom"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Rhabdoida tumörer", "g": "SMARCA4", "s": ["Rhabdoid tumörpredispostionssyndrom 2"], "sub": [], "lr": ["Okänd risk och spektrum, mycket sällsynt"], "sources": [{"id": "rcc"}]}, {"o": "Rhabdoida tumörer", "g": "SMARCB1", "s": ["Rhabdoid tumör predispositionsyndrom 1"], "sub": ["olika lokalisationer"], "lr": ["Okänd (penetrans >90% vid 5 års ålder)"], "sources": [{"id": "rcc"}]}, {"o": "Saknar organ/symtom", "g": "PDE11A", "s": ["Carney complex"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Saknar organ/symtom", "g": "PDE8B", "s": ["Carney complex"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Sarkom", "g": "RB1", "s": ["Retinoblastom"], "sub": [], "lr": ["4% (om tidigare bilaterala retinoblastom)"], "sources": [{"id": "rcc"}]}, {"o": "Sarkom", "g": "TP53", "s": ["TP53-relaterad cancerpredisponerande syndrom"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Sarkom", "g": "WRN biallelisk (homozygot eller  kompound heterozygot)", "s": ["Werner syndrome"], "sub": ["muskler/skelett + sköldkörtelcancer"], "lr": [">95%"], "sources": [{"id": "rcc"}]}, {"o": "Schwannom", "g": "LZTR1", "s": ["LZRT1- relaterad schwannomatos"], "sub": [], "lr": ["40-50%: hjärna, ryggmärg och dess hinnor -Schwannom, olika lokalisationer, även unilateral vestibulärt schwannom."], "sources": [{"id": "rcc"}]}, {"o": "Schwannom", "g": "SMARCB1", "s": ["SMARCB1-relaterad schwannomatos"], "sub": [], "lr": ["40-50%"], "sources": [{"id": "rcc"}]}, {"o": "Sköldkörtel", "g": "APC", "s": ["Familjär adenomatös polypos (FAP), Gardners syndrom"], "sub": [], "lr": ["2-9%"], "sources": [{"id": "rcc"}]}, {"o": "Sköldkörtel", "g": "DICER1", "s": ["DICER1 relaterad cancer predisposition syndrom"], "sub": [], "lr": ["Okänd"], "sources": [{"id": "rcc"}]}, {"o": "Sköldkörtel", "g": "RET", "s": ["Multipel endokrin neoplasi typ 2"], "sub": ["medullär"], "lr": ["100%"], "sources": [{"id": "rcc"}]}, {"o": "Sköldkörtel", "g": "PTEN", "s": ["PHTS, PTEN-hamartoma tumör syndrom, innefattar även Bannayan-Riley-Ruvalcabas syndrom, Cowdens syndrom"], "sub": [], "lr": ["35%"], "sources": [{"id": "rcc"}]}, {"o": "Tjock- och ändtarm", "g": "APC", "s": ["Familjär adenomatös polypos (FAP), Gardners syndrom"], "sub": [], "lr": ["100%"], "sources": [{"id": "rcc"}]}, {"o": "Tjock- och ändtarm", "g": "BMPR1A", "s": ["Juvenil polypos syndrom"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Tjock- och ändtarm", "g": "MLH1", "s": ["Lynchs syndrom"], "sub": [], "lr": ["48-57%, https://plsd.eu/"], "sources": [{"id": "rcc"}]}, {"o": "Tjock- och ändtarm", "g": "MSH2", "s": ["Lynchs syndrom"], "sub": [], "lr": ["36-50% (kvinnor), 47-65% (män), https://plsd.eu/"], "sources": [{"id": "rcc"}]}, {"o": "Tjock- och ändtarm", "g": "MSH3 biallelisk", "s": ["Recessivt"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Tjock- och ändtarm", "g": "MSH6", "s": ["Lynchs syndrom"], "sub": [], "lr": ["11-26% (kvinnor), 9-29% (män), https://plsd.eu/"], "sources": [{"id": "rcc"}]}, {"o": "Tjock- och ändtarm", "g": "MUTYH biallelisk (homozygot eller kompound heterozygot)", "s": ["MAP (MUTYH-associerad polypos)"], "sub": [], "lr": ["40-100%"], "sources": [{"id": "rcc"}]}, {"o": "Tjock- och ändtarm", "g": "NTHL1 biallelisk (homozygot eller kompound heterozygot)", "s": ["NTHL1 Tumor Syndrome"], "sub": [], "lr": ["Ej definierad"], "sources": [{"id": "rcc"}]}, {"o": "Tjock- och ändtarm", "g": "PMS2", "s": ["Lynchs syndrom"], "sub": [], "lr": ["9% (kvinnor), 33% (män), (stort konfidensintervall) , https://plsd.eu/"], "sources": [{"id": "rcc"}]}, {"o": "Tjock- och ändtarm", "g": "POLD1", "s": ["PPAP (polymerase proofreading adenomatous polyposis"], "sub": [], "lr": ["Hög men ännu inte fastställd"], "sources": [{"id": "rcc"}]}, {"o": "Tjock- och ändtarm", "g": "POLE", "s": ["PPAP (polymerase proofreading adenomatous polyposis"], "sub": [], "lr": ["Hög men ännu inte fastställd"], "sources": [{"id": "rcc"}]}, {"o": "Tjock- och ändtarm", "g": "PTEN", "s": ["PHTS, PTEN-hamartoma tumör syndrom, innefattar även Bannayan-Riley-Ruvalcabas syndrom, Cowdens syndrom"], "sub": [], "lr": ["16%"], "sources": [{"id": "rcc"}]}, {"o": "Tjock- och ändtarm", "g": "SMAD4", "s": ["Juvenil polypos syndrom"], "sub": [], "lr": ["38-60%"], "sources": [{"id": "rcc"}]}, {"o": "Tjock- och ändtarm", "g": "TP53", "s": ["TP53-relaterad cancerpredisponerande syndrom"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Tolvfingertarm", "g": "NTHL1 biallelisk (homozygot eller kompound heterozygot)", "s": ["NTHL1 Tumor Syndrome"], "sub": [], "lr": ["Ej definierad"], "sources": [{"id": "rcc"}]}, {"o": "Tymuscarcinoid", "g": "MEN1", "s": ["Multipel endokrin neoplasi typ 1"], "sub": [], "lr": ["7%"], "sources": [{"id": "rcc"}]}, {"o": "Tänder", "g": "PTCH1", "s": ["Gorlins syndrom"], "sub": ["odontogena keratocystor (OKC)"], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Urinvägar", "g": "MSH2", "s": ["Lynchs syndrom"], "sub": [], "lr": ["15-30% (kvinnor), 11-22% (män), https://plsd.eu/"], "sources": [{"id": "rcc"}]}, {"o": "Äggstockar", "g": "PMS2", "s": ["Lynchs syndrom"], "sub": [], "lr": ["2.6%, https://plsd.eu/"], "sources": [{"id": "rcc"}]}, {"o": "Äggstockar", "g": "RAD51C", "s": ["RAD51C-related cancer susceptibility"], "sub": [], "lr": ["11%"], "sources": [{"id": "rcc"}]}, {"o": "Äggstockar", "g": "RAD51D", "s": ["RAD51D-related cancer susceptibility"], "sub": [], "lr": ["13%"], "sources": [{"id": "rcc"}]}, {"o": "Äggstockar", "g": "DICER1", "s": ["DICER1 relaterad cancer predisposition syndrom"], "sub": ["könssträngstumörer"], "lr": ["7%"], "sources": [{"id": "rcc"}]}, {"o": "Äggstockar", "g": "SMARCA4", "s": ["Rhabdoid tumörpredispostionssyndrom 2"], "sub": ["SCCOHT (småcellig, hyperkalcemisk typ)"], "lr": ["Okänd"], "sources": [{"id": "rcc"}]}, {"o": "Äggstockar/äggledare", "g": "BRCA1", "s": ["Ärftlig bröst- och äggstockscancer"], "sub": [], "lr": ["30-60%"], "sources": [{"id": "rcc"}]}, {"o": "Äggstockar/äggledare", "g": "BRCA2", "s": ["Ärftlig bröst- och äggstockscancer"], "sub": [], "lr": ["10-25%"], "sources": [{"id": "rcc"}]}, {"o": "Äggstockar/äggledare", "g": "MLH1", "s": ["Lynchs syndrom"], "sub": [], "lr": ["5-12%, https://plsd.eu/"], "sources": [{"id": "rcc"}]}, {"o": "Äggstockar/äggledare", "g": "MSH2", "s": ["Lynchs syndrom"], "sub": [], "lr": ["9-20%, https://plsd.eu/"], "sources": [{"id": "rcc"}]}, {"o": "Äggstockar/äggledare", "g": "MSH6", "s": ["Lynchs syndrom"], "sub": [], "lr": ["3-15%, https://plsd.eu/"], "sources": [{"id": "rcc"}]}, {"o": "Äggstockar/äggledare", "g": "BRIP1", "s": [], "sub": [], "lr": ["6–12%"], "sources": [{"id": "rcc"}]}, {"o": "Äggstockar", "g": "PALB2", "s": ["Bröst-ovarial cancer predisposition syndrom"], "sub": [], "lr": [">5%"], "sources": [{"id": "rcc"}]}, {"o": "Äggstocksfibrom", "g": "PTCH1", "s": ["Gorlins syndrom"], "sub": [], "lr": ["~ 5%"], "sources": [{"id": "rcc"}]}, {"o": "Äggstocksfibrom", "g": "SUFU", "s": [], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Ögon", "g": "BAP1", "s": ["BAP1-tumör predispositionsyndrom"], "sub": [], "lr": ["36% av probander, 16% av bärare (icke proband)"], "sources": [{"id": "rcc"}]}, {"o": "Ögon", "g": "RB1", "s": ["Retinoblastom"], "sub": ["näthinna"], "lr": ["90%"], "sources": [{"id": "rcc"}]}, {"o": "Övriga cancer", "g": "TP53", "s": ["TP53-relaterad cancerpredisponerande syndrom"], "sub": [], "lr": ["Risk för malign melanom. Hypodiploid ALL är patognomisk för germline varianter i TP53. Sammantaget nästan 100% (lägre penetrans vid vissa missens varianter)"], "sources": [{"id": "rcc"}]}, {"o": "Övrigt", "g": "APC", "s": ["Familjär adenomatös polypos (FAP), Gardners syndrom"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Övrigt", "g": "DICER1", "s": ["DICER1 relaterad cancer predisposition syndrom"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Övrigt", "g": "WRN biallelisk (homozygot eller  kompound heterozygot)", "s": ["Werner syndrome"], "sub": [], "lr": [], "sources": [{"id": "rcc"}]}, {"o": "Prostata", "g": "HOXB13", "s": [], "sub": [], "lr": [], "sources": [{"id": "eau", "lage": "17q21.2", "risk": "OR 3,4–7,9", "risk_en": "OR 3.4–7.9", "kommentar": "Prostataspecifik risk-gen; högre PSA och Gleason vid diagnos. Saknas i RCC – blir ny nod.", "ref": "32,43,44"}]}, {"o": "Prostata", "g": "CHEK2", "s": [], "sub": [], "lr": [], "sources": [{"id": "eau", "lage": "22q12.1", "risk": "OR 3,3", "risk_en": "OR 3.3", "kommentar": "HRR-gen i bredare paneler; PARP-nytta vid icke-BRCA HRR inkonsekvent (EMA-monoterapi begränsad till BRCA1/2).", "ref": "30,38,39"}]}, {"o": "Prostata", "g": "BRCA1", "s": [], "sub": [], "lr": [], "sources": [{"id": "eau", "lage": "17q21", "risk": "RR 1,8–3,8 (≤65 år)", "risk_en": "RR 1.8–3.8 (≤65 yrs)", "behandling": "PARP-hämmare vid HRR-/BRCA-muterad mCRPC.", "behandling_en": "PARP inhibitors in HRR/BRCA-mutated mCRPC.", "kommentar": "Högre andel letal PCa bland bärare.", "ref": "30,37,45,46"}]}, {"o": "Prostata", "g": "ATM", "s": [], "sub": [], "lr": [], "sources": [{"id": "eau", "lage": "11q22.3", "risk": "RR 6,3 (metastaserad PCa)", "risk_en": "RR 6.3 (metastatic PCa)", "behandling": "HRR-gen (PROfound kohort A: BRCA1/2/ATM); PARP-hämmare kan erbjudas, men effekt svagare än vid BRCA.", "behandling_en": "HRR gene (PROfound cohort A: BRCA1/2/ATM); PARP inhibitors may be offered, but effect weaker than for BRCA.", "kommentar": "Högre andel letal PCa bland bärare. EAU avser monoallelisk bärarstatus.", "ref": "30,37"}]}, {"o": "Prostata", "g": "MLH1", "s": [], "sub": [], "lr": [], "sources": [{"id": "eau", "lage": "3p21.3", "risk": "RR 3,7 (MMR/Lynch)", "risk_en": "RR 3.7 (MMR/Lynch)", "behandling": "Vid MMR-brist/MSI-hög mCRPC: pembrolizumab (immunterapi).", "behandling_en": "In MMR-deficient/MSI-high mCRPC: pembrolizumab (immunotherapy).", "kommentar": "MMR-gen (Lynchs syndrom).", "ref": "47,48"}]}, {"o": "Prostata", "g": "MSH6", "s": [], "sub": [], "lr": [], "sources": [{"id": "eau", "lage": "2p16", "risk": "RR 3,7 (MMR/Lynch)", "risk_en": "RR 3.7 (MMR/Lynch)", "behandling": "Vid MMR-brist/MSI-hög mCRPC: pembrolizumab (immunterapi).", "behandling_en": "In MMR-deficient/MSI-high mCRPC: pembrolizumab (immunotherapy).", "kommentar": "MMR-gen (Lynchs syndrom).", "ref": "47,48"}]}, {"o": "Prostata", "g": "PMS2", "s": [], "sub": [], "lr": [], "sources": [{"id": "eau", "lage": "7p22.2", "risk": "RR 3,7 (MMR/Lynch)", "risk_en": "RR 3.7 (MMR/Lynch)", "behandling": "Vid MMR-brist/MSI-hög mCRPC: pembrolizumab (immunterapi).", "behandling_en": "In MMR-deficient/MSI-high mCRPC: pembrolizumab (immunotherapy).", "kommentar": "MMR-gen (Lynchs syndrom).", "ref": "47,48"}]}];
+const TRANSLATIONS = {"ui": {"sv": {"html_lang": "sv", "page_title": "Genoversikt - Organ vs Gen", "header_title": "Genoversikt - Organ vs Gen", "search_placeholder": "Sök organ eller gen...", "show_all_labels": "Visa alla namn", "reset_button": "Återställ", "download_button": "Ladda ned data (JSON)", "legend_organ": "Kanoniskt organ", "legend_gene": "Gen", "language_label": "Språk", "lang_sv": "Svenska", "lang_en": "English", "tooltip_organ": "Kanoniskt organ", "tooltip_gene": "Gen", "tooltip_connections": "kopplingar", "panel_organ": "Kanoniskt organ", "panel_gene": "Gen", "panel_connected_to_organs": "kopplade organ", "panel_connected_to_genes": "kopplade gener", "info_nodes": "noder", "info_edges": "kanter", "info_matches_zero": "0 träffar", "info_matches": "träffar", "source_label": "Källa", "source_link_text": "RCC nationellt vårdprogram"}, "en": {"html_lang": "en", "page_title": "Gene overview - Organ vs Gene", "header_title": "Gene overview - Organ vs Gene", "search_placeholder": "Search organ or gene...", "show_all_labels": "Show all labels", "reset_button": "Reset", "download_button": "Download data (JSON)", "legend_organ": "Canonical organ", "legend_gene": "Gene", "language_label": "Language", "lang_sv": "Svenska", "lang_en": "English", "tooltip_organ": "Canonical organ", "tooltip_gene": "Gene", "tooltip_connections": "connections", "panel_organ": "Canonical organ", "panel_gene": "Gene", "panel_connected_to_organs": "connected organs", "panel_connected_to_genes": "connected genes", "info_nodes": "nodes", "info_edges": "edges", "info_matches_zero": "0 matches", "info_matches": "matches", "source_label": "Source", "source_link_text": "RCC national care programme"}}, "organs": {"Andra maligna tumörer": "Other malignant tumors", "Andra relevanta symptom": "Other relevant symptoms", "Benigna tumörer": "Benign tumors", "Binjure": "Adrenal gland", "Bisköldkörtel": "Parathyroid gland", "Bröst": "Breast", "Bukspottkörtel": "Pancreas", "Endolymfatiska säcken i innerörat (ELST)": "Endolymphatic sac of the inner ear (ELST)", "GIST": "GIST", "Hematologiska maligniteter": "Hematological malignancies", "Hjärna": "Brain", "Hjärtfibrom": "Cardiac fibroma", "Hud": "Skin", "Hypofys": "Pituitary gland", "Könsträngs tumör med annular tubules": "Sex cord tumor with annular tubules", "Lever": "Liver", "Livmoderhals, germinala celler (SCTAT), äggstockar, livmoderkropp": "Cervix, germinal cells (SCTAT), ovaries, uterine corpus", "Livmoderkropp": "Uterine corpus", "Lunga": "Lung", "Lymfom": "Lymphoma", "Magsäck": "Stomach", "Magsäck/tolvfingertarm": "Stomach/duodenum", "Malign perifer nervskidetumör (MPNST)": "Malignant peripheral nerve sheath tumor (MPNST)", "Medulloblastom": "Medulloblastoma", "Meningiom": "Meningioma", "Mesoteliom (peritoneum och pleura)": "Mesothelioma (peritoneum and pleura)", "Multipla tumörer": "Multiple tumors", "Njurar": "Kidneys", "Osteoporos": "Osteoporosis", "Paragangliom/feokromocytom": "Paraganglioma/pheochromocytoma", "Prostata": "Prostate", "Rhabdoida tumörer": "Rhabdoid tumors", "Saknar organ/symtom": "No organ/symptom", "Sarkom": "Sarcoma", "Schwannom": "Schwannoma", "Sköldkörtel": "Thyroid", "Tjock- och ändtarm": "Colon and rectum", "Tolvfingertarm": "Duodenum", "Tymuscarcinoid": "Thymic carcinoid", "Tänder": "Teeth", "Urinvägar": "Urinary tract", "Äggstockar": "Ovaries", "Äggstockar/äggledare": "Ovaries/fallopian tubes", "Äggstocksfibrom": "Ovarian fibroma", "Ögon": "Eyes", "Övriga cancer": "Other cancers", "Övrigt": "Other"}, "subcategories": {"Optikus gliom": "Optic glioma", "PNET (neuroendokrin)": "PNET (neuroendocrine)", "SCCOHT (småcellig, hyperkalcemisk typ)": "SCCOHT (small cell, hypercalcemic type)", "SEGA (subependymalt jättecellsastrocytom)": "SEGA (subependymal giant cell astrocytoma)", "angiomyolipom": "angiomyolipoma", "bark": "cortex", "basalcellscancer (BCC)": "basal cell carcinoma (BCC)", "bronkialcarcinoid": "bronchial carcinoid", "carcinoider": "carcinoids", "endokrin": "endocrine", "feokromocytom": "pheochromocytoma", "fibrofolliculom": "fibrofolliculoma", "klarcellig": "clear cell", "kvinnor": "women", "könssträngstumörer": "sex cord tumors", "lobulär (kvinnor)": "lobular (women)", "lungblastom": "pulmonary blastoma", "lungcystor/pneumothorax": "lung cysts/pneumothorax", "magsäck/tunntarm/tjocktarm": "stomach/small intestine/large intestine", "medullär": "medullary", "muskler/skelett + sköldkörtelcancer": "muscles/skeleton + thyroid cancer", "män": "men", "näthinna": "retina", "näthinna (retinala hemangioblastom)": "retina (retinal hemangioblastomas)", "odontogena keratocystor (OKC)": "odontogenic keratocysts (OKC)", "olika lokalisationer": "various locations", "papillär": "papillary", "paragangliom": "paraganglioma", "ryggmärg och dess hinnor": "spinal cord and meninges", "ryggmärg och dess hinnor (hemangioblastom)": "spinal cord and meninges (hemangioblastoma)"}, "syndromes": {"ACTH-independent macronodular adrenal hyperplasia 2": "ACTH-independent macronodular adrenal hyperplasia 2", "Ataxia-telangiectasia": "Ataxia-telangiectasia", "BAP1-tumör predispositionsyndrom": "BAP1 tumor predisposition syndrome", "BARD1-relaterad bröstcancer": "BARD1-related breast cancer", "Birt-Hogg-Dubés syndrom": "Birt-Hogg-Dubé syndrome", "Blooms syndrom": "Bloom syndrome", "Bröst-ovarial cancer predisposition syndrom": "Breast-ovarian cancer predisposition syndrome", "CHEK2 -relaterad cancer predisposition": "CHEK2-related cancer predisposition", "Carney complex": "Carney complex", "Constitutional mismatch repair deficiency (CMMRD)": "Constitutional mismatch repair deficiency (CMMRD)", "Constitutional mismatchrepair deficiency": "Constitutional mismatch repair deficiency", "DICER1 relaterad cancer predisposition syndrom": "DICER1-related cancer predisposition syndrome", "Dyskeratosis congenita": "Dyskeratosis congenita", "Familjär adenomatös polypos (FAP), Gardners syndrom": "Familial adenomatous polyposis (FAP), Gardner syndrome", "Familjär hyperaldosteronism typ 1": "Familial hyperaldosteronism type 1", "Familjär hyperaldosteronism typ 2": "Familial hyperaldosteronism type 2", "Familjär hyperaldosteronism typ 3, AD": "Familial hyperaldosteronism type 3, AD", "Familjär hyperaldosteronism typ 4, AD": "Familial hyperaldosteronism type 4, AD", "GAPPS (gastric adenocarcinoma and proximal polyposis of the stomach)": "GAPPS (gastric adenocarcinoma and proximal polyposis of the stomach)", "Gorlins syndrom": "Gorlin syndrome", "HLRCC (hereditär leiomyomatos och klarcellig njurcancer syndrom)": "HLRCC (hereditary leiomyomatosis and clear cell renal cell cancer syndrome)", "Hereditär diffus ventrikel cancer": "Hereditary diffuse gastric cancer", "Juvenil polypos syndrom": "Juvenile polyposis syndrome", "LZRT1- relaterad schwannomatos": "LZTR1-related schwannomatosis", "Lynchs syndrom": "Lynch syndrome", "MAP (MUTYH-associerad polypos)": "MAP (MUTYH-associated polyposis)", "Melanom – pancreascancer syndrom": "Melanoma-pancreatic cancer syndrome", "Multipel endokrin neoplasi typ 1": "Multiple endocrine neoplasia type 1", "Multipel endokrin neoplasi typ 2": "Multiple endocrine neoplasia type 2", "NTHL1 Tumor Syndrome": "NTHL1 Tumor Syndrome", "Neurofibromatos typ 1": "Neurofibromatosis type 1", "PASNA syndrom, AD": "PASNA syndrome, AD", "PHTS, PTEN-hamartoma tumör syndrom, innefattar även Bannayan-Riley-Ruvalcabas syndrom, Cowdens syndrom": "PHTS, PTEN hamartoma tumor syndrome, also includes Bannayan-Riley-Ruvalcaba syndrome, Cowden syndrome", "PPAP (polymerase proofreading adenomatous polyposis": "PPAP (polymerase proofreading adenomatous polyposis)", "Peutz-Jeghers Syndrom": "Peutz-Jeghers syndrome", "RAD51C-related cancer susceptibility": "RAD51C-related cancer susceptibility", "RAD51D-related cancer susceptibility": "RAD51D-related cancer susceptibility", "Recessivt": "Recessive", "Retinoblastom": "Retinoblastoma", "Rhabdoid tumör predispositionsyndrom 1": "Rhabdoid tumor predisposition syndrome 1", "Rhabdoid tumörpredispostionssyndrom 2": "Rhabdoid tumor predisposition syndrome 2", "SMARCB1-relaterad schwannomatos": "SMARCB1-related schwannomatosis", "TP53-relaterad cancerpredisponerande syndrom": "TP53-related cancer predisposition syndrome", "Tuberös skleros": "Tuberous sclerosis", "Von Hippel-Lindaus syndrom": "Von Hippel-Lindau syndrome", "Werner syndrome": "Werner syndrome", "Ärftlig bröst- och äggstockscancer": "Hereditary breast and ovarian cancer", "Ärftlig diffus ventrikelcancer och lobulär bröstcancer syndrom": "Hereditary diffuse gastric cancer and lobular breast cancer syndrome", "Ärftlig feokromocytom/paragangliom syndrom": "Hereditary pheochromocytoma/paraganglioma syndrome", "Ärftlig feokromocytom/paragangliomsyndrom": "Hereditary pheochromocytoma/paraganglioma syndrome", "Ärftligt feokromocytom/paragangliom syndrom": "Hereditary pheochromocytoma/paraganglioma syndrome"}, "genes": {"APC": "APC", "APC  (mutationer i exon 1B promotor)": "APC (mutations in exon 1B promoter)", "ARMC5": "ARMC5", "ATM biallelisk (homozygot, kompound heterozygot)": "ATM biallelic (homozygous, compound heterozygous)", "ATM monoallelisk (heterozygot)": "ATM monoallelic (heterozygous)", "BAP1": "BAP1", "BARD1": "BARD1", "BLM - biallelisk (homozygot eller kompound heterozygot)": "BLM - biallelic (homozygous or compound heterozygous)", "BMPR1A": "BMPR1A", "BRCA1": "BRCA1", "BRCA2": "BRCA2", "BRIP1": "BRIP1", "CACNA1D": "CACNA1D", "CACNA1H": "CACNA1H", "CDH1": "CDH1", "CDKN2A": "CDKN2A", "CHEK2": "CHEK2", "CHEK2 biallelisk (homozygot eller kompound heterozygot)": "CHEK2 biallelic (homozygous or compound heterozygous)", "CLCN2": "CLCN2", "CTNN1A": "CTNN1A", "CYP11B1": "CYP11B1", "DICER1": "DICER1", "DKC1, X-bunden recessiv": "DKC1, X-linked recessive", "FH": "FH", "FLCN": "FLCN", "KCNJ5": "KCNJ5", "LZTR1": "LZTR1", "MAX": "MAX", "MEN1": "MEN1", "MLH1": "MLH1", "MLH1 biallelisk (homozygot eller kompound heterozygot)": "MLH1 biallelic (homozygous or compound heterozygous)", "MSH2": "MSH2", "MSH2 biallelisk (homozygot eller kompound heterozygot)": "MSH2 biallelic (homozygous or compound heterozygous)", "MSH3 biallelisk": "MSH3 biallelic", "MSH6": "MSH6", "MSH6 biallelisk (homozygot eller kompound heterozygot)": "MSH6 biallelic (homozygous or compound heterozygous)", "MUTYH biallelisk (homozygot eller kompound heterozygot)": "MUTYH biallelic (homozygous or compound heterozygous)", "NF1": "NF1", "NTHL1 biallelisk (homozygot eller kompound heterozygot)": "NTHL1 biallelic (homozygous or compound heterozygous)", "PALB2": "PALB2", "PDE11A": "PDE11A", "PDE8B": "PDE8B", "PMS2": "PMS2", "PMS2 biallelisk (homozygot eller kompound heterozygot": "PMS2 biallelic (homozygous or compound heterozygous)", "POLD1": "POLD1", "POLE": "POLE", "PRKACA": "PRKACA", "PRKAR1A": "PRKAR1A", "PTCH1": "PTCH1", "PTEN": "PTEN", "RAD51C": "RAD51C", "RAD51D": "RAD51D", "RB1": "RB1", "RET": "RET", "SDHA": "SDHA", "SDHAF2 (på maternell allel)": "SDHAF2 (on maternal allele)", "SDHAF2 (på paternell allel)": "SDHAF2 (on paternal allele)", "SDHB": "SDHB", "SDHC": "SDHC", "SDHD (på maternell allel)": "SDHD (on maternal allele)", "SDHD (på paternell allel)": "SDHD (on paternal allele)", "SMAD4": "SMAD4", "SMARCA4": "SMARCA4", "SMARCB1": "SMARCB1", "STK11": "STK11", "SUFU": "SUFU", "TMEM127": "TMEM127", "TP53": "TP53", "TSC1": "TSC1", "TSC2": "TSC2", "VHL": "VHL", "WRN biallelisk (homozygot eller  kompound heterozygot)": "WRN biallelic (homozygous or compound heterozygous)"}, "risk_phrases": {"1-10%": "1-10%", "10%": "10%", "10% (hos storrökare)": "10% (in heavy smokers)", "10% av bärare": "10% of carriers", "10-20%": "10-20%", "10-20% av TS patienter": "10-20% of TS patients", "10-24% för desmoider": "10-24% for desmoids", "10-25%": "10-25%", "100%": "100%", "11%": "11%", "11% av patienter": "11% of patients", "11-26% (kvinnor), 9-29% (män), https://plsd.eu/": "11-26% (women), 9-29% (men), https://plsd.eu/", "11-55%": "11-55%", "13%": "13%", "13% av bärare": "13% of carriers", "14%": "14%", "15 - 30%": "15-30%", "15% (2% av fallen kräver behandling)": "15% (2% of cases require treatment)", "15-30%": "15-30%", "15-30% (kvinnor), 11-22% (män), https://plsd.eu/": "15-30% (women), 11-22% (men), https://plsd.eu/", "16%": "16%", "18%": "18%", "18-32%, https://plsd.eu/": "18-32%, https://plsd.eu/", "18-50%": "18-50%", "2%": "2%", "2,5%": "2.5%", "2-9%": "2-9%", "2.6%, https://plsd.eu/": "2.6%, https://plsd.eu/", "20%": "20%", "20-40%": "20-40%", "20-60%": "20-60%", "21% (stort konfidensintervall), https://plsd.eu/": "21% (large confidence interval), https://plsd.eu/", "25% av probander, 17% av bärare (icke proband).": "25% of probands, 17% of carriers (non-proband).", "27-60%": "27-60%", "28%": "28%", "3-15%, https://plsd.eu/": "3-15%, https://plsd.eu/", "30%": "30%", "30-60%": "30-60%", "30-70%": "30-70%", "31-44%, https://plsd.eu/": "31-44%, https://plsd.eu/", "33% för kvinnor och 42% för män": "33% for women and 42% for men", "34%": "34%", "35%": "35%", "36% av probander, 16% av bärare (icke proband)": "36% of probands, 16% of carriers (non-proband)", "36-50% (kvinnor), 47-65% (män), https://plsd.eu/": "36-50% (women), 47-65% (men), https://plsd.eu/", "36-53%, https://plsd.eu/": "36-53%, https://plsd.eu/", "36-57%, https://plsd.eu/": "36-57%, https://plsd.eu/", "38-60%": "38-60%", "4%": "4%", "4% (om tidigare bilaterala retinoblastom)": "4% (if previous bilateral retinoblastoma)", "4-10%": "4-10%", "40-100%": "40-100%", "40-50%": "40-50%", "40-50%: hjärna, ryggmärg och dess hinnor -Schwannom, olika lokalisationer, även unilateral vestibulärt schwannom.": "40-50%: brain, spinal cord and meninges - Schwannoma, various locations, also unilateral vestibular schwannoma.", "40-70%": "40-70%", "48-57%, https://plsd.eu/": "48-57%, https://plsd.eu/", "5%": "5%", "5-12%, https://plsd.eu/": "5-12%, https://plsd.eu/", "50%": "50%", "50-60% av VHL patienter": "50-60% of VHL patients", "50-80%": "50-80%", "57%": "57%", "60 gånger förhöjd (75% för den svenska foundermutationen)": "60-fold elevated (75% for the Swedish founder mutation)", "60-80% av VHL patienter": "60-80% of VHL patients", "6–12%": "6-12%", "7%": "7%", "75 av TS patienter har angiomyolipom": "75% of TS patients have angiomyolipoma", "75% av TS patienter har angiomyolipom": "75% of TS patients have angiomyolipoma", "8-9%": "8-9%", "83%, den kumulativa risken upp till 40 års ålder.": "83%, cumulative risk up to age 40.", "9% (kvinnor), 33% (män), (stort konfidensintervall) , https://plsd.eu/": "9% (women), 33% (men), (large confidence interval), https://plsd.eu/", "9% (män)": "9% (men)", "9-20%, https://plsd.eu/": "9-20%, https://plsd.eu/", "90%": "90%", "< 2%": "< 2%", ">15%": ">15%", ">5%": ">5%", ">95%": ">95%", "Ej definerad": "Not defined", "Ej definierad": "Not defined", "Ej definierad.": "Not defined.", "Ej fastställd": "Not established", "Hög men ännu inte fastställd": "High but not yet established", "Hög penetrans, varierande fenotyp": "High penetrance, varying phenotype", "Hög penetrans, varierande fenotyp.": "High penetrance, varying phenotype.", "Låg risk för metastatisk sjukdom": "Low risk of metastatic disease", "Måttligt förhöjd": "Moderately elevated", "Måttligt förhöjd.": "Moderately elevated.", "Nedsatt penetrans": "Reduced penetrance", "Okänd": "Unknown", "Okänd (penetrans >90% vid 5 års ålder)": "Unknown (penetrance >90% by age 5)", "Okänd risk och spektrum, mycket sällsynt": "Unknown risk and spectrum, very rare", "Okänd.": "Unknown.", "Risk för malign melanom. Hypodiploid ALL är patognomisk för germline varianter i TP53. Sammantaget nästan 100% (lägre penetrans vid vissa missens varianter)": "Risk of malignant melanoma. Hypodiploid ALL is pathognomonic for germline TP53 variants. Overall almost 100% (lower penetrance for certain missense variants)", "Sannolikt hög men ännu inte fastställd": "Likely high but not yet established", "Sannolikt starkt förhöjd": "Likely strongly elevated", "Starkt förhöjd": "Strongly elevated", "Starkt förhöjd, även i mycket unga år.": "Strongly elevated, even at very young ages.", "Upp till 25%": "Up to 25%", "~ 5%": "~ 5%"}};
+
+// ---------- Language ----------
+function detectInitialLang() {
+  const urlLang = new URLSearchParams(window.location.search).get('lang');
+  if (urlLang === 'sv' || urlLang === 'en') return urlLang;
+  const stored = localStorage.getItem('genoversikt_lang');
+  if (stored === 'sv' || stored === 'en') return stored;
+  const browser = (navigator.language || 'sv').toLowerCase();
+  if (browser.startsWith('sv')) return 'sv';
+  if (browser.startsWith('en')) return 'en';
+  return 'sv';
+}
+let currentLang = detectInitialLang();
+
+function t(category, text) {
+  if (text === undefined || text === null) return text;
+  if (currentLang === 'sv') return text;
+  const dict = TRANSLATIONS[category];
+  if (dict && dict[text] !== undefined) return dict[text];
+  return text;
+}
+function tUI(key) {
+  const dict = TRANSLATIONS.ui[currentLang] || TRANSLATIONS.ui.sv;
+  return dict[key] !== undefined ? dict[key] : key;
+}
+
+function applyStaticI18n() {
+  document.documentElement.lang = tUI('html_lang');
+  document.title = tUI('page_title');
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    el.textContent = tUI(el.dataset.i18n);
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    el.setAttribute('placeholder', tUI(el.dataset.i18nPlaceholder));
+  });
+  document.querySelectorAll('#lang-toggle button').forEach(b => {
+    b.classList.toggle('active', b.dataset.lang === currentLang);
+  });
+}
+
+function setLanguage(lang) {
+  if (lang !== 'sv' && lang !== 'en') return;
+  currentLang = lang;
+  localStorage.setItem('genoversikt_lang', lang);
+  // Update URL parameter (push state, don't reload)
+  const url = new URL(window.location.href);
+  if (lang === 'sv') url.searchParams.delete('lang');
+  else url.searchParams.set('lang', lang);
+  window.history.replaceState({}, '', url.toString());
+  applyStaticI18n();
+  refreshNodeLabels();
+  applyLabels();
+  // Re-render panel if open
+  if (panel.style.display === 'block' && currentSelected) {
+    showPanel(currentSelected);
+  }
+  updateInfoCount();
+}
+
+// ---------- Graph data ----------
+const nodes = new Map();
+const links = [];
+function addNode(id, type) {
+  if (!nodes.has(id)) nodes.set(id, { id, type, label: id, deg: 0, x: 0, y: 0, vx: 0, vy: 0 });
+  return nodes.get(id);
+}
+EDGES_DATA.forEach(e => {
+  const o = addNode("O::" + e.o, "organ"); o.label = e.o;
+  const g = addNode("G::" + e.g, "gene"); g.label = e.g;
+  o.deg++; g.deg++;
+  links.push({ source: o, target: g, data: e });
+});
+const nodeList = Array.from(nodes.values());
+const adj = new Map();
+nodeList.forEach(n => adj.set(n.id, new Set()));
+links.forEach(l => { adj.get(l.source.id).add(l.target.id); adj.get(l.target.id).add(l.source.id); });
+
+function nodeDisplayLabel(n) {
+  const cat = n.type === 'organ' ? 'organs' : 'genes';
+  return t(cat, n.label);
+}
+
+const cx = 700, cy = 450;
+nodeList.forEach((n, i) => {
+  const angle = (i / nodeList.length) * Math.PI * 2;
+  const r = 350 + (Math.random() - 0.5) * 80;
+  n.x = cx + r * Math.cos(angle);
+  n.y = cy + r * Math.sin(angle);
+});
+
+function step() {
+  const k = 1800;
+  for (let i = 0; i < nodeList.length; i++) {
+    const a = nodeList[i];
+    for (let j = i + 1; j < nodeList.length; j++) {
+      const b = nodeList[j];
+      let dx = b.x - a.x, dy = b.y - a.y;
+      let dist2 = dx * dx + dy * dy;
+      if (dist2 < 1) dist2 = 1;
+      const dist = Math.sqrt(dist2);
+      const f = k / dist2;
+      const fx = (dx / dist) * f, fy = (dy / dist) * f;
+      a.vx -= fx; a.vy -= fy; b.vx += fx; b.vy += fy;
+    }
+  }
+  const targetLen = 95;
+  links.forEach(l => {
+    const a = l.source, b = l.target;
+    let dx = b.x - a.x, dy = b.y - a.y;
+    let dist = Math.sqrt(dx * dx + dy * dy);
+    if (dist < 1) dist = 1;
+    const f = (dist - targetLen) * 0.08;
+    const fx = (dx / dist) * f, fy = (dy / dist) * f;
+    a.vx += fx; a.vy += fy; b.vx -= fx; b.vy -= fy;
+  });
+  nodeList.forEach(n => { n.vx += (cx - n.x) * 0.005; n.vy += (cy - n.y) * 0.005; });
+  nodeList.forEach(n => {
+    if (n.fixed) { n.vx = 0; n.vy = 0; return; }
+    n.vx *= 0.78; n.vy *= 0.78;
+    n.x += n.vx; n.y += n.vy;
+  });
+}
+for (let i = 0; i < 600; i++) step();
+
+const svg = document.getElementById('svg');
+function setViewBox() {
+  let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+  nodeList.forEach(n => {
+    if (n.x < minX) minX = n.x; if (n.x > maxX) maxX = n.x;
+    if (n.y < minY) minY = n.y; if (n.y > maxY) maxY = n.y;
+  });
+  const pad = 40;
+  svg.setAttribute('viewBox', `${minX - pad} ${minY - pad} ${maxX - minX + pad * 2} ${maxY - minY + pad * 2}`);
+}
+
+const NS = "http://www.w3.org/2000/svg";
+links.forEach(l => {
+  const el = document.createElementNS(NS, 'line');
+  el.setAttribute('class', 'link');
+  svg.appendChild(el); l.el = el;
+});
+nodeList.forEach(n => {
+  const g = document.createElementNS(NS, 'g');
+  g.setAttribute('class', 'node ' + n.type);
+  g.dataset.id = n.id;
+  const c = document.createElementNS(NS, 'circle');
+  const r = Math.min(14, 4 + Math.sqrt(n.deg) * 2.2);
+  c.setAttribute('r', r);
+  g.appendChild(c);
+  const tx = document.createElementNS(NS, 'text');
+  tx.setAttribute('x', r + 3); tx.setAttribute('y', 3);
+  tx.textContent = nodeDisplayLabel(n);
+  g.appendChild(tx);
+  svg.appendChild(g);
+  n.el = g; n.textEl = tx; n.r = r;
+});
+
+function refreshNodeLabels() {
+  nodeList.forEach(n => { n.textEl.textContent = nodeDisplayLabel(n); });
+}
+
+function render() {
+  links.forEach(l => {
+    l.el.setAttribute('x1', l.source.x); l.el.setAttribute('y1', l.source.y);
+    l.el.setAttribute('x2', l.target.x); l.el.setAttribute('y2', l.target.y);
+  });
+  nodeList.forEach(n => n.el.setAttribute('transform', `translate(${n.x},${n.y})`));
+}
+function applyLabels() {
+  const showAll = document.getElementById('showLabels').checked;
+  nodeList.forEach(n => {
+    const sel = n.el.classList.contains('selected') || n.el.classList.contains('highlight');
+    n.textEl.style.display = (showAll || sel || n.deg >= 4) ? '' : 'none';
+  });
+}
+function activeLayers() {
+  return { rcc: document.getElementById('layer-rcc').checked,
+           eau: document.getElementById('layer-eau').checked };
+}
+function shownSources(l, act) {
+  return (l.data.sources || [{ id: 'rcc' }]).map(s => s.id).filter(s => act[s]);
+}
+function applyLayers() {
+  const act = activeLayers();
+  const live = new Set();
+  links.forEach(l => {
+    const shown = shownSources(l, act);
+    const on = shown.length > 0;
+    l.el.style.display = on ? '' : 'none';
+    l.el.classList.toggle('src-eau', on && !shown.includes('rcc'));
+    if (on) { live.add(l.source.id); live.add(l.target.id); }
+  });
+  nodeList.forEach(n => { n.el.style.display = live.has(n.id) ? '' : 'none'; });
+  if (currentSelected && live.has(currentSelected.id)) highlightNode(currentSelected);
+  else if (currentSelected) clearHighlight();
+}
+
+const tooltip = document.getElementById('tooltip');
+const panel = document.getElementById('panel');
+let currentSelected = null;
+
+function updateInfoCount() {
+  document.getElementById('info').textContent =
+    `${nodeList.length} ${tUI('info_nodes')}, ${links.length} ${tUI('info_edges')}`;
+}
+
+function clearHighlight() {
+  nodeList.forEach(n => n.el.classList.remove('selected', 'highlight', 'dim'));
+  links.forEach(l => l.el.classList.remove('highlight'));
+  panel.style.display = 'none';
+  currentSelected = null;
+  updateInfoCount();
+  applyLabels();
+}
+function highlightNode(n) {
+  clearHighlight();
+  currentSelected = n;
+  const act = activeLayers();
+  const neighbors = new Set();
+  links.forEach(l => {
+    if (shownSources(l, act).length === 0) return;
+    if (l.source === n) neighbors.add(l.target.id);
+    if (l.target === n) neighbors.add(l.source.id);
+  });
+  nodeList.forEach(m => {
+    if (m.el.style.display === 'none') return;
+    if (m === n) m.el.classList.add('selected');
+    else if (neighbors.has(m.id)) m.el.classList.add('highlight');
+    else m.el.classList.add('dim');
+  });
+  links.forEach(l => { if ((l.source === n || l.target === n) && l.el.style.display !== 'none') l.el.classList.add('highlight'); });
+  applyLabels(); showPanel(n);
+}
+function escapeHTML(s) { return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c])); }
+
+function translateLR(arr) {
+  return (arr || []).map(x => t('risk_phrases', x));
+}
+function translateSub(arr) {
+  return (arr || []).map(x => t('subcategories', x));
+}
+
+function showPanel(n) {
+  const act = activeLayers();
+  const myLinks = links.filter(l => (l.source === n || l.target === n) && shownSources(l, act).length > 0);
+  const isOrgan = n.type === 'organ';
+  const otherKey = isOrgan ? 'panel_connected_to_genes' : 'panel_connected_to_organs';
+  const headerLabel = isOrgan ? tUI('panel_organ') : tUI('panel_gene');
+  const displayLabel = nodeDisplayLabel(n);
+  let html = `<h3>${escapeHTML(displayLabel)}</h3><div class="small">${escapeHTML(headerLabel)} - ${myLinks.length} ${escapeHTML(tUI(otherKey))}</div><div style="margin-top:8px">`;
+  // Sort by translated label, locale-aware
+  const sortLocale = currentLang === 'en' ? 'en' : 'sv';
+  myLinks.sort((a, b) => {
+    const la = nodeDisplayLabel(isOrgan ? a.target : a.source);
+    const lb = nodeDisplayLabel(isOrgan ? b.target : b.source);
+    return la.localeCompare(lb, sortLocale);
+  });
+  myLinks.forEach(l => {
+    const other = isOrgan ? l.target : l.source;
+    const otherLabel = nodeDisplayLabel(other);
+    const lr = translateLR(l.data.lr).join(' / ');
+    const sub = translateSub(l.data.sub).join(', ');
+    html += `<div class="row" data-id="${other.id}"><span class="badge">${other.deg}</span>${escapeHTML(otherLabel)}`;
+    if (sub) html += ` <span class="small">[${escapeHTML(sub)}]</span>`;
+    if (lr) html += `<div class="small" style="margin-left:30px">${escapeHTML(lr)}</div>`;
+    const eau = act.eau ? (l.data.sources || []).find(s => s.id === 'eau') : null;
+    if (eau) {
+      const en = currentLang === 'en';
+      const eauLbl = en ? { risk: 'EAU risk', beh: 'Treatment' } : { risk: 'EAU-risk', beh: 'Behandling' };
+      const eauRisk = en && eau.risk_en ? eau.risk_en : eau.risk;
+      const eauBeh = en && eau.behandling_en ? eau.behandling_en : eau.behandling;
+      if (eauRisk) html += `<div class="small" style="margin-left:30px">${eauLbl.risk}: ${escapeHTML(eauRisk)}</div>`;
+      if (eauBeh) html += `<div class="small" style="margin-left:30px">${eauLbl.beh}: ${escapeHTML(eauBeh)}</div>`;
+    }
+    html += `</div>`;
+  });
+  html += '</div>';
+  panel.innerHTML = html;
+  panel.style.display = 'block';
+  panel.querySelectorAll('.row').forEach(r => {
+    r.addEventListener('click', () => {
+      const tn = nodes.get(r.dataset.id);
+      if (tn) highlightNode(tn);
+    });
+  });
+}
+
+nodeList.forEach(n => {
+  n.el.addEventListener('mouseenter', () => {
+    const typeLabel = n.type === 'organ' ? tUI('tooltip_organ') : tUI('tooltip_gene');
+    tooltip.innerHTML = `<h4>${escapeHTML(nodeDisplayLabel(n))}</h4><div class="small">${escapeHTML(typeLabel)} - ${n.deg} ${escapeHTML(tUI('tooltip_connections'))}</div>`;
+    tooltip.style.display = 'block';
+  });
+  n.el.addEventListener('mousemove', e => {
+    const rect = document.getElementById('stage').getBoundingClientRect();
+    tooltip.style.left = (e.clientX - rect.left + 12) + 'px';
+    tooltip.style.top = (e.clientY - rect.top + 12) + 'px';
+  });
+  n.el.addEventListener('mouseleave', () => { tooltip.style.display = 'none'; });
+  n.el.addEventListener('click', e => { e.stopPropagation(); highlightNode(n); });
+});
+
+document.getElementById('stage').addEventListener('click', e => { if (e.target === svg || e.target === document.getElementById('stage')) clearHighlight(); });
+document.getElementById('reset').addEventListener('click', () => { document.getElementById('search').value = ''; clearHighlight(); });
+document.getElementById('showLabels').addEventListener('change', applyLabels);
+document.getElementById('layer-rcc').addEventListener('change', applyLayers);
+document.getElementById('layer-eau').addEventListener('change', applyLayers);
+
+// Language toggle
+document.querySelectorAll('#lang-toggle button').forEach(b => {
+  b.addEventListener('click', () => setLanguage(b.dataset.lang));
+});
+
+document.getElementById('search').addEventListener('input', e => {
+  const q = e.target.value.trim().toLowerCase();
+  if (!q) { clearHighlight(); return; }
+  // Match against both Swedish original and translated label
+  const matches = nodeList.filter(n => {
+    const lbl = n.label.toLowerCase();
+    const tlbl = nodeDisplayLabel(n).toLowerCase();
+    return lbl.includes(q) || tlbl.includes(q);
+  });
+  if (matches.length === 0) {
+    clearHighlight();
+    document.getElementById('info').textContent = tUI('info_matches_zero');
+    return;
+  }
+  if (matches.length === 1) { highlightNode(matches[0]); return; }
+  clearHighlight();
+  const matchIds = new Set(matches.map(m => m.id));
+  const nbrIds = new Set();
+  matches.forEach(m => adj.get(m.id).forEach(id => nbrIds.add(id)));
+  nodeList.forEach(n => {
+    if (matchIds.has(n.id)) n.el.classList.add('selected');
+    else if (nbrIds.has(n.id)) n.el.classList.add('highlight');
+    else n.el.classList.add('dim');
+  });
+  links.forEach(l => { if (matchIds.has(l.source.id) || matchIds.has(l.target.id)) l.el.classList.add('highlight'); });
+  applyLabels();
+  document.getElementById('info').textContent = `${matches.length} ${tUI('info_matches')}`;
+});
+
+let dragNode = null, dragOffset = { x: 0, y: 0 };
+function svgPoint(evt) {
+  const pt = svg.createSVGPoint(); pt.x = evt.clientX; pt.y = evt.clientY;
+  return pt.matrixTransform(svg.getScreenCTM().inverse());
+}
+nodeList.forEach(n => {
+  n.el.addEventListener('mousedown', e => {
+    e.stopPropagation(); dragNode = n;
+    const p = svgPoint(e); dragOffset.x = p.x - n.x; dragOffset.y = p.y - n.y;
+    n.fixed = true; svg.classList.add('dragging');
+  });
+});
+window.addEventListener('mousemove', e => {
+  if (!dragNode) return;
+  const p = svgPoint(e);
+  dragNode.x = p.x - dragOffset.x; dragNode.y = p.y - dragOffset.y;
+  dragNode.vx = 0; dragNode.vy = 0;
+  for (let i = 0; i < 3; i++) step();
+  render();
+});
+window.addEventListener('mouseup', () => { if (dragNode) dragNode.fixed = false; dragNode = null; svg.classList.remove('dragging'); });
+
+let panState = null;
+svg.addEventListener('mousedown', e => {
+  if (e.target === svg) {
+    panState = { x: e.clientX, y: e.clientY, vb: { x: svg.viewBox.baseVal.x, y: svg.viewBox.baseVal.y, width: svg.viewBox.baseVal.width, height: svg.viewBox.baseVal.height } };
+    svg.classList.add('dragging');
+  }
+});
+window.addEventListener('mousemove', e => {
+  if (!panState) return;
+  const dx = (e.clientX - panState.x) * (panState.vb.width / svg.clientWidth);
+  const dy = (e.clientY - panState.y) * (panState.vb.height / svg.clientHeight);
+  svg.setAttribute('viewBox', `${panState.vb.x - dx} ${panState.vb.y - dy} ${panState.vb.width} ${panState.vb.height}`);
+});
+window.addEventListener('mouseup', () => { if (panState) svg.classList.remove('dragging'); panState = null; });
+
+svg.addEventListener('wheel', e => {
+  e.preventDefault();
+  const vb = svg.viewBox.baseVal;
+  const factor = e.deltaY > 0 ? 1.15 : 0.87;
+  const pt = svgPoint(e);
+  const newW = vb.width * factor, newH = vb.height * factor;
+  const newX = pt.x - (pt.x - vb.x) * factor, newY = pt.y - (pt.y - vb.y) * factor;
+  svg.setAttribute('viewBox', `${newX} ${newY} ${newW} ${newH}`);
+}, { passive: false });
+
+// Initial render
+applyStaticI18n();
+render(); setViewBox(); applyLabels(); applyLayers();
+updateInfoCount();
+</script>
+</body>
+</html>

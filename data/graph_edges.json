@@ -1,0 +1,3461 @@
+[
+  {
+    "organ": "Andra maligna tumörer",
+    "gen": "ATM biallelisk (homozygot, kompound heterozygot)",
+    "syndrom": [
+      "Ataxia-telangiectasia"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Andra maligna tumörer"
+    ],
+    "livstidsrisker": [
+      "Ej definerad"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Andra maligna tumörer",
+    "gen": "BLM - biallelisk (homozygot eller kompound heterozygot)",
+    "syndrom": [
+      "Blooms syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Andra maligna tumörer"
+    ],
+    "livstidsrisker": [
+      "83%, den kumulativa risken upp till 40 års ålder."
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Andra relevanta symptom",
+    "gen": "ATM biallelisk (homozygot, kompound heterozygot)",
+    "syndrom": [
+      "Ataxia-telangiectasia"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Andra relevanta symptom"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Andra relevanta symptom",
+    "gen": "CDH1",
+    "syndrom": [
+      "Ärftlig diffus ventrikelcancer och lobulär bröstcancer syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Andra relevanta symptom"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Benigna tumörer",
+    "gen": "APC",
+    "syndrom": [
+      "Familjär adenomatös polypos (FAP), Gardners syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Benigna tumörer"
+    ],
+    "livstidsrisker": [
+      "10-24% för desmoider"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Binjure",
+    "gen": "VHL",
+    "syndrom": [
+      "Von Hippel-Lindaus syndrom"
+    ],
+    "subkategorier": [
+      "feokromocytom"
+    ],
+    "originalnycklar": [
+      "Binjurar (feokromocytom)"
+    ],
+    "livstidsrisker": [
+      "10-20%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Binjure",
+    "gen": "ARMC5",
+    "syndrom": [
+      "ACTH-independent macronodular adrenal hyperplasia 2"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Binjure"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Binjure",
+    "gen": "CACNA1D",
+    "syndrom": [
+      "PASNA syndrom, AD"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Binjure"
+    ],
+    "livstidsrisker": [
+      "Hög penetrans, varierande fenotyp."
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Binjure",
+    "gen": "CACNA1H",
+    "syndrom": [
+      "Familjär hyperaldosteronism typ 4, AD"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Binjure"
+    ],
+    "livstidsrisker": [
+      "Ej definierad."
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Binjure",
+    "gen": "CLCN2",
+    "syndrom": [
+      "Familjär hyperaldosteronism typ 2"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Binjure"
+    ],
+    "livstidsrisker": [
+      "Nedsatt penetrans"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Binjure",
+    "gen": "CYP11B1",
+    "syndrom": [
+      "Familjär hyperaldosteronism typ 1"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Binjure"
+    ],
+    "livstidsrisker": [
+      "Nedsatt penetrans"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Binjure",
+    "gen": "KCNJ5",
+    "syndrom": [
+      "Familjär hyperaldosteronism typ 3, AD"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Binjure"
+    ],
+    "livstidsrisker": [
+      "Hög penetrans, varierande fenotyp"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Binjure",
+    "gen": "NF1",
+    "syndrom": [
+      "Neurofibromatos typ 1"
+    ],
+    "subkategorier": [
+      "feokromocytom"
+    ],
+    "originalnycklar": [
+      "Binjure (Feokromocytom)"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Binjure",
+    "gen": "RET",
+    "syndrom": [
+      "Multipel endokrin neoplasi typ 2"
+    ],
+    "subkategorier": [
+      "feokromocytom"
+    ],
+    "originalnycklar": [
+      "Binjure - feokromocytom"
+    ],
+    "livstidsrisker": [
+      "50%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Binjure",
+    "gen": "TP53",
+    "syndrom": [
+      "TP53-relaterad cancerpredisponerande syndrom"
+    ],
+    "subkategorier": [
+      "bark"
+    ],
+    "originalnycklar": [
+      "Binjurebark"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bisköldkörtel",
+    "gen": "MEN1",
+    "syndrom": [
+      "Multipel endokrin neoplasi typ 1"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Bisköldkörtel"
+    ],
+    "livstidsrisker": [
+      "90%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bisköldkörtel",
+    "gen": "RET",
+    "syndrom": [
+      "Multipel endokrin neoplasi typ 2"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Bisköldkörtel"
+    ],
+    "livstidsrisker": [
+      "15 - 30%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Lunga",
+    "gen": "MEN1",
+    "syndrom": [
+      "Multipel endokrin neoplasi typ 1"
+    ],
+    "subkategorier": [
+      "bronkialcarcinoid"
+    ],
+    "originalnycklar": [
+      "Bronkialcarcinoid"
+    ],
+    "livstidsrisker": [
+      "18%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bröst",
+    "gen": "ATM monoallelisk (heterozygot)",
+    "syndrom": [],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Bröst"
+    ],
+    "livstidsrisker": [
+      "Måttligt förhöjd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bröst",
+    "gen": "BARD1",
+    "syndrom": [
+      "BARD1-relaterad bröstcancer"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Bröst"
+    ],
+    "livstidsrisker": [
+      "Måttligt förhöjd."
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bröst",
+    "gen": "BLM - biallelisk (homozygot eller kompound heterozygot)",
+    "syndrom": [
+      "Blooms syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Bröst"
+    ],
+    "livstidsrisker": [
+      "Okänd."
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bröst",
+    "gen": "NF1",
+    "syndrom": [
+      "Neurofibromatos typ 1"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Bröst"
+    ],
+    "livstidsrisker": [
+      "Måttligt förhöjd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bröst",
+    "gen": "STK11",
+    "syndrom": [
+      "Peutz-Jeghers Syndrom"
+    ],
+    "subkategorier": [
+      "kvinnor"
+    ],
+    "originalnycklar": [
+      "Bröst (kvinnor)"
+    ],
+    "livstidsrisker": [
+      "Sannolikt starkt förhöjd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bröst",
+    "gen": "BRCA2",
+    "syndrom": [
+      "Ärftlig bröst- och äggstockscancer"
+    ],
+    "subkategorier": [
+      "kvinnor",
+      "män"
+    ],
+    "originalnycklar": [
+      "Bröst (män)",
+      "Kvinnor bröst"
+    ],
+    "livstidsrisker": [
+      "4%",
+      "50-80%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bröst",
+    "gen": "CDH1",
+    "syndrom": [
+      "Ärftlig diffus ventrikelcancer och lobulär bröstcancer syndrom"
+    ],
+    "subkategorier": [
+      "lobulär (kvinnor)"
+    ],
+    "originalnycklar": [
+      "Bröst lobulär (kvinnor)"
+    ],
+    "livstidsrisker": [
+      "Sannolikt starkt förhöjd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bröst",
+    "gen": "PTEN",
+    "syndrom": [
+      "PHTS, PTEN-hamartoma tumör syndrom, innefattar även Bannayan-Riley-Ruvalcabas syndrom, Cowdens syndrom"
+    ],
+    "subkategorier": [
+      "kvinnor"
+    ],
+    "originalnycklar": [
+      "Bröst, kvinnor"
+    ],
+    "livstidsrisker": [
+      "Sannolikt starkt förhöjd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bröst",
+    "gen": "TP53",
+    "syndrom": [
+      "TP53-relaterad cancerpredisponerande syndrom"
+    ],
+    "subkategorier": [
+      "kvinnor"
+    ],
+    "originalnycklar": [
+      "Bröst, kvinnor."
+    ],
+    "livstidsrisker": [
+      "Starkt förhöjd, även i mycket unga år."
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bröst",
+    "gen": "CHEK2",
+    "syndrom": [
+      "CHEK2 -relaterad cancer predisposition"
+    ],
+    "subkategorier": [
+      "kvinnor"
+    ],
+    "originalnycklar": [
+      "Bröstcancer"
+    ],
+    "livstidsrisker": [
+      "Måttligt förhöjd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bröst",
+    "gen": "CHEK2 biallelisk (homozygot eller kompound heterozygot)",
+    "syndrom": [
+      "CHEK2 -relaterad cancer predisposition"
+    ],
+    "subkategorier": [
+      "kvinnor"
+    ],
+    "originalnycklar": [
+      "Bröstcancer"
+    ],
+    "livstidsrisker": [
+      "50-80%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bröst",
+    "gen": "PALB2",
+    "syndrom": [
+      "Bröst-ovarial cancer predisposition syndrom"
+    ],
+    "subkategorier": [
+      "kvinnor"
+    ],
+    "originalnycklar": [
+      "Bröstcancer"
+    ],
+    "livstidsrisker": [
+      "Starkt förhöjd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bröst",
+    "gen": "RAD51C",
+    "syndrom": [
+      "RAD51C-related cancer susceptibility"
+    ],
+    "subkategorier": [
+      "kvinnor"
+    ],
+    "originalnycklar": [
+      "Bröstcancer"
+    ],
+    "livstidsrisker": [
+      "Måttligt förhöjd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bröst",
+    "gen": "RAD51D",
+    "syndrom": [
+      "RAD51D-related cancer susceptibility"
+    ],
+    "subkategorier": [
+      "kvinnor"
+    ],
+    "originalnycklar": [
+      "Bröstcancer"
+    ],
+    "livstidsrisker": [
+      "Måttligt förhöjd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bukspottkörtel",
+    "gen": "CDKN2A",
+    "syndrom": [],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Bukspottkörtel"
+    ],
+    "livstidsrisker": [
+      ">15%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bukspottkörtel",
+    "gen": "STK11",
+    "syndrom": [
+      "Peutz-Jeghers Syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Bukspottkörtel"
+    ],
+    "livstidsrisker": [
+      "11-55%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bukspottkörtel",
+    "gen": "VHL",
+    "syndrom": [
+      "Von Hippel-Lindaus syndrom"
+    ],
+    "subkategorier": [
+      "PNET (neuroendokrin)"
+    ],
+    "originalnycklar": [
+      "Bukspottkörtel (PNET)"
+    ],
+    "livstidsrisker": [
+      "11% av patienter"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Magsäck/tolvfingertarm",
+    "gen": "MEN1",
+    "syndrom": [
+      "Multipel endokrin neoplasi typ 1"
+    ],
+    "subkategorier": [
+      "carcinoider"
+    ],
+    "originalnycklar": [
+      "Carcinoider i magsäck/tolvfingertarm"
+    ],
+    "livstidsrisker": [
+      "20-40%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bukspottkörtel",
+    "gen": "MEN1",
+    "syndrom": [
+      "Multipel endokrin neoplasi typ 1"
+    ],
+    "subkategorier": [
+      "endokrin"
+    ],
+    "originalnycklar": [
+      "Endokrin bukspottkörtel"
+    ],
+    "livstidsrisker": [
+      "30-70%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Endolymfatiska säcken i innerörat (ELST)",
+    "gen": "VHL",
+    "syndrom": [
+      "Von Hippel-Lindaus syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Endolymfatiska säcken i innerörat (ELST)"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "GIST",
+    "gen": "SDHA",
+    "syndrom": [
+      "Ärftligt feokromocytom/paragangliom syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "GIST"
+    ],
+    "livstidsrisker": [
+      "Okänd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "GIST",
+    "gen": "SDHB",
+    "syndrom": [
+      "Ärftligt feokromocytom/paragangliom syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "GIST"
+    ],
+    "livstidsrisker": [
+      "2%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Hematologiska maligniteter",
+    "gen": "ATM biallelisk (homozygot, kompound heterozygot)",
+    "syndrom": [
+      "Ataxia-telangiectasia"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Hematologiska maligniteter"
+    ],
+    "livstidsrisker": [
+      "Ej definierad."
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Hjärna",
+    "gen": "TP53",
+    "syndrom": [
+      "TP53-relaterad cancerpredisponerande syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Hjärna"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Hjärna",
+    "gen": "SMARCB1",
+    "syndrom": [
+      "Rhabdoid tumör predispositionsyndrom 1"
+    ],
+    "subkategorier": [
+      "ryggmärg och dess hinnor"
+    ],
+    "originalnycklar": [
+      "Hjärna, ryggmärg och dess hinnor"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Hjärna",
+    "gen": "VHL",
+    "syndrom": [
+      "Von Hippel-Lindaus syndrom"
+    ],
+    "subkategorier": [
+      "ryggmärg och dess hinnor (hemangioblastom)"
+    ],
+    "originalnycklar": [
+      "Hjärna, ryggmärg och dess hinnor (hemangioblastom)"
+    ],
+    "livstidsrisker": [
+      "60-80% av VHL patienter"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Hjärna",
+    "gen": "NF1",
+    "syndrom": [
+      "Neurofibromatos typ 1"
+    ],
+    "subkategorier": [
+      "Optikus gliom"
+    ],
+    "originalnycklar": [
+      "Hjärna, ryggmärg och dess hinnor (Optikus gliom)"
+    ],
+    "livstidsrisker": [
+      "15% (2% av fallen kräver behandling)"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Hjärna",
+    "gen": "TSC1",
+    "syndrom": [
+      "Tuberös skleros"
+    ],
+    "subkategorier": [
+      "SEGA (subependymalt jättecellsastrocytom)"
+    ],
+    "originalnycklar": [
+      "Hjärna-subependymalt jättecellsastrocytom (SEGA)"
+    ],
+    "livstidsrisker": [
+      "10-20% av TS patienter"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Hjärna",
+    "gen": "TSC2",
+    "syndrom": [
+      "Tuberös skleros"
+    ],
+    "subkategorier": [
+      "SEGA (subependymalt jättecellsastrocytom)"
+    ],
+    "originalnycklar": [
+      "Hjärna-subependymalt jättecellsastrocytom (SEGA)"
+    ],
+    "livstidsrisker": [
+      "10-20% av TS patienter"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Hjärtfibrom",
+    "gen": "PTCH1",
+    "syndrom": [
+      "Gorlins syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Hjärtfibrom"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Hjärtfibrom",
+    "gen": "SUFU",
+    "syndrom": [],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Hjärtfibrom"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Hud",
+    "gen": "BAP1",
+    "syndrom": [
+      "BAP1-tumör predispositionsyndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Hud"
+    ],
+    "livstidsrisker": [
+      "13% av bärare"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Hud",
+    "gen": "CDKN2A",
+    "syndrom": [
+      "Melanom – pancreascancer syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Hud"
+    ],
+    "livstidsrisker": [
+      "60 gånger förhöjd (75% för den svenska foundermutationen)"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Hud",
+    "gen": "DKC1, X-bunden recessiv",
+    "syndrom": [
+      "Dyskeratosis congenita"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Hud"
+    ],
+    "livstidsrisker": [
+      "Okänd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Hud",
+    "gen": "PTCH1",
+    "syndrom": [
+      "Gorlins syndrom"
+    ],
+    "subkategorier": [
+      "basalcellscancer (BCC)"
+    ],
+    "originalnycklar": [
+      "Hud - basalcellscancer (BCC)."
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Hud",
+    "gen": "SUFU",
+    "syndrom": [],
+    "subkategorier": [
+      "basalcellscancer (BCC)"
+    ],
+    "originalnycklar": [
+      "Hud - basalcellscancer (BCC)."
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Hud",
+    "gen": "FLCN",
+    "syndrom": [
+      "Birt-Hogg-Dubés syndrom"
+    ],
+    "subkategorier": [
+      "fibrofolliculom"
+    ],
+    "originalnycklar": [
+      "Hud/fibrofolliculom"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Hypofys",
+    "gen": "MEN1",
+    "syndrom": [
+      "Multipel endokrin neoplasi typ 1"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Hypofys"
+    ],
+    "livstidsrisker": [
+      "50%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Bröst",
+    "gen": "BRCA1",
+    "syndrom": [
+      "Ärftlig bröst- och äggstockscancer"
+    ],
+    "subkategorier": [
+      "kvinnor"
+    ],
+    "originalnycklar": [
+      "Kvinnor bröst"
+    ],
+    "livstidsrisker": [
+      "50-80%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Könsträngs tumör med annular tubules",
+    "gen": "STK11",
+    "syndrom": [
+      "Peutz-Jeghers Syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Könsträngs tumör med annular tubules"
+    ],
+    "livstidsrisker": [
+      "9% (män)"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Lever",
+    "gen": "APC",
+    "syndrom": [
+      "Familjär adenomatös polypos (FAP), Gardners syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Lever"
+    ],
+    "livstidsrisker": [
+      "2,5%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Livmoderhals, germinala celler (SCTAT), äggstockar, livmoderkropp",
+    "gen": "STK11",
+    "syndrom": [
+      "Peutz-Jeghers Syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Livmoderhals, germinala celler (SCTAT), äggstockar, livmoderkropp"
+    ],
+    "livstidsrisker": [
+      "18-50%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Livmoderkropp",
+    "gen": "MLH1",
+    "syndrom": [
+      "Lynchs syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Livmoderkropp"
+    ],
+    "livstidsrisker": [
+      "31-44%, https://plsd.eu/"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Livmoderkropp",
+    "gen": "MSH2",
+    "syndrom": [
+      "Lynchs syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Livmoderkropp"
+    ],
+    "livstidsrisker": [
+      "36-53%, https://plsd.eu/"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Livmoderkropp",
+    "gen": "MSH6",
+    "syndrom": [
+      "Lynchs syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Livmoderkropp"
+    ],
+    "livstidsrisker": [
+      "36-57%, https://plsd.eu/"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Livmoderkropp",
+    "gen": "NTHL1 biallelisk (homozygot eller kompound heterozygot)",
+    "syndrom": [
+      "NTHL1 Tumor Syndrome"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Livmoderkropp"
+    ],
+    "livstidsrisker": [
+      "Ej definierad"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Livmoderkropp",
+    "gen": "PMS2",
+    "syndrom": [
+      "Lynchs syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Livmoderkropp"
+    ],
+    "livstidsrisker": [
+      "21% (stort konfidensintervall), https://plsd.eu/"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Livmoderkropp",
+    "gen": "POLD1",
+    "syndrom": [
+      "PPAP (polymerase proofreading adenomatous polyposis"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Livmoderkropp"
+    ],
+    "livstidsrisker": [
+      "Sannolikt hög men ännu inte fastställd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Livmoderkropp",
+    "gen": "POLE",
+    "syndrom": [
+      "PPAP (polymerase proofreading adenomatous polyposis"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Livmoderkropp"
+    ],
+    "livstidsrisker": [
+      "Ej fastställd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Livmoderkropp",
+    "gen": "PTEN",
+    "syndrom": [
+      "PHTS, PTEN-hamartoma tumör syndrom, innefattar även Bannayan-Riley-Ruvalcabas syndrom, Cowdens syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Livmoderkropp"
+    ],
+    "livstidsrisker": [
+      "28%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Lunga",
+    "gen": "CDKN2A",
+    "syndrom": [],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Lunga"
+    ],
+    "livstidsrisker": [
+      "10% (hos storrökare)"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Lunga",
+    "gen": "DICER1",
+    "syndrom": [
+      "DICER1 relaterad cancer predisposition syndrom"
+    ],
+    "subkategorier": [
+      "lungblastom"
+    ],
+    "originalnycklar": [
+      "Lungblastom"
+    ],
+    "livstidsrisker": [
+      "Ej definierad"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Lunga",
+    "gen": "FLCN",
+    "syndrom": [
+      "Birt-Hogg-Dubés syndrom"
+    ],
+    "subkategorier": [
+      "lungcystor/pneumothorax"
+    ],
+    "originalnycklar": [
+      "Lungcystor/pneumothorax"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Lymfom",
+    "gen": "BLM - biallelisk (homozygot eller kompound heterozygot)",
+    "syndrom": [
+      "Blooms syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Lymfom"
+    ],
+    "livstidsrisker": [
+      "Okänd."
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Magsäck",
+    "gen": "APC  (mutationer i exon 1B promotor)",
+    "syndrom": [
+      "GAPPS (gastric adenocarcinoma and proximal polyposis of the stomach)"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Magsäck"
+    ],
+    "livstidsrisker": [
+      "Upp till 25%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Magsäck",
+    "gen": "CDH1",
+    "syndrom": [
+      "Ärftlig diffus ventrikelcancer och lobulär bröstcancer syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Magsäck"
+    ],
+    "livstidsrisker": [
+      "33% för kvinnor och 42% för män"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Magsäck",
+    "gen": "CTNN1A",
+    "syndrom": [
+      "Hereditär diffus ventrikel cancer"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Magsäck"
+    ],
+    "livstidsrisker": [
+      "50%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Magsäck",
+    "gen": "STK11",
+    "syndrom": [
+      "Peutz-Jeghers Syndrom"
+    ],
+    "subkategorier": [
+      "magsäck/tunntarm/tjocktarm"
+    ],
+    "originalnycklar": [
+      "Magsäck, tunntarm och tjocktarm."
+    ],
+    "livstidsrisker": [
+      "57%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Magsäck/tolvfingertarm",
+    "gen": "APC",
+    "syndrom": [
+      "Familjär adenomatös polypos (FAP), Gardners syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Magsäck/tolvfingertarm"
+    ],
+    "livstidsrisker": [
+      "4-10%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Magsäck/tolvfingertarm",
+    "gen": "BMPR1A",
+    "syndrom": [
+      "Juvenil polypos syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Magsäck/tolvfingertarm"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Magsäck/tolvfingertarm",
+    "gen": "MSH3 biallelisk",
+    "syndrom": [
+      "Recessivt"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Magsäck/tolvfingertarm"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Magsäck/tolvfingertarm",
+    "gen": "MUTYH biallelisk (homozygot eller kompound heterozygot)",
+    "syndrom": [
+      "MAP (MUTYH-associerad polypos)"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Magsäck/tolvfingertarm"
+    ],
+    "livstidsrisker": [
+      "5%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Magsäck/tolvfingertarm",
+    "gen": "POLD1",
+    "syndrom": [
+      "PPAP (polymerase proofreading adenomatous polyposis"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Magsäck/tolvfingertarm"
+    ],
+    "livstidsrisker": [
+      "Hög men ännu inte fastställd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Magsäck/tolvfingertarm",
+    "gen": "POLE",
+    "syndrom": [
+      "PPAP (polymerase proofreading adenomatous polyposis"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Magsäck/tolvfingertarm"
+    ],
+    "livstidsrisker": [
+      "Hög men ännu inte fastställd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Magsäck/tolvfingertarm",
+    "gen": "SMAD4",
+    "syndrom": [
+      "Juvenil polypos syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Magsäck/tolvfingertarm"
+    ],
+    "livstidsrisker": [
+      "20-60%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Malign perifer nervskidetumör (MPNST)",
+    "gen": "NF1",
+    "syndrom": [
+      "Neurofibromatos typ 1"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Malign perifer nervskidetumör (MPNST)"
+    ],
+    "livstidsrisker": [
+      "10%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Medulloblastom",
+    "gen": "PTCH1",
+    "syndrom": [
+      "Gorlins syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Medulloblastom"
+    ],
+    "livstidsrisker": [
+      "< 2%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Medulloblastom",
+    "gen": "SUFU",
+    "syndrom": [],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Medulloblastom"
+    ],
+    "livstidsrisker": [
+      "8-9%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Meningiom",
+    "gen": "PTCH1",
+    "syndrom": [
+      "Gorlins syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Meningiom"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Meningiom",
+    "gen": "SUFU",
+    "syndrom": [],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Meningiom"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Mesoteliom (peritoneum och pleura)",
+    "gen": "BAP1",
+    "syndrom": [
+      "BAP1-tumör predispositionsyndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Mesoteliom (peritoneum och pleura)"
+    ],
+    "livstidsrisker": [
+      "25% av probander, 17% av bärare (icke proband)."
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Multipla tumörer",
+    "gen": "MLH1 biallelisk (homozygot eller kompound heterozygot)",
+    "syndrom": [
+      "Constitutional mismatch repair deficiency (CMMRD)"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Multipla tumörer"
+    ],
+    "livstidsrisker": [
+      "100%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Multipla tumörer",
+    "gen": "MSH2 biallelisk (homozygot eller kompound heterozygot)",
+    "syndrom": [
+      "Constitutional mismatchrepair deficiency"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Multipla tumörer"
+    ],
+    "livstidsrisker": [
+      "100%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Multipla tumörer",
+    "gen": "MSH6 biallelisk (homozygot eller kompound heterozygot)",
+    "syndrom": [
+      "Constitutional mismatchrepair deficiency"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Multipla tumörer"
+    ],
+    "livstidsrisker": [
+      "100%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Multipla tumörer",
+    "gen": "PMS2 biallelisk (homozygot eller kompound heterozygot",
+    "syndrom": [
+      "Constitutional mismatchrepair deficiency"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Multipla tumörer"
+    ],
+    "livstidsrisker": [
+      "100%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Multipla tumörer",
+    "gen": "PRKACA",
+    "syndrom": [
+      "Carney complex"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Multipla tumörer"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Multipla tumörer",
+    "gen": "PRKAR1A",
+    "syndrom": [
+      "Carney complex"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Multipla tumörer"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Njurar",
+    "gen": "BAP1",
+    "syndrom": [
+      "BAP1-tumör predispositionsyndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Njurar"
+    ],
+    "livstidsrisker": [
+      "10% av bärare"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Njurar",
+    "gen": "DICER1",
+    "syndrom": [
+      "DICER1 relaterad cancer predisposition syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Njurar"
+    ],
+    "livstidsrisker": [
+      "7%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Njurar",
+    "gen": "FH",
+    "syndrom": [
+      "HLRCC (hereditär leiomyomatos och klarcellig njurcancer syndrom)"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Njurar"
+    ],
+    "livstidsrisker": [
+      "20%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Njurar",
+    "gen": "FLCN",
+    "syndrom": [
+      "Birt-Hogg-Dubés syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Njurar"
+    ],
+    "livstidsrisker": [
+      "15-30%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Njurar",
+    "gen": "TSC1",
+    "syndrom": [
+      "Tuberös skleros"
+    ],
+    "subkategorier": [
+      "angiomyolipom"
+    ],
+    "originalnycklar": [
+      "Njurar (angiomyolipom)"
+    ],
+    "livstidsrisker": [
+      "75% av TS patienter har angiomyolipom"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Njurar",
+    "gen": "TSC2",
+    "syndrom": [
+      "Tuberös skleros"
+    ],
+    "subkategorier": [
+      "angiomyolipom"
+    ],
+    "originalnycklar": [
+      "Njurar (angiomyolipom)"
+    ],
+    "livstidsrisker": [
+      "75 av TS patienter har angiomyolipom"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Njurar",
+    "gen": "PTEN",
+    "syndrom": [
+      "PHTS, PTEN-hamartoma tumör syndrom, innefattar även Bannayan-Riley-Ruvalcabas syndrom, Cowdens syndrom"
+    ],
+    "subkategorier": [
+      "papillär"
+    ],
+    "originalnycklar": [
+      "Njurar (ffa papillär njurcancer )"
+    ],
+    "livstidsrisker": [
+      "34%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Njurar",
+    "gen": "VHL",
+    "syndrom": [
+      "Von Hippel-Lindaus syndrom"
+    ],
+    "subkategorier": [
+      "klarcellig"
+    ],
+    "originalnycklar": [
+      "Njurar (klarcellig njurcancer)"
+    ],
+    "livstidsrisker": [
+      "40-70%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Njurar",
+    "gen": "SDHB",
+    "syndrom": [
+      "Ärftligt feokromocytom/paragangliom syndrom"
+    ],
+    "subkategorier": [
+      "klarcellig"
+    ],
+    "originalnycklar": [
+      "Njurar (klarcellig)"
+    ],
+    "livstidsrisker": [
+      "14%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Ögon",
+    "gen": "VHL",
+    "syndrom": [
+      "Von Hippel-Lindaus syndrom"
+    ],
+    "subkategorier": [
+      "näthinna (retinala hemangioblastom)"
+    ],
+    "originalnycklar": [
+      "Näthinna (retinala hemangioblastom)"
+    ],
+    "livstidsrisker": [
+      "50-60% av VHL patienter"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Osteoporos",
+    "gen": "NF1",
+    "syndrom": [
+      "Neurofibromatos typ 1"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Osteoporos"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Paragangliom/feokromocytom",
+    "gen": "VHL",
+    "syndrom": [
+      "Von Hippel-Lindaus syndrom"
+    ],
+    "subkategorier": [
+      "paragangliom"
+    ],
+    "originalnycklar": [
+      "Paragangliom"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Paragangliom/feokromocytom",
+    "gen": "MAX",
+    "syndrom": [
+      "Ärftlig feokromocytom/paragangliomsyndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Paragangliom/feokromocytom"
+    ],
+    "livstidsrisker": [
+      "Okänd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Paragangliom/feokromocytom",
+    "gen": "SDHA",
+    "syndrom": [
+      "Ärftligt feokromocytom/paragangliom syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Paragangliom/feokromocytom"
+    ],
+    "livstidsrisker": [
+      "1-10%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Paragangliom/feokromocytom",
+    "gen": "SDHAF2 (på maternell allel)",
+    "syndrom": [
+      "Ärftligt feokromocytom/paragangliom syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Paragangliom/feokromocytom"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Paragangliom/feokromocytom",
+    "gen": "SDHAF2 (på paternell allel)",
+    "syndrom": [
+      "Ärftligt feokromocytom/paragangliom syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Paragangliom/feokromocytom"
+    ],
+    "livstidsrisker": [
+      "Låg risk för metastatisk sjukdom"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Paragangliom/feokromocytom",
+    "gen": "SDHB",
+    "syndrom": [
+      "Ärftligt feokromocytom/paragangliom syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Paragangliom/feokromocytom"
+    ],
+    "livstidsrisker": [
+      "30%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Paragangliom/feokromocytom",
+    "gen": "SDHC",
+    "syndrom": [
+      "Ärftligt feokromocytom/paragangliom syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Paragangliom/feokromocytom"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Paragangliom/feokromocytom",
+    "gen": "SDHD (på maternell allel)",
+    "syndrom": [
+      "Ärftligt feokromocytom/paragangliom syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Paragangliom/feokromocytom"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Paragangliom/feokromocytom",
+    "gen": "SDHD (på paternell allel)",
+    "syndrom": [
+      "Ärftligt feokromocytom/paragangliom syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Paragangliom/feokromocytom"
+    ],
+    "livstidsrisker": [
+      "Låg risk för metastatisk sjukdom"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Paragangliom/feokromocytom",
+    "gen": "TMEM127",
+    "syndrom": [
+      "Ärftlig feokromocytom/paragangliom syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Paragangliom/feokromocytom"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Prostata",
+    "gen": "BRCA2",
+    "syndrom": [
+      "Ärftlig bröst- och äggstockscancer"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Prostata"
+    ],
+    "livstidsrisker": [
+      "27-60%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      },
+      {
+        "id": "eau",
+        "lage": "13q12.3",
+        "risk": "RR 2,5–4,6; ≤55 år RR 8–23",
+        "risk_en": "RR 2.5–4.6; ≤55 yrs RR 8–23",
+        "behandling": "PARP-hämmare (t.ex. olaparib) vid HRR-/BRCA-muterad mCRPC – prioriteras vid BRCA. Platinumkänslighet.",
+        "behandling_en": "PARP inhibitors (e.g. olaparib) in HRR/BRCA-mutated mCRPC – prioritised for BRCA. Platinum sensitivity.",
+        "kommentar": "Oberoende prediktor för metastas och sämre PCa-specifik överlevnad.",
+        "ref": "30,35,38,39,40,41,42"
+      }
+    ]
+  },
+  {
+    "organ": "Prostata",
+    "gen": "MSH2",
+    "syndrom": [
+      "Lynchs syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Prostata"
+    ],
+    "livstidsrisker": [
+      "18-32%, https://plsd.eu/"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      },
+      {
+        "id": "eau",
+        "lage": "2p21",
+        "risk": "RR 3,7 (MMR/Lynch)",
+        "risk_en": "RR 3.7 (MMR/Lynch)",
+        "behandling": "Vid MMR-brist/MSI-hög mCRPC: pembrolizumab (immunterapi).",
+        "behandling_en": "In MMR-deficient/MSI-high mCRPC: pembrolizumab (immunotherapy).",
+        "kommentar": "Störst PCa-risk bland MMR-generna.",
+        "ref": "47,48,49"
+      }
+    ]
+  },
+  {
+    "organ": "Prostata",
+    "gen": "TP53",
+    "syndrom": [
+      "TP53-relaterad cancerpredisponerande syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Prostata"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Rhabdoida tumörer",
+    "gen": "SMARCA4",
+    "syndrom": [
+      "Rhabdoid tumörpredispostionssyndrom 2"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Rhabdoida tumörer"
+    ],
+    "livstidsrisker": [
+      "Okänd risk och spektrum, mycket sällsynt"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Rhabdoida tumörer",
+    "gen": "SMARCB1",
+    "syndrom": [
+      "Rhabdoid tumör predispositionsyndrom 1"
+    ],
+    "subkategorier": [
+      "olika lokalisationer"
+    ],
+    "originalnycklar": [
+      "Rhaboida tumörer (olika lokalisationer)"
+    ],
+    "livstidsrisker": [
+      "Okänd (penetrans >90% vid 5 års ålder)"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Saknar organ/symtom",
+    "gen": "PDE11A",
+    "syndrom": [
+      "Carney complex"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Saknar organ/symtom"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Saknar organ/symtom",
+    "gen": "PDE8B",
+    "syndrom": [
+      "Carney complex"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Saknar organ/symtom"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Sarkom",
+    "gen": "RB1",
+    "syndrom": [
+      "Retinoblastom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Sarkom"
+    ],
+    "livstidsrisker": [
+      "4% (om tidigare bilaterala retinoblastom)"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Sarkom",
+    "gen": "TP53",
+    "syndrom": [
+      "TP53-relaterad cancerpredisponerande syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Sarkom"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Sarkom",
+    "gen": "WRN biallelisk (homozygot eller  kompound heterozygot)",
+    "syndrom": [
+      "Werner syndrome"
+    ],
+    "subkategorier": [
+      "muskler/skelett + sköldkörtelcancer"
+    ],
+    "originalnycklar": [
+      "Sarkom i muskler, skelett och sköldkörtelcancer"
+    ],
+    "livstidsrisker": [
+      ">95%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Schwannom",
+    "gen": "LZTR1",
+    "syndrom": [
+      "LZRT1- relaterad schwannomatos"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Schwannom"
+    ],
+    "livstidsrisker": [
+      "40-50%: hjärna, ryggmärg och dess hinnor -Schwannom, olika lokalisationer, även unilateral vestibulärt schwannom."
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Schwannom",
+    "gen": "SMARCB1",
+    "syndrom": [
+      "SMARCB1-relaterad schwannomatos"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Schwannom"
+    ],
+    "livstidsrisker": [
+      "40-50%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Sköldkörtel",
+    "gen": "APC",
+    "syndrom": [
+      "Familjär adenomatös polypos (FAP), Gardners syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Sköldkörtel"
+    ],
+    "livstidsrisker": [
+      "2-9%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Sköldkörtel",
+    "gen": "DICER1",
+    "syndrom": [
+      "DICER1 relaterad cancer predisposition syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Sköldkörtel"
+    ],
+    "livstidsrisker": [
+      "Okänd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Sköldkörtel",
+    "gen": "RET",
+    "syndrom": [
+      "Multipel endokrin neoplasi typ 2"
+    ],
+    "subkategorier": [
+      "medullär"
+    ],
+    "originalnycklar": [
+      "Sköldkörtel (medullär)"
+    ],
+    "livstidsrisker": [
+      "100%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Sköldkörtel",
+    "gen": "PTEN",
+    "syndrom": [
+      "PHTS, PTEN-hamartoma tumör syndrom, innefattar även Bannayan-Riley-Ruvalcabas syndrom, Cowdens syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Sköldkörteln"
+    ],
+    "livstidsrisker": [
+      "35%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Tjock- och ändtarm",
+    "gen": "APC",
+    "syndrom": [
+      "Familjär adenomatös polypos (FAP), Gardners syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Tjock- och ändtarm"
+    ],
+    "livstidsrisker": [
+      "100%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Tjock- och ändtarm",
+    "gen": "BMPR1A",
+    "syndrom": [
+      "Juvenil polypos syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Tjock- och ändtarm"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Tjock- och ändtarm",
+    "gen": "MLH1",
+    "syndrom": [
+      "Lynchs syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Tjock- och ändtarm"
+    ],
+    "livstidsrisker": [
+      "48-57%, https://plsd.eu/"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Tjock- och ändtarm",
+    "gen": "MSH2",
+    "syndrom": [
+      "Lynchs syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Tjock- och ändtarm"
+    ],
+    "livstidsrisker": [
+      "36-50% (kvinnor), 47-65% (män), https://plsd.eu/"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Tjock- och ändtarm",
+    "gen": "MSH3 biallelisk",
+    "syndrom": [
+      "Recessivt"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Tjock- och ändtarm"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Tjock- och ändtarm",
+    "gen": "MSH6",
+    "syndrom": [
+      "Lynchs syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Tjock- och ändtarm"
+    ],
+    "livstidsrisker": [
+      "11-26% (kvinnor), 9-29% (män), https://plsd.eu/"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Tjock- och ändtarm",
+    "gen": "MUTYH biallelisk (homozygot eller kompound heterozygot)",
+    "syndrom": [
+      "MAP (MUTYH-associerad polypos)"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Tjock- och ändtarm"
+    ],
+    "livstidsrisker": [
+      "40-100%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Tjock- och ändtarm",
+    "gen": "NTHL1 biallelisk (homozygot eller kompound heterozygot)",
+    "syndrom": [
+      "NTHL1 Tumor Syndrome"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Tjock- och ändtarm"
+    ],
+    "livstidsrisker": [
+      "Ej definierad"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Tjock- och ändtarm",
+    "gen": "PMS2",
+    "syndrom": [
+      "Lynchs syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Tjock- och ändtarm"
+    ],
+    "livstidsrisker": [
+      "9% (kvinnor), 33% (män), (stort konfidensintervall) , https://plsd.eu/"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Tjock- och ändtarm",
+    "gen": "POLD1",
+    "syndrom": [
+      "PPAP (polymerase proofreading adenomatous polyposis"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Tjock- och ändtarm"
+    ],
+    "livstidsrisker": [
+      "Hög men ännu inte fastställd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Tjock- och ändtarm",
+    "gen": "POLE",
+    "syndrom": [
+      "PPAP (polymerase proofreading adenomatous polyposis"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Tjock- och ändtarm"
+    ],
+    "livstidsrisker": [
+      "Hög men ännu inte fastställd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Tjock- och ändtarm",
+    "gen": "PTEN",
+    "syndrom": [
+      "PHTS, PTEN-hamartoma tumör syndrom, innefattar även Bannayan-Riley-Ruvalcabas syndrom, Cowdens syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Tjock- och ändtarm"
+    ],
+    "livstidsrisker": [
+      "16%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Tjock- och ändtarm",
+    "gen": "SMAD4",
+    "syndrom": [
+      "Juvenil polypos syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Tjock- och ändtarm"
+    ],
+    "livstidsrisker": [
+      "38-60%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Tjock- och ändtarm",
+    "gen": "TP53",
+    "syndrom": [
+      "TP53-relaterad cancerpredisponerande syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Tjocktarm och ändtarm"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Tolvfingertarm",
+    "gen": "NTHL1 biallelisk (homozygot eller kompound heterozygot)",
+    "syndrom": [
+      "NTHL1 Tumor Syndrome"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Tolvfingertarm"
+    ],
+    "livstidsrisker": [
+      "Ej definierad"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Tymuscarcinoid",
+    "gen": "MEN1",
+    "syndrom": [
+      "Multipel endokrin neoplasi typ 1"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Tymuscarcinoid"
+    ],
+    "livstidsrisker": [
+      "7%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Tänder",
+    "gen": "PTCH1",
+    "syndrom": [
+      "Gorlins syndrom"
+    ],
+    "subkategorier": [
+      "odontogena keratocystor (OKC)"
+    ],
+    "originalnycklar": [
+      "Tänder- odontogena keratocystor (OKC)."
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Urinvägar",
+    "gen": "MSH2",
+    "syndrom": [
+      "Lynchs syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Urinvägar"
+    ],
+    "livstidsrisker": [
+      "15-30% (kvinnor), 11-22% (män), https://plsd.eu/"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Äggstockar",
+    "gen": "PMS2",
+    "syndrom": [
+      "Lynchs syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Äggstockar"
+    ],
+    "livstidsrisker": [
+      "2.6%, https://plsd.eu/"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Äggstockar",
+    "gen": "RAD51C",
+    "syndrom": [
+      "RAD51C-related cancer susceptibility"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Äggstockar"
+    ],
+    "livstidsrisker": [
+      "11%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Äggstockar",
+    "gen": "RAD51D",
+    "syndrom": [
+      "RAD51D-related cancer susceptibility"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Äggstockar"
+    ],
+    "livstidsrisker": [
+      "13%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Äggstockar",
+    "gen": "DICER1",
+    "syndrom": [
+      "DICER1 relaterad cancer predisposition syndrom"
+    ],
+    "subkategorier": [
+      "könssträngstumörer"
+    ],
+    "originalnycklar": [
+      "Äggstockar (könssträngstumörer)."
+    ],
+    "livstidsrisker": [
+      "7%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Äggstockar",
+    "gen": "SMARCA4",
+    "syndrom": [
+      "Rhabdoid tumörpredispostionssyndrom 2"
+    ],
+    "subkategorier": [
+      "SCCOHT (småcellig, hyperkalcemisk typ)"
+    ],
+    "originalnycklar": [
+      "Äggstockar (småcellig äggstockscancer, hyperkalcemisk typ, SCCOHT)."
+    ],
+    "livstidsrisker": [
+      "Okänd"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Äggstockar/äggledare",
+    "gen": "BRCA1",
+    "syndrom": [
+      "Ärftlig bröst- och äggstockscancer"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Äggstockar/äggledare"
+    ],
+    "livstidsrisker": [
+      "30-60%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Äggstockar/äggledare",
+    "gen": "BRCA2",
+    "syndrom": [
+      "Ärftlig bröst- och äggstockscancer"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Äggstockar/äggledare"
+    ],
+    "livstidsrisker": [
+      "10-25%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Äggstockar/äggledare",
+    "gen": "MLH1",
+    "syndrom": [
+      "Lynchs syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Äggstockar/äggledare"
+    ],
+    "livstidsrisker": [
+      "5-12%, https://plsd.eu/"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Äggstockar/äggledare",
+    "gen": "MSH2",
+    "syndrom": [
+      "Lynchs syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Äggstockar/äggledare"
+    ],
+    "livstidsrisker": [
+      "9-20%, https://plsd.eu/"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Äggstockar/äggledare",
+    "gen": "MSH6",
+    "syndrom": [
+      "Lynchs syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Äggstockar/äggledare"
+    ],
+    "livstidsrisker": [
+      "3-15%, https://plsd.eu/"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Äggstockar/äggledare",
+    "gen": "BRIP1",
+    "syndrom": [],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Äggstockar/äggledare."
+    ],
+    "livstidsrisker": [
+      "6–12%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Äggstockar",
+    "gen": "PALB2",
+    "syndrom": [
+      "Bröst-ovarial cancer predisposition syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Äggstockscancer"
+    ],
+    "livstidsrisker": [
+      ">5%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Äggstocksfibrom",
+    "gen": "PTCH1",
+    "syndrom": [
+      "Gorlins syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Äggstocksfibrom"
+    ],
+    "livstidsrisker": [
+      "~ 5%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Äggstocksfibrom",
+    "gen": "SUFU",
+    "syndrom": [],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Äggstocksfibrom"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Ögon",
+    "gen": "BAP1",
+    "syndrom": [
+      "BAP1-tumör predispositionsyndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Ögon"
+    ],
+    "livstidsrisker": [
+      "36% av probander, 16% av bärare (icke proband)"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Ögon",
+    "gen": "RB1",
+    "syndrom": [
+      "Retinoblastom"
+    ],
+    "subkategorier": [
+      "näthinna"
+    ],
+    "originalnycklar": [
+      "Ögon (näthinna)"
+    ],
+    "livstidsrisker": [
+      "90%"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Övriga cancer",
+    "gen": "TP53",
+    "syndrom": [
+      "TP53-relaterad cancerpredisponerande syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Övriga cancer"
+    ],
+    "livstidsrisker": [
+      "Risk för malign melanom. Hypodiploid ALL är patognomisk för germline varianter i TP53. Sammantaget nästan 100% (lägre penetrans vid vissa missens varianter)"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Övrigt",
+    "gen": "APC",
+    "syndrom": [
+      "Familjär adenomatös polypos (FAP), Gardners syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Övrigt"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Övrigt",
+    "gen": "DICER1",
+    "syndrom": [
+      "DICER1 relaterad cancer predisposition syndrom"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Övrigt"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Övrigt",
+    "gen": "WRN biallelisk (homozygot eller  kompound heterozygot)",
+    "syndrom": [
+      "Werner syndrome"
+    ],
+    "subkategorier": [],
+    "originalnycklar": [
+      "Övrigt"
+    ],
+    "livstidsrisker": [
+      "-"
+    ],
+    "sources": [
+      {
+        "id": "rcc"
+      }
+    ]
+  },
+  {
+    "organ": "Prostata",
+    "gen": "HOXB13",
+    "syndrom": [],
+    "subkategorier": [],
+    "originalnycklar": [],
+    "livstidsrisker": [],
+    "sources": [
+      {
+        "id": "eau",
+        "lage": "17q21.2",
+        "risk": "OR 3,4–7,9",
+        "risk_en": "OR 3.4–7.9",
+        "kommentar": "Prostataspecifik risk-gen; högre PSA och Gleason vid diagnos. Saknas i RCC – blir ny nod.",
+        "ref": "32,43,44"
+      }
+    ]
+  },
+  {
+    "organ": "Prostata",
+    "gen": "CHEK2",
+    "syndrom": [],
+    "subkategorier": [],
+    "originalnycklar": [],
+    "livstidsrisker": [],
+    "sources": [
+      {
+        "id": "eau",
+        "lage": "22q12.1",
+        "risk": "OR 3,3",
+        "risk_en": "OR 3.3",
+        "kommentar": "HRR-gen i bredare paneler; PARP-nytta vid icke-BRCA HRR inkonsekvent (EMA-monoterapi begränsad till BRCA1/2).",
+        "ref": "30,38,39"
+      }
+    ]
+  },
+  {
+    "organ": "Prostata",
+    "gen": "BRCA1",
+    "syndrom": [],
+    "subkategorier": [],
+    "originalnycklar": [],
+    "livstidsrisker": [],
+    "sources": [
+      {
+        "id": "eau",
+        "lage": "17q21",
+        "risk": "RR 1,8–3,8 (≤65 år)",
+        "risk_en": "RR 1.8–3.8 (≤65 yrs)",
+        "behandling": "PARP-hämmare vid HRR-/BRCA-muterad mCRPC.",
+        "behandling_en": "PARP inhibitors in HRR/BRCA-mutated mCRPC.",
+        "kommentar": "Högre andel letal PCa bland bärare.",
+        "ref": "30,37,45,46"
+      }
+    ]
+  },
+  {
+    "organ": "Prostata",
+    "gen": "ATM",
+    "syndrom": [],
+    "subkategorier": [],
+    "originalnycklar": [],
+    "livstidsrisker": [],
+    "sources": [
+      {
+        "id": "eau",
+        "lage": "11q22.3",
+        "risk": "RR 6,3 (metastaserad PCa)",
+        "risk_en": "RR 6.3 (metastatic PCa)",
+        "behandling": "HRR-gen (PROfound kohort A: BRCA1/2/ATM); PARP-hämmare kan erbjudas, men effekt svagare än vid BRCA.",
+        "behandling_en": "HRR gene (PROfound cohort A: BRCA1/2/ATM); PARP inhibitors may be offered, but effect weaker than for BRCA.",
+        "kommentar": "Högre andel letal PCa bland bärare. EAU avser monoallelisk bärarstatus.",
+        "ref": "30,37"
+      }
+    ]
+  },
+  {
+    "organ": "Prostata",
+    "gen": "MLH1",
+    "syndrom": [],
+    "subkategorier": [],
+    "originalnycklar": [],
+    "livstidsrisker": [],
+    "sources": [
+      {
+        "id": "eau",
+        "lage": "3p21.3",
+        "risk": "RR 3,7 (MMR/Lynch)",
+        "risk_en": "RR 3.7 (MMR/Lynch)",
+        "behandling": "Vid MMR-brist/MSI-hög mCRPC: pembrolizumab (immunterapi).",
+        "behandling_en": "In MMR-deficient/MSI-high mCRPC: pembrolizumab (immunotherapy).",
+        "kommentar": "MMR-gen (Lynchs syndrom).",
+        "ref": "47,48"
+      }
+    ]
+  },
+  {
+    "organ": "Prostata",
+    "gen": "MSH6",
+    "syndrom": [],
+    "subkategorier": [],
+    "originalnycklar": [],
+    "livstidsrisker": [],
+    "sources": [
+      {
+        "id": "eau",
+        "lage": "2p16",
+        "risk": "RR 3,7 (MMR/Lynch)",
+        "risk_en": "RR 3.7 (MMR/Lynch)",
+        "behandling": "Vid MMR-brist/MSI-hög mCRPC: pembrolizumab (immunterapi).",
+        "behandling_en": "In MMR-deficient/MSI-high mCRPC: pembrolizumab (immunotherapy).",
+        "kommentar": "MMR-gen (Lynchs syndrom).",
+        "ref": "47,48"
+      }
+    ]
+  },
+  {
+    "organ": "Prostata",
+    "gen": "PMS2",
+    "syndrom": [],
+    "subkategorier": [],
+    "originalnycklar": [],
+    "livstidsrisker": [],
+    "sources": [
+      {
+        "id": "eau",
+        "lage": "7p22.2",
+        "risk": "RR 3,7 (MMR/Lynch)",
+        "risk_en": "RR 3.7 (MMR/Lynch)",
+        "behandling": "Vid MMR-brist/MSI-hög mCRPC: pembrolizumab (immunterapi).",
+        "behandling_en": "In MMR-deficient/MSI-high mCRPC: pembrolizumab (immunotherapy).",
+        "kommentar": "MMR-gen (Lynchs syndrom).",
+        "ref": "47,48"
+      }
+    ]
+  }
+]
